@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Home, Building, Search, FileText, PiggyBank, Users, Map, Clock } from "lucide-react"
+import { Home, Building, Search, FileText, PiggyBank, Users, Map, Clock, Heart } from "lucide-react"
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
