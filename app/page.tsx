@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       <section className="relative">
         <HeroImage 
-          src="/images/johannesburg-skyline.jpg" 
+          src="/images/backgrounds/johannesburg-skyline.jpg" 
           alt="Johannesburg skyline with dramatic sky" 
           height="h-[600px]"
           overlay
