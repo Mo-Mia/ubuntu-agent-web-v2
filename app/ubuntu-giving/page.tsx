@@ -239,11 +239,11 @@ export default function UbuntuGivingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="heading-lg mb-6">Discuss the Programme</h2>
-              <p className="text-body-lg mb-4">
+              <p className="text-white text-body-lg mb-4">
                 Interested in learning more about how the Ubuntu Giving Programme works with your
                 real estate transaction?
               </p>
-              <p className="text-body-lg mb-6">
+              <p className="text-white text-body-lg mb-6">
                 Contact me today to discuss your property goals and how we can make a difference
                 together. When your transaction is complete, you'll receive a Certificate
                 of Giving acknowledging your contribution through the Ubuntu Giving Programme.
