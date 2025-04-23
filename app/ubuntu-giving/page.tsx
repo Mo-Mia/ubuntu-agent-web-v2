@@ -130,7 +130,7 @@ export default function UbuntuGivingPage() {
                   src="/images/ubuntu/ubuntu-philosophy.svg"
                   alt="Ubuntu philosophy visualization"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
               </div>
             </div>
