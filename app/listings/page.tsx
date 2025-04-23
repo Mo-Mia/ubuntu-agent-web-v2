@@ -78,21 +78,16 @@ export default function ListingsPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-4">Looking to Buy or Sell?</h2>
-            <p className="text-body-lg mb-8">
-              Contact Gary directly to discuss your property needs in Fourways, Dainfern, North Riding, and Midrand. Experience personalised service with the Ubuntu philosophy.
+            <p className="text-white mb-8">
+              Whether you are looking to buy or sell property in North Johannesburg, The Ubuntu Agent has the expertise and local knowledge to help you navigate the market successfully.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">
                 Contact Gary
               </Link>
-              <a 
-                href="https://www.expsouthafrica.co.za/agents/80314" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20 flex items-center gap-2"
-              >
-                View Listings <ExternalLink className="h-4 w-4" />
-              </a>
+              <Link href="/services" className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20">
+                Explore Services
+              </Link>
             </div>
           </div>
         </div>

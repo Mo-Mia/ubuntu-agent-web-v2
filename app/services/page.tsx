@@ -736,7 +736,7 @@ export default function ServicesPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-4">Ready to Begin Your Real Estate Journey?</h2>
-            <p className="text-body-lg mb-8">
+            <p className="text-white mb-8">
               Whether you're buying, selling, or just exploring your options in North Johannesburg, let's connect to discuss how The Ubuntu Agent can help you achieve your real estate goals while making a positive community impact.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
