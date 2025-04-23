@@ -57,7 +57,7 @@ export default function HomePage() {
                 With 10 years of experience in Johannesburg real estate, I combine professional service with the Ubuntu philosophy - "I am because we are." Through my giving program, 5% of my commission (10% if capped) goes to local charities.
               </p>
               <p className="text-gray-600 mb-6">
-                Specializing in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, I'm here to help you navigate the property market while making a positive impact on our community.
+                Specialising in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, I'm here to help you navigate the property market while making a positive impact on our community.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="/about" className="btn-primary">
@@ -81,7 +81,7 @@ export default function HomePage() {
           <SectionHeading
             subtitle="How I Can Help"
             title="Residential Real Estate Services"
-            description="Whether you're buying, selling, or renting in the North Johannesburg area, I provide personalized services to meet your unique needs."
+            description="Whether you're buying, selling, or renting in the North Johannesburg area, I provide personalised services to meet your unique needs."
             alignment="center"
           />
 
@@ -95,7 +95,7 @@ export default function HomePage() {
 
             <ServiceCard
               title="For Home Sellers"
-              description="Maximize your property's value with my strategic approach to increasing offers and collaborating with a network of agents."
+              description="Maximise your property's value with my strategic approach to increasing offers and collaborating with a network of agents."
               icon={Building}
               link="/services#sellers"
               variant="outlined"
@@ -134,7 +134,7 @@ export default function HomePage() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="heading-sm mb-4">Current Charitable Activities</h3>
               <p className="text-body mb-4">
-                The Ubuntu philosophy teaches us that our humanity is tied together. I'm currently supporting organizations like Four Paws, CHOC, and Breadline through my real estate transactions, with plans to expand partnerships.
+                The Ubuntu philosophy teaches us that our humanity is tied together. I'm currently supporting organisations like Four Paws, CHOC, and Breadline through my real estate transactions, with plans to expand partnerships.
               </p>
               <p className="text-body mb-4">
                 When you buy or sell a home with me, you can direct 5% of my commission (10% if capped) to one of these charities or suggest another cause that resonates with you.
