@@ -37,11 +37,11 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/ubuntu-giving" className="text-gray-300 hover:text-amber-400 transition-colors">
-                  Ubuntu Giving Program
+                  Ubuntu Giving Programme
                 </Link>
               </li>
               <li>
-                <Link href="/properties" className="text-gray-300 hover:text-amber-400 transition-colors">
+                <Link href="/listings" className="text-gray-300 hover:text-amber-400 transition-colors">
                   Properties
                 </Link>
               </li>

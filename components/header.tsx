@@ -108,7 +108,7 @@ const Header = () => {
               About
             </Link>
             <Link href="/ubuntu-giving" className="nav-link">
-              Ubuntu Giving
+              Ubuntu Giving Programme
             </Link>
             <div className="relative group">
               <button
@@ -221,7 +221,7 @@ const Header = () => {
               className={`nav-link py-3 px-4 rounded-md transition-all ${activeMenuItem === 'ubuntu' ? 'bg-amber-50 text-amber-600' : 'hover:bg-gray-50'}`} 
               onClick={() => closeMenu('ubuntu')}
             >
-              Ubuntu Giving
+              Ubuntu Giving Programme
             </Link>
             <div className="py-1">
               <button 
