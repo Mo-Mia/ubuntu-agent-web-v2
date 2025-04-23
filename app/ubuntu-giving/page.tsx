@@ -62,7 +62,7 @@ export default function UbuntuGivingPage() {
     <>
       <section className="relative">
         <HeroImage 
-          src="/images/giving-bg.jpg" 
+          src="/images/backgrounds/johannesburg-skyline.jpg" 
           alt="Ubuntu Giving Programme"
           height="h-[600px]"
           overlay
