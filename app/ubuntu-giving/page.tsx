@@ -1,19 +1,49 @@
-import Image from "next/image"
-import Link from "next/link"
+import { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
 
-import HeroSection from "@/components/hero-section"
-import SectionHeading from "@/components/section-heading"
-import GivingProcess from "@/components/giving-process"
-import CharityCard from "@/components/charity-card"
-import CharitableCalculator from "@/components/charitable-calculator"
-import FaqSection from "@/components/faq-section"
+import { HeroImage } from '@/components/ui/HeroImage'
+import SectionHeading from '@/components/section-heading'
+import GivingProcess from '@/components/giving-process'
+import CharityCard from '@/components/charity-card'
+import CharitableCalculator from '@/components/charitable-calculator'
+import FAQ from '@/components/faq'
+import CharitySection from '@/components/charity/CharitySection'
 import { charities } from "@/lib/data/charities"
 
-export const metadata = {
-  title: "Ubuntu Giving Program | The Ubuntu Agent",
+export const metadata: Metadata = {
+  title: "Ubuntu Giving Programme: Making a Difference Together | The Ubuntu Agent",
   description:
-    "Learn about the Ubuntu Giving Program where 5% of commission is donated to local charities chosen by home buyers in Johannesburg, South Africa.",
+    "Learn about the Ubuntu Giving Programme where 5% of commission is donated to local charities chosen by home buyers in Johannesburg, South Africa.",
 }
+
+const faqItems = [
+  {
+    question: "What is Ubuntu and why is it important?",
+    answer:
+      "Ubuntu is a South African philosophy that means 'I am because we are.' It emphasizes our interconnectedness and shared humanity. In real estate, I apply this by ensuring each transaction contributes positively to our community."
+  },
+  {
+    question: "How does the Ubuntu Giving Programme work?",
+    answer:
+      "Through the Ubuntu Giving Programme, 5% of my commission on every transaction (10% if my commission is capped) is donated to a charitable cause of your choice. You can select from our partner organisations or nominate another registered non-profit organisation."
+  },
+  {
+    question: "Which charities can I choose from?",
+    answer:
+      "You can select from our list of vetted charity partners, which ensures the organisations are registered, transparent, and making a real impact. If you have another charity in mind, we can evaluate it to ensure it meets our criteria for inclusion in the programme."
+  },
+  {
+    question: "Is there any additional cost to me as a client?",
+    answer:
+      "Absolutely not. The donation comes directly from my commission, not from your pocket. My services and fees remain competitive with other agents, but with the added benefit of community impact."
+  },
+  {
+    question: "How do I know the donation was made?",
+    answer:
+      "Transparency is central to the Ubuntu Giving Programme. You'll receive documentation of the donation made in your name, and we maintain public records of all donations on our impact tracking page."
+  },
+]
 
 export default function UbuntuGivingPage() {
   // Get featured charities for the highlight section
@@ -28,327 +58,195 @@ export default function UbuntuGivingPage() {
     link: `/ubuntu-giving/charity-selection?highlight=${charity.id}`,
   }));
 
-  const faqs = [
-    {
-      question: "How does the Ubuntu Giving Program work?",
-      answer:
-        "When you buy or sell a property with The Ubuntu Agent, 5% of the commission (10% if the agent is capped) is donated to a local charity of your choice. You can select from our list of vetted charity partners or nominate another registered non-profit organization.",
-    },
-    {
-      question: "Can I choose any charity for the donation?",
-      answer:
-        "You can select from our list of vetted charity partners, which ensures the organizations are registered, transparent, and making a real impact. If you have another charity in mind, we can evaluate it to ensure it meets our criteria for inclusion in the program.",
-    },
-    {
-      question: "Is there any additional cost to me as a buyer or seller?",
-      answer:
-        "No, there is absolutely no additional cost to you. The donation comes directly from The Ubuntu Agent's commission, not from your pocket. You receive the same professional real estate service while also making a positive community impact.",
-    },
-    {
-      question: "How much is typically donated per transaction?",
-      answer:
-        "The donation amount varies based on the property value and commission structure. For example, on a R2 million property with a 5% commission, the donation would be approximately R5,000. You can use our Charitable Calculator to estimate the donation for your specific transaction.",
-    },
-    {
-      question: "Do I get a tax benefit from the donation?",
-      answer:
-        "Since the donation comes from The Ubuntu Agent's commission, the tax receipt goes to the agent. However, you receive recognition for directing the funds and will receive impact reports showing how your chosen charity used the donation.",
-    },
-    {
-      question: "Can I split my donation between multiple charities?",
-      answer:
-        "Yes, you can divide your donation among up to three different charity partners, allowing you to support multiple causes that matter to you.",
-    },
-    {
-      question: "How do I know the money actually reaches the charity?",
-      answer:
-        "Transparency is central to the Ubuntu Giving Program. You'll receive documentation of the donation made in your name, and we maintain public records of all donations on our impact tracking page.",
-    },
-    {
-      question: "What if I want to make an additional personal donation?",
-      answer:
-        "We're happy to facilitate additional personal donations to your chosen charity. These would be made directly by you and would be eligible for any applicable tax benefits.",
-    },
-  ]
-
   return (
     <>
-      <HeroSection
-        title="Ubuntu Giving Program"
-        subtitle="Community Impact"
-        description="Transforming real estate transactions into opportunities for positive community change."
-        ctaText="How It Works"
-        ctaLink="#how-it-works"
-        secondaryCtaText="Our Charity Partners"
-        secondaryCtaLink="#charity-partners"
-        imageSrc="/images/backgrounds/community-gathering.svg"
-        imageAlt="Community gathering in Johannesburg"
-        priority={false}
+      <HeroImage
+        src="/images/giving-bg.jpg"
+        alt="Ubuntu Giving Programme"
+        height="h-[400px]"
+        overlay
       />
 
-      {/* Introduction Section */}
+      {/* Main Content */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeading
-                subtitle="Real Estate with Purpose"
-                title="The Ubuntu Giving Program"
-                description="Connecting property transactions to community impact through charitable giving."
+                subtitle="About"
+                title="The Ubuntu Giving Programme: Making a Difference Together"
+                alignment="left"
               />
-
               <p className="text-body mb-4">
-                The Ubuntu philosophy teaches us that "I am because we are" — our humanity is tied together. The Ubuntu
-                Giving Program brings this philosophy to real estate by connecting each property transaction to positive
-                community change.
+                Ubuntu is a South African philosophy that means "I am because we are." The Ubuntu
+                Giving Programme brings this philosophy to real estate by connecting each property transaction to positive
+                community impact.
               </p>
-
-              <p className="text-body mb-4">
-                When you buy or sell a property with The Ubuntu Agent, 5% of the commission (10% if capped) is donated
-                to a local charity of your choice. This creates a ripple effect of positive impact that extends far
-                beyond the property itself.
-              </p>
-
               <p className="text-body mb-6">
-                There's no additional cost to you as a client — you receive the same professional real estate service
-                while also making a meaningful contribution to the community you're joining or leaving.
+                With every home bought or sold, 5% of my commission (10% if capped) goes to a
+                charity of your choice. This approach costs you nothing extra but makes your real
+                estate transaction more meaningful.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary">
-                  Get Started
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link href="#process" className="btn-primary">
+                  How It Works
                 </Link>
-                <Link href="/ubuntu-giving/charity-selection" className="btn-tertiary">
-                  View Charity Partners
+                <Link href="#charity-partners" className="btn-secondary">
+                  Our Charity Partners
+                </Link>
+                <Link href="#impact" className="btn-tertiary">
+                  Track Our Impact
                 </Link>
               </div>
             </div>
-
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image
-                src="/images/backgrounds/community-impact.svg"
-                alt="Community impact through real estate"
-                fill
-                className="object-cover"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 600px"
-              />
+            <div>
+              <div className="aspect-video relative rounded-lg overflow-hidden">
+                <Image
+                  src="/images/ubuntu/ubuntu-philosophy.svg"
+                  alt="Ubuntu philosophy visualization"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="section-padding bg-gray-50">
+      <section id="process" className="section-padding bg-gray-50">
         <div className="container-custom">
           <SectionHeading
-            subtitle="The Process"
-            title="How the Ubuntu Giving Program Works"
-            description="A simple, transparent process that connects real estate to community impact."
+            subtitle="Process"
+            title="How the Ubuntu Giving Programme Works"
+            description="Making a difference is simple and transparent."
             alignment="center"
           />
 
           <GivingProcess />
 
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="heading-sm mb-4">Current Charity Partners</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Four Paws</span> - Animal welfare organisation protecting animals under human control
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">CHOC (Childhood Cancer Foundation)</span> - Supporting children with cancer and their families
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Breadline</span> - Providing nutritional support to those in need
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Future Partnership</span> - In discussions with Gift of the Givers for future support
-                  </p>
-                </li>
-                <li className="flex items-start mt-6 pt-4 border-t border-gray-200">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    You can also <span className="font-bold">suggest a charity</span> that's meaningful to you
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <CharitableCalculator />
-          </div>
-        </div>
-      </section>
-
-      {/* Current Charitable Support */}
-      <section id="charity-partners" className="section-padding bg-white">
-        <div className="container-custom">
-          <SectionHeading
-            subtitle="Making a Difference"
-            title="Current Charitable Support"
-            description="Through the Ubuntu Giving Program, we're already making an impact with these organizations."
-            alignment="center"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6">
-              <h3 className="heading-sm mb-4">Four Paws</h3>
-              <p className="text-body-sm mb-4">
-                Supporting animal welfare by protecting animals under direct human influence - farm animals, companion animals, wild animals and animals used in entertainment.
-              </p>
-              <a href="https://www.four-paws.org.za/" target="_blank" rel="noopener noreferrer" className="text-gold font-medium hover:underline">
-                Learn more
-              </a>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6">
-              <h3 className="heading-sm mb-4">CHOC</h3>
-              <p className="text-body-sm mb-4">
-                The Childhood Cancer Foundation of South Africa provides comprehensive support for children with cancer and life-threatening blood disorders, and their families.
-              </p>
-              <a href="https://choc.org.za/" target="_blank" rel="noopener noreferrer" className="text-gold font-medium hover:underline">
-                Learn more
-              </a>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-md p-6">
-              <h3 className="heading-sm mb-4">Breadline</h3>
-              <p className="text-body-sm mb-4">
-                Providing nutritional support to South Africans living in poverty, Breadline helps address food insecurity in communities throughout Johannesburg.
-              </p>
-              <a href="#" className="text-gold font-medium hover:underline">
-                Contact for more information
-              </a>
-            </div>
-          </div>
-
-          <div className="text-center mt-10">
-            <p className="text-body mb-6">
-              We're in the process of expanding our charity partnerships to offer more options for buyers and sellers.
-              If you have a specific charity you'd like to support, please let me know during our consultation.
-            </p>
-            <Link 
-              href="/contact" 
-              className="btn-primary"
-            >
-              Discuss Charity Options
+          <div className="mt-12 text-center">
+            <Link href="/contact" className="btn-primary">
+              Start Your Ubuntu Journey
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Future Impact Tracking Section */}
-      <section className="section-padding bg-gray-50">
+      {/* Charity Partners Section */}
+      <section id="charities" className="section-padding bg-white">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Future Transparency"
-            title="Impact Tracking Coming Soon"
-            description="As the Ubuntu Giving Program grows, we'll provide transparent reporting on donations and impact."
+            subtitle="Current Impact"
+            title="Charities We've Supported"
+            description="Through the Ubuntu Giving Programme, we're already making an impact with these organisations."
             alignment="center"
           />
 
-          <div className="bg-white p-8 rounded-lg shadow-md mt-12">
-            <div className="text-center max-w-2xl mx-auto">
-              <h3 className="heading-sm mb-6">Planned Impact Tracking Features</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-8">
-                <div className="flex items-start">
-                  <span className="text-gold font-bold mr-2 mt-1">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Total Donation Tracking</span><br />
-                    Transparent reporting of all charitable contributions
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <span className="text-gold font-bold mr-2 mt-1">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Charity Breakdown</span><br />
-                    Details of which organizations have been supported
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <span className="text-gold font-bold mr-2 mt-1">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Community Impact</span><br />
-                    Stories and updates about how donations are making a difference
-                  </p>
-                </div>
-                
-                <div className="flex items-start">
-                  <span className="text-gold font-bold mr-2 mt-1">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Donation Certificates</span><br />
-                    Recognition for clients who participate in the program
-                  </p>
-                </div>
-              </div>
-              
-              <p className="text-body mb-6">
-                As the program expands, this section will be updated with actual donation data and impact stories. 
-                For now, you can contact me directly to learn more about how your transaction can support these worthy causes.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <CharityCard
+              name="Four Paws"
+              description="Animal welfare organisation dedicated to saving animals in need."
+              imageSrc="/images/charity/four-paws.jpg"
+              websiteUrl="https://www.four-paws.org.za/"
+            />
+            <CharityCard
+              name="CHOC"
+              description="Childhood Cancer Foundation supporting children and families affected by cancer."
+              imageSrc="/images/charity/choc.jpg"
+              websiteUrl="https://choc.org.za/"
+            />
+            <CharityCard
+              name="Breadline Africa"
+              description="Transforming the lives of children through infrastructure projects."
+              imageSrc="/images/charity/breadline-africa.jpg"
+              websiteUrl="https://breadlineafrica.org/"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive Charity Partners Section */}
+      <section id="charity-partners" className="bg-white">
+        <CharitySection />
+      </section>
+
+      {/* Impact Tracking Section */}
+      <section id="impact" className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Impact"
+            title="Tracking Our Giving"
+            description="As the Ubuntu Giving Programme grows, we'll provide transparent reporting on donations and impact."
+            alignment="center"
+          />
+
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-body mb-6">
+              This section will include:
+            </p>
+            <ul className="list-disc text-left pl-8 mb-6 space-y-2">
+              <li>Total donations made through the programme</li>
+              <li>Breakdown by charity category</li>
+              <li>Impact stories from beneficiary organisations</li>
+              <li>Monthly and yearly donation totals</li>
+              <li>Details of which organisations have been supported</li>
+              <li>Real estate transaction volume connected to charitable giving</li>
+            </ul>
+            <p className="text-body mb-8">
+              The dashboard will also feature:
+            </p>
+            <ul className="list-disc text-left pl-8 mb-6 space-y-2">
+              <li>Interactive giving metrics</li>
+              <li>Recognition for clients who participate in the programme</li>
+              <li>Testimonials from charity partners</li>
+            </ul>
+            <p className="text-body mb-6 italic">
+              As the programme expands, this section will be updated with actual donation data and impact stories.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-navy text-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="heading-lg mb-6">Discuss the Programme</h2>
+              <p className="text-body-lg mb-4">
+                Interested in learning more about how the Ubuntu Giving Programme works with your
+                real estate transaction?
               </p>
-              
+              <p className="text-body-lg mb-6">
+                Contact me today to discuss your property goals and how we can make a difference
+                together. When your transaction is complete, you'll receive a Certificate
+                of Giving acknowledging your contribution through the Ubuntu Giving Programme.
+              </p>
               <Link href="/contact" className="btn-primary">
-                Discuss the Program
+                Get In Touch
               </Link>
+            </div>
+            <div>
+              <CharitableCalculator />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Certificate Section */}
+      {/* FAQ Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">
-              The Certificate of Community Contribution
-            </h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <p className="text-body mb-4">
-                  After your property transaction is complete, you'll receive a personalised Certificate
-                  of Giving acknowledging your contribution through the Ubuntu Giving Program.
-                </p>
-                <p className="text-body mb-4">
-                  This certificate details:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 mb-4">
-                  <li className="text-body">The charity you've chosen to support</li>
-                  <li className="text-body">The amount donated on your behalf</li>
-                  <li className="text-body">How this donation will make a difference</li>
-                </ul>
-                <p className="text-body">
-                  It's a tangible reminder of the positive impact your property transaction has had
-                  beyond just changing homes.
-                </p>
-              </div>
-              
-              <div className="relative h-[300px] rounded-lg overflow-hidden border shadow-sm">
-                <Image
-                  src="/images/charity/certificate-sample.svg"
-                  alt="Sample Certificate of Community Contribution"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 600px"
-                />
-              </div>
-            </div>
+          <SectionHeading
+            subtitle="Questions"
+            title="Frequently Asked Questions"
+            description="Learn more about how the Ubuntu Giving Programme works."
+            alignment="center"
+          />
+
+          <div className="mt-12 max-w-3xl mx-auto">
+            <FAQ items={faqItems} />
           </div>
         </div>
       </section>
