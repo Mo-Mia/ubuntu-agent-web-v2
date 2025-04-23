@@ -341,7 +341,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-4">Ready to Work with The Ubuntu Agent?</h2>
-            <p className="text-body-lg mb-8">
+            <p className="text-white mb-8">
               Let's connect to discuss your real estate needs and how we can make your property transaction a force for
               positive change in our community.
             </p>
