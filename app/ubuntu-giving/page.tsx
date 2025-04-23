@@ -21,7 +21,7 @@ const faqItems = [
   {
     question: "What is Ubuntu and why is it important?",
     answer:
-      "Ubuntu is a South African philosophy that means 'I am because we are.' It emphasizes our interconnectedness and shared humanity. In real estate, I apply this by ensuring each transaction contributes positively to our community."
+      "Ubuntu is a South African philosophy that means 'I am because we are.' It emphasises our interconnectedness and shared humanity. In real estate, I apply this by ensuring each transaction contributes positively to our community."
   },
   {
     question: "How does the Ubuntu Giving Programme work?",
