@@ -30,7 +30,7 @@ export function ContactDetails({
     },
   };
 
-  const baseItemClass = 'flex items-center';
+  const baseItemClass = 'flex items-start';
   const itemClass = variant === 'horizontal' 
     ? `${baseItemClass} mr-6 mb-2`
     : `${baseItemClass} mb-4`;
@@ -40,13 +40,13 @@ export function ContactDetails({
       {Object.entries(contactInfo).map(([key, { display, link, icon }]) => (
         <div key={key} className={itemClass}>
           {showIcons && (
-            <span className="mr-2 text-amber-600">
+            <span className="mr-2 text-amber-600 flex-shrink-0 mt-1">
               {icon}
             </span>
           )}
           <a 
             href={link}
-            className="hover:text-amber-600 transition-colors break-words"
+            className="hover:text-amber-600 transition-colors break-all text-sm sm:text-base"
             rel={key === 'whatsApp' ? 'noopener noreferrer' : undefined}
             target={key === 'whatsApp' ? '_blank' : undefined}
           >

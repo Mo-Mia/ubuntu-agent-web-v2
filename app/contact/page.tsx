@@ -19,7 +19,7 @@ export default function ContactPage() {
     <>
       <section className="relative">
         <HeroImage 
-          src="/images/contact-bg.jpg" 
+          src="/images/backgrounds/johannesburg-skyline.jpg" 
           alt="Contact The Ubuntu Agent"
           height="h-[600px]"
           overlay
@@ -72,7 +72,9 @@ export default function ContactPage() {
                     </p>
                   </div>
                   
-                  <ContactDetails showIcons={true} className="mb-6" />
+                  <div className="w-full overflow-hidden">
+                    <ContactDetails showIcons={true} className="mb-6" />
+                  </div>
                   
                   <div>
                     <h3 className="text-sm font-medium text-gray-700 mb-2">Office Hours</h3>
