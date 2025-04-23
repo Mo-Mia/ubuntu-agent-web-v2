@@ -12,7 +12,7 @@ import TestimonialCard from "@/components/testimonial-card"
 
 export const metadata: Metadata = {
   title: "Real Estate Services | The Ubuntu Agent",
-  description: "Professional real estate services in North Johannesburg including buyer representation, seller services, and the Ubuntu Giving Program.",
+  description: "Professional real estate services in North Johannesburg including buyer representation, seller services, and the Ubuntu Giving Programme.",
 }
 
 export default function ServicesPage() {
@@ -31,7 +31,7 @@ export default function ServicesPage() {
     },
     {
       title: "Home Selection",
-      description: "Personalized property recommendations based on your criteria and preferences.",
+      description: "Personalised property recommendations based on your criteria and preferences.",
       icon: Home,
       link: "/services#buyers",
     },
@@ -135,7 +135,7 @@ export default function ServicesPage() {
               <p className="text-body mb-4">
                 With 10 years of experience in North Johannesburg real estate, I specialise in residential sales and rentals in 
                 Fourways, Dainfern, North Riding, and Midrand, while making a positive community 
-                impact through the Ubuntu Giving Program.
+                impact through the Ubuntu Giving Programme.
               </p>
 
               <p className="text-body mb-4">
@@ -153,7 +153,7 @@ export default function ServicesPage() {
                   Schedule a Consultation
                 </Link>
                 <Link href="/ubuntu-giving" className="btn-tertiary">
-                  Ubuntu Giving Program
+                  Ubuntu Giving Programme
                 </Link>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
           <SectionHeading
             subtitle="For Home Buyers"
             title="Your Home Buying Journey"
-            description="A personalized approach to finding your ideal property in North Johannesburg."
+            description="A personalised approach to finding your ideal property in North Johannesburg."
             alignment="center"
           />
 
@@ -537,7 +537,7 @@ export default function ServicesPage() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-gold font-bold mr-2">•</span>
-                        <span>Introduce the Ubuntu Giving Program</span>
+                        <span>Introduce the Ubuntu Giving Programme</span>
                       </li>
                     </ul>
                   </div>
@@ -562,7 +562,7 @@ export default function ServicesPage() {
                     <ul className="space-y-2 text-body-sm">
                       <li className="flex items-start">
                         <span className="text-gold font-bold mr-2">•</span>
-                        <span>Create a customized buying or selling plan</span>
+                        <span>Create a customised buying or selling plan</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-gold font-bold mr-2">•</span>
