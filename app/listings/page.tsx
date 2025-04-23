@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Home } from "lucide-react"
+import { Calendar, Home, ExternalLink } from "lucide-react"
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
@@ -31,9 +31,9 @@ export default function ListingsPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Coming Soon"
-            title="Property Listings Coming Soon"
-            description="Our property listings feature is currently in development."
+            subtitle="Available Properties"
+            title="Current Property Listings"
+            description="Browse Gary's current property listings via his eXp Realty agent profile."
             alignment="center"
           />
 
@@ -46,16 +46,24 @@ export default function ListingsPage() {
               </div>
 
               <p className="text-body mb-6">
-                Gary specializes in residential properties in Fourways, Dainfern, North Riding, and Midrand areas. 
-                While the property listings section is being developed, Gary can help you find your ideal home through personalized service.
+                Gary specialises in residential properties in Fourways, Dainfern, North Riding, and Midrand areas. 
+                While our integrated property listings section is being developed, you can view Gary's current listings on his eXp Realty profile.
               </p>
 
               <p className="text-body mb-6">
-                Contact Gary directly to discuss your property needs, whether you're looking to buy, sell, or rent in the North Johannesburg area.
+                View all of Gary's active property listings by clicking the button below, or contact Gary directly to discuss your specific property needs.
               </p>
 
-              <div className="flex justify-center">
-                <Link href="/contact" className="btn-primary">
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                <a 
+                  href="https://www.expsouthafrica.co.za/agents/80314" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-primary flex items-center justify-center gap-2"
+                >
+                  View Current Listings <ExternalLink className="h-4 w-4" />
+                </a>
+                <Link href="/contact" className="btn-secondary">
                   Contact for Property Inquiries
                 </Link>
               </div>
@@ -70,7 +78,7 @@ export default function ListingsPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-4">Looking to Buy or Sell?</h2>
             <p className="text-body-lg mb-8">
-              Contact Gary directly to discuss your property needs in Fourways, Dainfern, North Riding, and Midrand. Experience personalized service with the Ubuntu philosophy.
+              Contact Gary directly to discuss your property needs in Fourways, Dainfern, North Riding, and Midrand. Experience personalised service with the Ubuntu philosophy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">
