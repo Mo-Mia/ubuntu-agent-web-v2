@@ -242,41 +242,31 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="heading-sm mb-4">Our Values</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Integrity:</span> Honest, transparent communication and ethical business
-                    practices in every interaction.
+              <h3 className="heading-sm mb-4">My Values in Real Estate</h3>
+              <ul className="space-y-4">
+                <li>
+                  <p className="text-body">
+                    <span className="font-bold">Integrity:</span> Honesty and transparency in every
+                    transaction are non-negotiable. You'll always get the full picture from me.
                   </p>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Community:</span> Recognizing that strong communities create better
-                    living environments for everyone.
+                <li>
+                  <p className="text-body">
+                    <span className="font-bold">Expertise:</span> My specialised knowledge of North
+                    Johannesburg neighbourhoods helps buyers find the perfect home and sellers maximise their
+                    property's value.
                   </p>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Excellence:</span> Delivering exceptional service and results for every
-                    client, every time.
+                <li>
+                  <p className="text-body">
+                    <span className="font-bold">Service:</span> I provide personalised attention to each
+                    client, adapting my approach to your unique needs and preferences.
                   </p>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Empathy:</span> Understanding the emotional journey of buying or selling
-                    a home and providing compassionate support.
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold font-bold mr-2">•</span>
-                  <p className="text-body-sm">
-                    <span className="font-bold">Innovation:</span> Continuously seeking better ways to serve clients and
-                    community through new ideas and approaches.
+                <li>
+                  <p className="text-body">
+                    <span className="font-bold">Community:</span> Recognising that strong communities create better
+                    living environments for all, I integrate charitable giving into my business model.
                   </p>
                 </li>
               </ul>

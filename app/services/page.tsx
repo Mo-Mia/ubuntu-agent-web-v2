@@ -1,41 +1,59 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Home, Building, Search, FileText, PiggyBank, Users, Map, Clock, Heart } from "lucide-react"
+import { Home, Building, Search, FileText, PiggyBank, Users, Map, Clock, Heart, Check } from "lucide-react"
+import { Metadata } from 'next';
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
 import ServiceCard from "@/components/service-card"
 import AreaMap from "@/components/area-map"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Real Estate Services | The Ubuntu Agent",
-  description:
-    "Comprehensive real estate services for buyers and sellers in Johannesburg, South Africa with the Ubuntu Agent.",
+  description: "Professional real estate services in North Johannesburg including buyer representation, seller services, and the Ubuntu Giving Program.",
 }
 
 export default function ServicesPage() {
   const buyerServices = [
     {
       title: "Market Analysis",
-      description: "Thorough market analysis to help you find the best property at the right price.",
+      description: "Comprehensive research to find the right property at the right price.",
       icon: Search,
       link: "/services#buyers",
     },
     {
-      title: "Money Saving Strategies",
-      description: "Two strategies to save you money: thorough market analysis and expert negotiation.",
-      icon: PiggyBank,
-      link: "/services#buyers",
-    },
-    {
       title: "Expert Negotiation",
-      description: "Skilled negotiation to secure the best possible price for your new home.",
+      description: "Skilled advocacy to secure favorable terms and protect your interests.",
       icon: Users,
       link: "/services#buyers",
     },
     {
-      title: "Charitable Giving",
-      description: "Direct 5% of commission (10% if capped) to a charity of your choice.",
+      title: "Home Selection",
+      description: "Personalized property recommendations based on your criteria and preferences.",
+      icon: Home,
+      link: "/services#buyers",
+    },
+    {
+      title: "Offer Maximisation",
+      description: "Strategic approach to increase offers on your property and maximise your sale price.",
+      icon: Building,
+      link: "/services#buyers",
+    },
+    {
+      title: "Network Access",
+      description: "Collaboration with other agents to expand your property's exposure.",
+      icon: Users,
+      link: "/services#buyers",
+    },
+    {
+      title: "Local Expertise",
+      description: "Specialised knowledge of the North Johannesburg property market.",
+      icon: Map,
+      link: "/services#buyers",
+    },
+    {
+      title: "Ubuntu Giving",
+      description: "Opportunity to direct 5% of commission to a charity of your choice.",
       icon: Heart,
       link: "/services#buyers",
     },
@@ -43,8 +61,8 @@ export default function ServicesPage() {
 
   const sellerServices = [
     {
-      title: "Offer Maximization",
-      description: "Strategic approach to increase offers on your property and maximize your sale price.",
+      title: "Offer Maximisation",
+      description: "Strategic approach to increase offers on your property and maximise your sale price.",
       icon: Building,
       link: "/services#sellers",
     },
@@ -91,14 +109,14 @@ export default function ServicesPage() {
               />
 
               <p className="text-body mb-4">
-                With 10 years of experience in North Johannesburg real estate, I specialize in residential sales and rentals in 
-                Fourways, Dainfern, North Riding, and Midrand, combining professional expertise with a commitment to community 
+                With 10 years of experience in North Johannesburg real estate, I specialise in residential sales and rentals in 
+                Fourways, Dainfern, North Riding, and Midrand, while making a positive community 
                 impact through the Ubuntu Giving Program.
               </p>
 
               <p className="text-body mb-4">
-                My approach focuses on saving money for buyers through thorough market analysis and expert negotiation, 
-                while helping sellers maximize offers through strategic approaches and collaboration with other agents.
+                I provide buyers with comprehensive market analysis and skilled negotiation,
+                while helping sellers maximise offers through strategic approaches and collaboration with other agents.
               </p>
 
               <p className="text-body mb-6">
@@ -133,8 +151,8 @@ export default function ServicesPage() {
         <div className="container-custom">
           <SectionHeading
             subtitle="For Home Buyers"
-            title="Finding Your Perfect Home"
-            description="Comprehensive support throughout your home buying journey."
+            title="Your Home Buying Journey"
+            description="A personalized approach to finding your ideal property in North Johannesburg."
             alignment="center"
           />
 
@@ -171,7 +189,7 @@ export default function ServicesPage() {
                   <div>
                     <h4 className="font-bold mb-1">Initial Consultation</h4>
                     <p className="text-body-sm text-muted-foreground">
-                      We'll discuss your needs, preferences, budget, and timeline to create a personalized home buying
+                      We'll discuss your needs, preferences, budget, and timeline to create a personalised home buying
                       strategy.
                     </p>
                   </div>
@@ -237,8 +255,8 @@ export default function ServicesPage() {
         <div className="container-custom">
           <SectionHeading
             subtitle="For Home Sellers"
-            title="Maximizing Your Property's Value"
-            description="Strategic marketing and expert guidance throughout the selling process."
+            title="Maximising Your Property's Value"
+            description="Strategic marketing and negotiation to achieve the best possible price for your property."
             alignment="center"
           />
 
@@ -277,9 +295,9 @@ export default function ServicesPage() {
                     2
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Preparation & Staging</h4>
+                    <h4 className="font-bold mb-1">Property Preparation</h4>
                     <p className="text-body-sm text-muted-foreground">
-                      Professional advice on preparing your property to appeal to target buyers and maximize value.
+                      Professional advice on preparing your property to appeal to target buyers and maximise value.
                     </p>
                   </div>
                 </div>
@@ -336,12 +354,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Areas Served Section */}
-      <section id="areas" className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <SectionHeading
             subtitle="Service Areas"
-            title="North Johannesburg Areas"
-            description="Specialized service in select North Johannesburg neighborhoods."
+            title="North Johannesburg Expertise"
+            description="Specialised service in select North Johannesburg neighbourhoods."
             alignment="center"
           />
 
@@ -413,7 +431,7 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex items-center">
                   <Map className="h-4 w-4 text-gold mr-2" />
-                  <span>Growing family neighborhoods</span>
+                  <span>Growing family neighbourhoods</span>
                 </li>
               </ul>
             </div>
@@ -443,7 +461,7 @@ export default function ServicesPage() {
                   <h3 className="heading-sm mb-2">Initial Consultation</h3>
                   <p className="text-body-sm text-muted-foreground">
                     We begin with a detailed discussion of your real estate goals, timeline, and specific needs. This
-                    helps us create a personalized strategy tailored to your unique situation.
+                    helps us create a personalised strategy tailored to your unique situation.
                   </p>
                 </div>
 
