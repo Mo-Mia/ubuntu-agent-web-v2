@@ -4,6 +4,7 @@ import { Calendar, Home, ExternalLink } from "lucide-react"
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
+import { HeroImage } from "@/components/ui/HeroImage"
 
 export const metadata = {
   title: "Property Listings | The Ubuntu Agent",
@@ -14,19 +15,41 @@ export const metadata = {
 export default function ListingsPage() {
   return (
     <>
-      <HeroSection
-        title="Property Listings"
-        subtitle="Available Properties"
-        description="Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, and Midrand."
-        ctaText="View Current Listings"
-        ctaLink="https://www.expsouthafrica.co.za/agents/80314"
-        secondaryCtaText="Contact for Property Inquiries"
-        secondaryCtaLink="/contact"
-        imageSrc="/images/backgrounds/johannesburg-skyline.jpg"
-        imageAlt="Johannesburg skyline"
-        height="medium"
-        ctaExternal={true}
-      />
+      <section className="relative">
+        <HeroImage 
+          src="/images/backgrounds/johannesburg-skyline.jpg" 
+          alt="Johannesburg skyline"
+          height="h-[600px]"
+          overlay
+          priority={true}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+              <span className="inline-block text-gold font-medium mb-2">Available Properties</span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Property Listings
+              </h1>
+              <p className="text-gray-700 mb-6">
+                Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, and Midrand.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="https://www.expsouthafrica.co.za/agents/80314" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-primary flex items-center gap-2"
+                >
+                  View Current Listings <ExternalLink className="h-4 w-4" />
+                </a>
+                <Link href="/contact" className="btn-secondary">
+                  Contact for Property Inquiries
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Available Properties Section */}
       <section className="section-padding bg-white">
