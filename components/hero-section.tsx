@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { ExternalLink } from "lucide-react"
 
 interface HeroSectionProps {
   title: string
@@ -7,8 +8,10 @@ interface HeroSectionProps {
   description: string
   ctaText?: string
   ctaLink?: string
+  ctaExternal?: boolean
   secondaryCtaText?: string
   secondaryCtaLink?: string
+  secondaryCtaExternal?: boolean
   imageSrc: string
   imageAlt: string
   height?: "small" | "medium" | "large"
@@ -21,8 +24,10 @@ const HeroSection = ({
   description,
   ctaText,
   ctaLink,
+  ctaExternal = false,
   secondaryCtaText,
   secondaryCtaLink,
+  secondaryCtaExternal = false,
   imageSrc,
   imageAlt,
   height = "large",
@@ -59,16 +64,38 @@ const HeroSection = ({
           <p className="text-xl text-white/90 mb-8 max-w-2xl">{description}</p>
           
           <div className="flex flex-wrap gap-4">
-            {ctaText && ctaLink && (
+            {ctaText && ctaLink && !ctaExternal && (
               <Link href={ctaLink} className="btn-primary">
                 {ctaText}
               </Link>
             )}
             
-            {secondaryCtaText && secondaryCtaLink && (
+            {ctaText && ctaLink && ctaExternal && (
+              <a 
+                href={ctaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary flex items-center gap-2"
+              >
+                {ctaText} <ExternalLink className="h-4 w-4" />
+              </a>
+            )}
+            
+            {secondaryCtaText && secondaryCtaLink && !secondaryCtaExternal && (
               <Link href={secondaryCtaLink} className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20">
                 {secondaryCtaText}
               </Link>
+            )}
+            
+            {secondaryCtaText && secondaryCtaLink && secondaryCtaExternal && (
+              <a 
+                href={secondaryCtaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20 flex items-center gap-2"
+              >
+                {secondaryCtaText} <ExternalLink className="h-4 w-4" />
+              </a>
             )}
           </div>
         </div>

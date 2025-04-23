@@ -8,7 +8,7 @@ import SectionHeading from "@/components/section-heading"
 export const metadata = {
   title: "Property Listings | The Ubuntu Agent",
   description:
-    "Browse property listings in Johannesburg with The Ubuntu Agent - real estate with a charitable giving component.",
+    "Browse Gary's current property listings in Johannesburg through his eXp Realty agent profile - specialising in Fourways, Dainfern, North Riding, and Midrand.",
 }
 
 export default function ListingsPage() {
@@ -16,18 +16,19 @@ export default function ListingsPage() {
     <>
       <HeroSection
         title="Property Listings"
-        subtitle="Coming Soon"
-        description="Our property listings section is currently under development. Check back soon for available properties in Johannesburg."
-        ctaText="Contact for Property Inquiries"
-        ctaLink="/contact"
-        secondaryCtaText="Learn About Our Services"
-        secondaryCtaLink="/services"
+        subtitle="Available Properties"
+        description="Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, and Midrand."
+        ctaText="View Current Listings"
+        ctaLink="https://www.expsouthafrica.co.za/agents/80314"
+        secondaryCtaText="Contact for Property Inquiries"
+        secondaryCtaLink="/contact"
         imageSrc="/images/backgrounds/modern-homes-johannesburg.svg"
         imageAlt="Modern homes in Johannesburg"
         height="medium"
+        ctaExternal={true}
       />
 
-      {/* Simple Coming Soon Section */}
+      {/* Available Properties Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionHeading
@@ -47,11 +48,11 @@ export default function ListingsPage() {
 
               <p className="text-body mb-6">
                 Gary specialises in residential properties in Fourways, Dainfern, North Riding, and Midrand areas. 
-                While our integrated property listings section is being developed, you can view Gary's current listings on his eXp Realty profile.
+                View all of Gary's current property listings on his official eXp Realty agent profile.
               </p>
 
               <p className="text-body mb-6">
-                View all of Gary's active property listings by clicking the button below, or contact Gary directly to discuss your specific property needs.
+                You can browse available properties, view details and photos, or contact Gary directly to discuss specific properties.
               </p>
 
               <div className="flex flex-col md:flex-row justify-center gap-4">
@@ -84,9 +85,14 @@ export default function ListingsPage() {
               <Link href="/contact" className="btn-primary">
                 Contact Gary
               </Link>
-              <Link href="/services" className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20">
-                Learn About Services
-              </Link>
+              <a 
+                href="https://www.expsouthafrica.co.za/agents/80314" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20 flex items-center gap-2"
+              >
+                View Listings <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
