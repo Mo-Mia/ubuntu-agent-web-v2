@@ -160,8 +160,8 @@ export default function ServicesPage() {
 
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/images/services/property-viewing.jpg"
-                alt="North Johannesburg property"
+                src="/images/services/modern-house.jpg"
+                alt="Modern real estate property in North Johannesburg"
                 fill
                 className="object-cover"
               />
