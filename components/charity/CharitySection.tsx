@@ -14,7 +14,7 @@ const animalCharities: CharityInfo[] = [
     description: 'Prevents cruelty to animals and provides shelter for stray, abandoned, and abused animals in the Randburg area. Services include investigations, adoptions, and education on responsible pet ownership.',
     website: 'https://www.spca-rbg.org.za',
     category: 'Animal Welfare',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/spca-randburg-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'kitty-puppy-haven',
@@ -22,7 +22,7 @@ const animalCharities: CharityInfo[] = [
     description: 'A pro-life animal sanctuary rescuing neglected, abused and abandoned cats and dogs. Rehabilitates animals and finds them loving permanent homes.',
     website: 'https://kittypuppyhaven.org.za',
     category: 'Animal Welfare',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/kitty-puppy-haven-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'ark-animal',
@@ -30,7 +30,7 @@ const animalCharities: CharityInfo[] = [
     description: 'A rehabilitation and re-homing shelter specialising in puppies and pregnant dogs. Provides safe refuge and medical care to young dogs until adoption.',
     website: null,
     category: 'Animal Welfare',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/ark-animal-centre-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   }
 ];
 
@@ -41,7 +41,7 @@ const childrenCharities: CharityInfo[] = [
     description: 'Operates a foster-care community for orphans and vulnerable children in Northriding. Provides a family-like environment where children can heal, grow and thrive.',
     website: 'https://motherofpeacejhb.co.za',
     category: 'Children & Youth',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/mother-of-peace-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'oasis-haven',
@@ -49,7 +49,7 @@ const childrenCharities: CharityInfo[] = [
     description: 'A Child & Youth Care Centre providing family-based care for orphaned and abandoned children. Operates family homes caring for up to 10 children in a loving environment.',
     website: 'https://oasishaven.org',
     category: 'Children & Youth',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/oasis-haven-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'choc',
@@ -57,7 +57,7 @@ const childrenCharities: CharityInfo[] = [
     description: 'Provides comprehensive support to children with cancer or life-threatening blood disorders, and their families, through accommodation, transport, and psychosocial support.',
     website: 'https://choc.org.za',
     category: 'Children & Youth',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/choc-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   }
 ];
 
@@ -68,7 +68,7 @@ const communityCharities: CharityInfo[] = [
     description: 'Creates jobs for homeless individuals by engaging them in cleaning and maintaining public spaces, improving both their lives and community environments.',
     website: null,
     category: 'Community Development',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/lets-work-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'gift-of-the-givers',
@@ -76,7 +76,7 @@ const communityCharities: CharityInfo[] = [
     description: 'South Africa\'s largest disaster response NGO, providing humanitarian aid in crises and community upliftment through various projects.',
     website: 'https://giftofthegivers.org',
     category: 'Community Development',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/gift-of-the-givers-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'one-small-act',
@@ -84,7 +84,7 @@ const communityCharities: CharityInfo[] = [
     description: 'Provides shelter, food and support to the homeless and destitute in the Randburg area. Runs feeding schemes and a men\'s shelter to ensure no one goes hungry.',
     website: null,
     category: 'Community Development',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/one-small-act-of-kindness-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   }
 ];
 
@@ -95,7 +95,7 @@ const elderlyCharities: CharityInfo[] = [
     description: 'Provides accommodation in retirement villages and frail-care centres for the elderly, with profits supporting care for indigent elders and rehabilitation programmes.',
     website: 'https://randaid.co.za',
     category: 'Elderly Care',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/rand-aid-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'garden-village',
@@ -103,7 +103,7 @@ const elderlyCharities: CharityInfo[] = [
     description: 'A long-established retirement home and frail care facility in Bordeaux, providing compassionate care and comfortable accommodation to the elderly for over 50 years.',
     website: 'https://mha.co.za',
     category: 'Elderly Care',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/methodist-homes-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   }
 ];
 
@@ -114,7 +114,7 @@ const healthcareCharities: CharityInfo[] = [
     description: 'Advocates for South Africans living with rare diseases and congenital disorders, ensuring patients have greater recognition, proper medical care, and access to treatments.',
     website: 'https://rarediseases.co.za',
     category: 'Healthcare & Disease Support',
-    logoUrl: 'https://ik.imagekit.io/urbanareas/ubuntu-charity/rare-diseases-sa-logo.png'
+    logoUrl: '/images/charity/placeholder.svg'
   },
   {
     id: 'breadline',
@@ -122,7 +122,7 @@ const healthcareCharities: CharityInfo[] = [
     description: 'Supports vulnerable families and individuals facing food insecurity in local communities.',
     website: null,
     category: 'Healthcare & Disease Support',
-    logoUrl: 'https://ngolawsa.co.za/wp-content/uploads/2019/01/Breadline-Africa.jpg'
+    logoUrl: '/images/charity/placeholder.svg'
   }
 ];
 
