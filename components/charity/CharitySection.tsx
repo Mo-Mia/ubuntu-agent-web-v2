@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import SectionHeading from '@/components/section-heading';
 import CharityTabs from '@/components/charity/CharityTabs';
