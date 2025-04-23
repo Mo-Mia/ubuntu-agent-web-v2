@@ -154,9 +154,6 @@ const Header = () => {
             <Link href="/listings" className="nav-link">
               Listings
             </Link>
-            <Link href="/resources" className="nav-link">
-              Resources
-            </Link>
             <Link href="/contact" className="nav-link">
               Contact
             </Link>
@@ -268,13 +265,6 @@ const Header = () => {
               onClick={() => closeMenu('listings')}
             >
               Listings
-            </Link>
-            <Link 
-              href="/resources" 
-              className={`nav-link py-3 px-4 rounded-md transition-all ${activeMenuItem === 'resources' ? 'bg-amber-50 text-amber-600' : 'hover:bg-gray-50'}`} 
-              onClick={() => closeMenu('resources')}
-            >
-              Resources
             </Link>
             <Link 
               href="/contact" 
