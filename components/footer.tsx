@@ -18,7 +18,7 @@ export function Footer() {
             </p>
             <ContactDetails 
               variant="vertical" 
-              className="text-gray-300" 
+              className="text-white" 
             />
           </div>
           

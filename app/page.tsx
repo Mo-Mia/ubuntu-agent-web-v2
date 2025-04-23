@@ -202,7 +202,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-4">Let's Connect</h2>
-            <p className="text-body-lg mb-8">
+            <p className="text-white mb-8">
               Whether you're buying, selling, or just exploring the North Johannesburg property market, I'm here to help. Let's discuss how to achieve your real estate goals while making a positive community impact.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
