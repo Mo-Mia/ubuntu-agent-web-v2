@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Home, Building, Search, FileText, PiggyBank, Users, Map, Clock, Heart, Check } from "lucide-react"
 import { Metadata } from 'next';
+import { HeroImage } from '@/components/ui/HeroImage'
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
@@ -89,14 +90,36 @@ export default function ServicesPage() {
 
   return (
     <>
-      <HeroSection
-        title="Real Estate Services"
-        subtitle="Professional Expertise"
-        description="Comprehensive services for buyers and sellers with a community impact component."
-        imageSrc="/images/services-bg.jpg"
-        imageAlt="Modern home in Johannesburg"
-        height="medium"
-      />
+      <section className="relative">
+        <HeroImage 
+          src="/images/services-bg.jpg" 
+          alt="Modern home in Johannesburg"
+          height="h-[600px]"
+          overlay
+          priority={true}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+              <span className="inline-block text-gold font-medium mb-2">Professional Expertise</span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Real Estate Services
+              </h1>
+              <p className="text-gray-700 mb-6">
+                Comprehensive services for buyers and sellers with a community impact component.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="#buyers" className="btn-primary">
+                  Buyer Services
+                </Link>
+                <Link href="#sellers" className="btn-secondary">
+                  Seller Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Overview Section */}
       <section className="section-padding bg-white">

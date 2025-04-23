@@ -4,6 +4,7 @@ import { Award, BookOpen, Briefcase, Users } from "lucide-react"
 import React from 'react';
 import { ProfileImage } from '@/components/ui/ProfileImage';
 import { ContactDetails } from '@/components/ContactDetails';
+import { HeroImage } from '@/components/ui/HeroImage'
 
 import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
@@ -19,17 +20,39 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <HeroSection
-        title="About Gary Berkowitz"
-        subtitle="The Ubuntu Agent"
-        description="Real estate professional with a passion for community impact through the Ubuntu philosophy."
-        imageSrc="/images/about-bg.jpg"
-        imageAlt="Gary Berkowitz, The Ubuntu Agent"
-        height="medium"
-      />
+      <section className="relative">
+        <HeroImage 
+          src="/images/about-bg.jpg" 
+          alt="Gary Berkowitz, The Ubuntu Agent"
+          height="h-[600px]"
+          overlay
+          priority={true}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+              <span className="inline-block text-gold font-medium mb-2">The Ubuntu Agent</span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                About Gary Berkowitz
+              </h1>
+              <p className="text-gray-700 mb-6">
+                Real estate professional with a passion for community impact through the Ubuntu philosophy.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="#gary-journey" className="btn-primary">
+                  My Journey
+                </Link>
+                <Link href="#testimonials" className="btn-secondary">
+                  Client Testimonials
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Gary's Journey Section */}
-      <section className="section-padding bg-white">
+      <section id="gary-journey" className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div>
