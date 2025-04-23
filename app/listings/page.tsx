@@ -22,8 +22,8 @@ export default function ListingsPage() {
         ctaLink="https://www.expsouthafrica.co.za/agents/80314"
         secondaryCtaText="Contact for Property Inquiries"
         secondaryCtaLink="/contact"
-        imageSrc="/images/backgrounds/modern-homes-johannesburg.svg"
-        imageAlt="Modern homes in Johannesburg"
+        imageSrc="/images/backgrounds/johannesburg-skyline.jpg"
+        imageAlt="Johannesburg skyline"
         height="medium"
         ctaExternal={true}
       />
