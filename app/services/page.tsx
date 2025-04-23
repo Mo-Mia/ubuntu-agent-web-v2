@@ -7,6 +7,7 @@ import HeroSection from "@/components/hero-section"
 import SectionHeading from "@/components/section-heading"
 import ServiceCard from "@/components/service-card"
 import AreaMap from "@/components/area-map"
+import TestimonialCard from "@/components/testimonial-card"
 
 export const metadata: Metadata = {
   title: "Real Estate Services | The Ubuntu Agent",
@@ -347,6 +348,30 @@ export default function ServicesPage() {
                 alt="Home selling process in Johannesburg"
                 fill
                 className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Seller Testimonials */}
+          <div className="mt-16">
+            <SectionHeading
+              subtitle="Client Success Stories"
+              title="What Our Sellers Say"
+              description="Real experiences from sellers who have worked with The Ubuntu Agent."
+              alignment="center"
+            />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <TestimonialCard
+                name="Iain Mackenzie"
+                testimonial="After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. Thanks to his persistence and strategic approach, he got my property sold—something that didn't happen with multiple agents involved."
+                compact={true}
+              />
+              
+              <TestimonialCard
+                name="Chris Coetzee"
+                testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way in which Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. To his credit, he brought me a desired offer within the first month of working on my property and drove the sale through to completion."
+                compact={true}
               />
             </div>
           </div>

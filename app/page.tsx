@@ -149,7 +149,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ready to join the future testimonials here */}
+      {/* Featured Testimonial Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Client Feedback"
+            title="What Our Clients Say"
+            description="Real experiences from homeowners who have worked with The Ubuntu Agent."
+            alignment="center"
+          />
+
+          <div className="max-w-3xl mx-auto mt-8">
+            <TestimonialCard 
+              name="Mark Solomon"
+              testimonial="Gary took over the sale of my house when the previous agent who had a sole mandate could not bring a single person through to view the place over a 6 month period. The previous estate agent went as far as to tell me that I needed to drop the price and that in this market there was no way this house would be sold. Gary contacted me and he brought in immediate energy and exuberance that lacked in other agents. Within 2 days he started to bring through potential buyers. We managed to find a buyer within 2 months and he managed to get our asking price. Gary was understanding, vibrant and had an amazing 'can do' attitude."
+              rating={5}
+            />
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/about#testimonials" className="btn-secondary">
+              View More Testimonials
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Resources Section */}
       <section className="section-padding bg-white">

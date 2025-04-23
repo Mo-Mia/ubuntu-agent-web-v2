@@ -165,6 +165,44 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Client Experiences"
+            title="What Clients Are Saying"
+            description="Real stories from homeowners who experienced The Ubuntu Agent difference."
+            alignment="center"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            <TestimonialCard
+              name="Michiel Barnard"
+              testimonial="It was a real pleasure to deal with you regarding the sale of our home. You were incredibly punctual, very attentive to all the small detail, and very professional. In a time when many other people were negative you remained bullish and optimistic because you believe that a thorough and professional approach will succeed in the end. And it did. You got us a really good buyer in a few weeks, and transfer has just gone through. Thank you very much Gary. You are a star! I unreservedly recommend you to potential sellers."
+              rating={5}
+            />
+
+            <TestimonialCard
+              name="Iain Mackenzie"
+              testimonial="I am writing to provide my highest recommendation for Gary Berkowitz as a real estate agent. From start to finish, Gary demonstrated exceptional professionalism, dedication, and a genuine commitment to securing the best possible outcome for me. After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. Thanks to his persistence and strategic approach, he got my property sold—something that didn't happen with multiple agents involved."
+              rating={5}
+            />
+
+            <TestimonialCard
+              name="Mark Solomon"
+              testimonial="Gary took over the sale of my house when the previous agent who had a sole mandate could not bring a single person through to view the place over a 6 month period. The previous estate agent went as far as to tell me that I needed to drop the price and that in this market there was no way this house would be sold. Gary contacted me and he brought in immediate energy and exuberance that lacked in other agents. Within 2 days he started to bring through potential buyers. We managed to find a buyer within 2 months and he managed to get our asking price. Gary was understanding, vibrant and had an amazing 'can do' attitude."
+              rating={5}
+            />
+
+            <TestimonialCard
+              name="Chris Coetzee"
+              testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way in which Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. To his credit, he brought me a desired offer within the first month of working on my property and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to."
+              rating={5}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* eXp Realty Partnership */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
@@ -271,44 +309,6 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <SectionHeading
-            subtitle="Client Experiences"
-            title="What Clients Are Saying"
-            description="Real stories from homeowners who experienced The Ubuntu Agent difference."
-            alignment="center"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <TestimonialCard
-              name="David & Priya Naidoo"
-              role="Home Sellers"
-              testimonial="Gary's approach to selling our family home was refreshingly different. His market knowledge was impressive, but what really stood out was how he connected our sale to community impact through the Ubuntu Giving Program."
-              imageSrc="/images/testimonials/client-1.jpg"
-              date="April 2023"
-            />
-
-            <TestimonialCard
-              name="Nomsa Mbeki"
-              role="First-time Buyer"
-              testimonial="As someone new to the property market, I appreciated Gary's patience and expertise. He made a complex process simple and meaningful by helping me direct part of his commission to an education charity close to my heart."
-              imageSrc="/images/testimonials/client-2.jpg"
-              date="February 2023"
-            />
-
-            <TestimonialCard
-              name="James & Sarah Wilson"
-              role="Property Investors"
-              testimonial="We've worked with many agents over the years, but Gary's combination of business acumen and community focus is unique. He understood our investment goals while helping us contribute to Johannesburg's development."
-              imageSrc="/images/testimonials/client-3.jpg"
-              date="December 2022"
-            />
           </div>
         </div>
       </section>
