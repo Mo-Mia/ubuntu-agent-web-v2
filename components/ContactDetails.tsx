@@ -46,7 +46,7 @@ export function ContactDetails({
           )}
           <a 
             href={link}
-            className="hover:text-amber-600 transition-colors"
+            className="hover:text-amber-600 transition-colors break-words"
             rel={key === 'whatsApp' ? 'noopener noreferrer' : undefined}
             target={key === 'whatsApp' ? '_blank' : undefined}
           >

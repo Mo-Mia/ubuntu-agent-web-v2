@@ -17,35 +17,43 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <HeroImage
-        src="/images/contact-bg.jpg"
-        alt="Contact The Ubuntu Agent"
-        height="h-[300px]"
-        overlay
-      />
+      <section className="relative">
+        <HeroImage 
+          src="/images/contact-bg.jpg" 
+          alt="Contact The Ubuntu Agent"
+          height="h-[600px]"
+          overlay
+          priority={true}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+              <span className="inline-block text-gold font-medium mb-2">Get in Touch</span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Contact Gary
+              </h1>
+              <p className="text-gray-700 mb-6">
+                Let's discuss your real estate needs and how we can achieve your goals together.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#consultation-form" className="btn-primary">
+                  Schedule Consultation
+                </a>
+                <Link href="/services" className="btn-secondary">
+                  View Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding bg-white">
-        <div className="container-custom">
-          <SectionHeading
-            subtitle="Get in Touch"
-            title="Contact Gary"
-            description="Let's discuss your real estate needs and how we can achieve your goals together."
-            alignment="center"
-          />
-          
-          <div className="container mx-auto px-4 py-12">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  Contact The Ubuntu Agent
-                </h1>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Schedule a consultation with Gary Berkowitz to discuss your real estate needs and learn more about how your purchase can make a difference.
-                </p>
-              </div>
-              
+        <div className="container-custom">          
+          <div className="container mx-auto px-4 py-8">
+            <div className="max-w-4xl mx-auto">              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-2">
+                <div id="consultation-form" className="md:col-span-2">
                   <ConsultationForm />
                 </div>
                 
