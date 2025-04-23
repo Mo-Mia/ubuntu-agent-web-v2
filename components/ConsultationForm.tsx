@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatePicker } from './ui/DatePicker';
 import { addDays, startOfToday } from 'date-fns';
 
@@ -12,11 +12,37 @@ export function ConsultationForm() {
     appointmentDate: null as Date | null,
     message: '',
     preferredContact: 'email',
+    interest: 'consultation' as 'buying' | 'selling' | 'valuation' | 'ubuntu' | 'consultation' | 'other',
+    subject: 'Consultation Request',
+    recaptchaToken: ''
   });
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  
+  // Load reCAPTCHA script
+  useEffect(() => {
+    const loadRecaptcha = () => {
+      const script = document.createElement('script');
+      script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`;
+      script.id = 'recaptcha-script';
+      document.body.appendChild(script);
+    };
+    
+    // Check if script already exists
+    if (!document.getElementById('recaptcha-script')) {
+      loadRecaptcha();
+    }
+    
+    return () => {
+      // Cleanup if needed
+      const script = document.getElementById('recaptcha-script');
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -52,6 +78,24 @@ export function ConsultationForm() {
     return Object.keys(newErrors).length === 0;
   };
   
+  const executeRecaptcha = async () => {
+    // @ts-ignore - window.grecaptcha will be available after script loads
+    if (window.grecaptcha && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+      try {
+        // @ts-ignore
+        const token = await window.grecaptcha.execute(
+          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, 
+          { action: 'submit' }
+        );
+        return token;
+      } catch (error) {
+        console.error('reCAPTCHA execution failed:', error);
+        return '';
+      }
+    }
+    return '';
+  };
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -60,9 +104,13 @@ export function ConsultationForm() {
     setSubmitting(true);
     
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha();
+      
       // Prepare the data for API submission
       const submissionData = {
         ...formData,
+        recaptchaToken,
         appointmentDate: formData.appointmentDate ? formData.appointmentDate.toISOString() : null,
       };
       
@@ -92,6 +140,9 @@ export function ConsultationForm() {
         appointmentDate: null,
         message: '',
         preferredContact: 'email',
+        interest: 'consultation',
+        subject: 'Consultation Request',
+        recaptchaToken: ''
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -212,6 +263,26 @@ export function ConsultationForm() {
                 <option value="whatsapp">WhatsApp</option>
               </select>
             </div>
+          </div>
+          
+          <div className="flex flex-col space-y-1.5">
+            <label htmlFor="interest" className="text-sm font-medium text-gray-700">
+              I'm interested in
+            </label>
+            <select
+              id="interest"
+              name="interest"
+              value={formData.interest}
+              onChange={handleChange}
+              className="px-3 py-2 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            >
+              <option value="consultation">A consultation</option>
+              <option value="buying">Buying property</option>
+              <option value="selling">Selling property</option>
+              <option value="valuation">Property valuation</option>
+              <option value="ubuntu">The Ubuntu Giving Programme</option>
+              <option value="other">Other inquiry</option>
+            </select>
           </div>
           
           {/* Appointment Date Picker */}
