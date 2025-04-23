@@ -12,10 +12,19 @@ interface CharityCardProps {
 }
 
 const CharityCard = ({ name, description, imageSrc, category, link, websiteUrl }: CharityCardProps) => {
+  // Check if the image is a logo (SVG or contains "logo" in the path)
+  const isLogo = imageSrc.endsWith('.svg') || imageSrc.includes('logo');
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="relative h-48">
-        <Image src={imageSrc || "/placeholder.svg"} alt={name} fill className="object-cover" />
+      <div className={`relative ${isLogo ? 'h-32 p-4' : 'h-48'}`}>
+        <Image 
+          src={imageSrc || "/placeholder.svg"} 
+          alt={name} 
+          fill 
+          className={isLogo ? "object-contain" : "object-cover"}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
       <div className="p-6">
         {category && (
