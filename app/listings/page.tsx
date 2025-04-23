@@ -15,14 +15,17 @@ export const metadata = {
 export default function ListingsPage() {
   return (
     <>
-      <section className="relative">
-        <HeroImage 
-          src="/images/backgrounds/johannesburg-skyline.jpg" 
-          alt="Johannesburg skyline"
-          height="h-[600px]"
-          overlay
-          priority={true}
-        />
+      <section className="relative h-[600px]">
+        <div className="absolute inset-0">
+          <Image 
+            src="/images/backgrounds/johannesburg-skyline.jpg" 
+            alt="Johannesburg skyline"
+            fill
+            className="object-cover"
+            priority={true}
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4">
             <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
