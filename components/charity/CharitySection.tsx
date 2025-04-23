@@ -13,24 +13,21 @@ const animalCharities: CharityInfo[] = [
     name: 'SPCA Randburg',
     description: 'Prevents cruelty to animals and provides shelter for stray, abandoned, and abused animals in the Randburg area. Services include investigations, adoptions, and education on responsible pet ownership.',
     website: 'https://www.spca-rbg.org.za',
-    category: 'Animal Welfare',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Animal Welfare'
   },
   {
     id: 'kitty-puppy-haven',
     name: 'Kitty and Puppy Haven',
     description: 'A pro-life animal sanctuary rescuing neglected, abused and abandoned cats and dogs. Rehabilitates animals and finds them loving permanent homes.',
     website: 'https://kittypuppyhaven.org.za',
-    category: 'Animal Welfare',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Animal Welfare'
   },
   {
     id: 'ark-animal',
     name: 'Ark Animal Centre',
     description: 'A rehabilitation and re-homing shelter specialising in puppies and pregnant dogs. Provides safe refuge and medical care to young dogs until adoption.',
     website: null,
-    category: 'Animal Welfare',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Animal Welfare'
   }
 ];
 
@@ -40,24 +37,21 @@ const childrenCharities: CharityInfo[] = [
     name: 'Mother of Peace Johannesburg',
     description: 'Operates a foster-care community for orphans and vulnerable children in Northriding. Provides a family-like environment where children can heal, grow and thrive.',
     website: 'https://motherofpeacejhb.co.za',
-    category: 'Children & Youth',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Children & Youth'
   },
   {
     id: 'oasis-haven',
     name: 'Oasis Haven',
     description: 'A Child & Youth Care Centre providing family-based care for orphaned and abandoned children. Operates family homes caring for up to 10 children in a loving environment.',
     website: 'https://oasishaven.org',
-    category: 'Children & Youth',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Children & Youth'
   },
   {
     id: 'choc',
     name: 'CHOC Childhood Cancer Foundation',
     description: 'Provides comprehensive support to children with cancer or life-threatening blood disorders, and their families, through accommodation, transport, and psychosocial support.',
     website: 'https://choc.org.za',
-    category: 'Children & Youth',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Children & Youth'
   }
 ];
 
@@ -67,24 +61,21 @@ const communityCharities: CharityInfo[] = [
     name: 'Let\'s Work (Ward 88)',
     description: 'Creates jobs for homeless individuals by engaging them in cleaning and maintaining public spaces, improving both their lives and community environments.',
     website: null,
-    category: 'Community Development',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Community Development'
   },
   {
     id: 'gift-of-the-givers',
     name: 'Gift of the Givers',
     description: 'South Africa\'s largest disaster response NGO, providing humanitarian aid in crises and community upliftment through various projects.',
     website: 'https://giftofthegivers.org',
-    category: 'Community Development',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Community Development'
   },
   {
     id: 'one-small-act',
     name: 'One Small Act of Kindness',
     description: 'Provides shelter, food and support to the homeless and destitute in the Randburg area. Runs feeding schemes and a men\'s shelter to ensure no one goes hungry.',
     website: null,
-    category: 'Community Development',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Community Development'
   }
 ];
 
@@ -94,16 +85,14 @@ const elderlyCharities: CharityInfo[] = [
     name: 'Rand Aid Association',
     description: 'Provides accommodation in retirement villages and frail-care centres for the elderly, with profits supporting care for indigent elders and rehabilitation programmes.',
     website: 'https://randaid.co.za',
-    category: 'Elderly Care',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Elderly Care'
   },
   {
     id: 'garden-village',
     name: 'Garden Village (Methodist Homes)',
     description: 'A long-established retirement home and frail care facility in Bordeaux, providing compassionate care and comfortable accommodation to the elderly for over 50 years.',
     website: 'https://mha.co.za',
-    category: 'Elderly Care',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Elderly Care'
   }
 ];
 
@@ -113,16 +102,14 @@ const healthcareCharities: CharityInfo[] = [
     name: 'Rare Diseases SA',
     description: 'Advocates for South Africans living with rare diseases and congenital disorders, ensuring patients have greater recognition, proper medical care, and access to treatments.',
     website: 'https://rarediseases.co.za',
-    category: 'Healthcare & Disease Support',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Healthcare & Disease Support'
   },
   {
     id: 'breadline',
     name: 'Breadline',
     description: 'Supports vulnerable families and individuals facing food insecurity in local communities.',
     website: null,
-    category: 'Healthcare & Disease Support',
-    logoUrl: '/images/charity/placeholder.svg'
+    category: 'Healthcare & Disease Support'
   }
 ];
 
