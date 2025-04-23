@@ -23,11 +23,12 @@ const animalCharities: CharityInfo[] = [
     category: 'Animal Welfare'
   },
   {
-    id: 'ark-animal',
-    name: 'Ark Animal Centre',
-    description: 'A rehabilitation and re-homing shelter specialising in puppies and pregnant dogs. Provides safe refuge and medical care to young dogs until adoption.',
-    website: null,
-    category: 'Animal Welfare'
+    id: 'four-paws',
+    name: 'Four Paws',
+    description: 'Animal welfare organisation dedicated to saving animals in need. Four Paws focuses on animals who are directly under human influence.',
+    website: 'https://www.four-paws.org.za',
+    category: 'Animal Welfare',
+    logoUrl: '/images/charity/logos/four-paws-logo.svg'
   }
 ];
 
@@ -51,7 +52,8 @@ const childrenCharities: CharityInfo[] = [
     name: 'CHOC Childhood Cancer Foundation',
     description: 'Provides comprehensive support to children with cancer or life-threatening blood disorders, and their families, through accommodation, transport, and psychosocial support.',
     website: 'https://choc.org.za',
-    category: 'Children & Youth'
+    category: 'Children & Youth',
+    logoUrl: '/images/charity/logos/choc-logo.png'
   }
 ];
 
@@ -105,11 +107,12 @@ const healthcareCharities: CharityInfo[] = [
     category: 'Healthcare & Disease Support'
   },
   {
-    id: 'breadline',
-    name: 'Breadline',
-    description: 'Supports vulnerable families and individuals facing food insecurity in local communities.',
-    website: null,
-    category: 'Healthcare & Disease Support'
+    id: 'breadline-africa',
+    name: 'Breadline Africa',
+    description: 'Transforming the lives of children through infrastructure projects. Breadline Africa provides initiatives focused on education, health, and well-being.',
+    website: 'https://breadlineafrica.org',
+    category: 'Healthcare & Disease Support',
+    logoUrl: '/images/charity/logos/breadline-africa-logo.png'
   }
 ];
 
@@ -149,7 +152,7 @@ const CharitySection = () => {
         <SectionHeading
           subtitle="Approved Partners"
           title="Charity Partners"
-          description="The Ubuntu Giving Programme allows you to direct 5% of Gary's commission (10% if capped) to a charity of your choice. Gary has already supported organisations like Four Paws, CHOC, and Breadline through real estate transactions, but you can choose from any of our approved charity partners below or suggest another cause that resonates with you."
+          description="The Ubuntu Giving Programme allows you to direct 5% of Gary's commission (10% if capped) to a charity of your choice. Gary has already supported organisations like Four Paws, CHOC, and Breadline Africa through real estate transactions, but you can choose from any of our approved charity partners below or suggest another cause that resonates with you."
           alignment="center"
         />
 
@@ -160,7 +163,7 @@ const CharitySection = () => {
             onSelectCategory={setActiveCategory}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {getCharitiesByCategory().map((charity) => (
               <EnhancedCharityCard key={charity.id} charity={charity} />
             ))}

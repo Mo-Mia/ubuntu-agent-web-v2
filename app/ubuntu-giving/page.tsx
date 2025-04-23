@@ -126,12 +126,12 @@ export default function UbuntuGivingPage() {
             </div>
             <div>
               <div className="aspect-video relative rounded-lg overflow-hidden">
-                <Image
+              <Image
                   src="/images/ubuntu/ubuntu-philosophy.svg"
                   alt="Ubuntu philosophy visualization"
-                  fill
-                  className="object-cover"
-                />
+                fill
+                className="object-cover"
+              />
               </div>
             </div>
           </div>
@@ -172,19 +172,19 @@ export default function UbuntuGivingPage() {
             <CharityCard
               name="Four Paws"
               description="Animal welfare organisation dedicated to saving animals in need."
-              imageSrc="/images/charity/four-paws.jpg"
+              imageSrc="/images/charity/logos/four-paws-logo.svg"
               websiteUrl="https://www.four-paws.org.za/"
             />
             <CharityCard
               name="CHOC"
               description="Childhood Cancer Foundation supporting children and families affected by cancer."
-              imageSrc="/images/charity/choc.jpg"
+              imageSrc="/images/charity/logos/choc-logo.png"
               websiteUrl="https://choc.org.za/"
             />
             <CharityCard
               name="Breadline Africa"
               description="Transforming the lives of children through infrastructure projects."
-              imageSrc="/images/charity/breadline-africa.jpg"
+              imageSrc="/images/charity/logos/breadline-africa-logo.png"
               websiteUrl="https://breadlineafrica.org/"
             />
           </div>
@@ -206,7 +206,7 @@ export default function UbuntuGivingPage() {
             alignment="center"
           />
 
-          <div className="text-center max-w-2xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto">
             <p className="text-body mb-6">
               This section will include:
             </p>
@@ -228,9 +228,9 @@ export default function UbuntuGivingPage() {
             </ul>
             <p className="text-body mb-6 italic">
               As the programme expands, this section will be updated with actual donation data and impact stories.
-            </p>
-          </div>
-        </div>
+                  </p>
+                </div>
+              </div>
       </section>
 
       {/* CTA Section */}
