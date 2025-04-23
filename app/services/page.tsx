@@ -76,7 +76,7 @@ export default function ServicesPage() {
     },
     {
       title: "Market Knowledge",
-      description: "Specialized knowledge of the North Johannesburg property market.",
+      description: "Specialised knowledge of the North Johannesburg property market.",
       icon: Map,
       link: "/services#sellers",
     },

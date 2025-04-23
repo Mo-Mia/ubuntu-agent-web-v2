@@ -76,7 +76,7 @@ export default function AboutPage() {
                 My approach to real estate is guided by the Ubuntu philosophy: "I am because we are." This belief in our interconnectedness drives my commitment to both exceptional service and meaningful community impact through charitable giving.
               </p>
               <p className="text-gray-600 mb-4">
-                I specialize in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, helping clients navigate the market with expertise and integrity.
+                I specialise in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, helping clients navigate the market with expertise and integrity.
               </p>
               
               <div className="mt-6">
