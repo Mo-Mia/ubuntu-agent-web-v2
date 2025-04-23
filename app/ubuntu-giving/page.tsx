@@ -60,12 +60,36 @@ export default function UbuntuGivingPage() {
 
   return (
     <>
-      <HeroImage
-        src="/images/giving-bg.jpg"
-        alt="Ubuntu Giving Programme"
-        height="h-[400px]"
-        overlay
-      />
+      <section className="relative">
+        <HeroImage 
+          src="/images/giving-bg.jpg" 
+          alt="Ubuntu Giving Programme"
+          height="h-[600px]"
+          overlay
+          priority={true}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
+              <span className="inline-block text-gold font-medium mb-2">About</span>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+                Ubuntu Giving Programme
+              </h1>
+              <p className="text-gray-700 mb-6">
+                Making a difference through real estate. With every transaction, 5% of commission goes to a charity of your choice.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="#process" className="btn-primary">
+                  How It Works
+                </Link>
+                <Link href="#charity-partners" className="btn-secondary">
+                  Charity Partners
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Main Content */}
       <section className="section-padding bg-white">
