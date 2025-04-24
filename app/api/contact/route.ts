@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server';
-import sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 
-// Set up SendGrid if API key is available
-if (process.env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-}
+// Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 type FormData = {
   name: string;
@@ -97,52 +95,58 @@ export async function POST(request: Request) {
     const toEmail = process.env.CONTACT_EMAIL_TO || 'gary@theubuntuagent.co.za';
     const fromEmail = process.env.CONTACT_EMAIL_FROM || 'website@theubuntuagent.co.za';
     
-    const emailToGary = {
-      to: toEmail,
-      from: fromEmail,
-      subject: `New Consultation Request: ${interest}`,
-      html: `
-        <h3>New Consultation Request</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Preferred Contact Method:</strong> ${preferredContact}</p>
-        <p><strong>Interest:</strong> ${interest}</p>
-        <p><strong>Preferred Date:</strong> ${formattedDate}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br/>') || 'No message provided'}</p>
-      `
-    };
+    // Create email content for Gary
+    const emailToGaryHtml = `
+      <h3>New Consultation Request</h3>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+      <p><strong>Preferred Contact Method:</strong> ${preferredContact}</p>
+      <p><strong>Interest:</strong> ${interest}</p>
+      <p><strong>Preferred Date:</strong> ${formattedDate}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br/>') || 'No message provided'}</p>
+    `;
     
-    // Confirmation email to client
-    const confirmationEmail = {
-      to: email,
-      from: fromEmail,
-      subject: 'Thank You for Contacting The Ubuntu Agent',
-      html: `
-        <h3>Thank You for Your Consultation Request</h3>
-        <p>Dear ${name},</p>
-        <p>Thank you for reaching out to The Ubuntu Agent. I've received your consultation request and will get back to you as soon as possible.</p>
-        <p>Here are the details of your request:</p>
-        <ul>
-          <li><strong>Interest:</strong> ${interest}</li>
-          <li><strong>Preferred Date:</strong> ${formattedDate}</li>
-          <li><strong>Preferred Contact Method:</strong> ${preferredContact}</li>
-        </ul>
-        ${message ? `<p><strong>Your Message:</strong></p><p>${message.replace(/\n/g, '<br/>')}</p>` : ''}
-        <p>In the spirit of Ubuntu,</p>
-        <p><strong>Gary Berkowitz</strong><br>The Ubuntu Agent | eXp South Africa<br>+27 061-540-3265</p>
-      `
-    };
+    // Create confirmation email to client
+    const confirmationEmailHtml = `
+      <h3>Thank You for Your Consultation Request</h3>
+      <p>Dear ${name},</p>
+      <p>Thank you for reaching out to The Ubuntu Agent. I've received your consultation request and will get back to you as soon as possible.</p>
+      <p>Here are the details of your request:</p>
+      <ul>
+        <li><strong>Interest:</strong> ${interest}</li>
+        <li><strong>Preferred Date:</strong> ${formattedDate}</li>
+        <li><strong>Preferred Contact Method:</strong> ${preferredContact}</li>
+      </ul>
+      ${message ? `<p><strong>Your Message:</strong></p><p>${message.replace(/\n/g, '<br/>')}</p>` : ''}
+      <p>In the spirit of Ubuntu,</p>
+      <p><strong>Gary Berkowitz</strong><br>The Ubuntu Agent | eXp South Africa<br>+27 061-540-3265</p>
+    `;
     
-    // Send emails if in production or if SendGrid is configured
-    if (process.env.NODE_ENV === 'production' && process.env.SENDGRID_API_KEY) {
+    // Send emails if in production or if Resend is configured
+    if (process.env.NODE_ENV === 'production' && process.env.RESEND_API_KEY) {
       try {
-        await Promise.all([
-          sgMail.send(emailToGary),
-          sgMail.send(confirmationEmail)
-        ]);
-        console.log('Emails sent successfully');
+        // Send email to Gary
+        const emailToGaryResponse = await resend.emails.send({
+          from: fromEmail,
+          to: toEmail,
+          subject: `New Consultation Request: ${interest}`,
+          html: emailToGaryHtml
+        });
+        
+        // Send confirmation email to client
+        const confirmationEmailResponse = await resend.emails.send({
+          from: fromEmail,
+          to: email,
+          subject: 'Thank You for Contacting The Ubuntu Agent',
+          html: confirmationEmailHtml
+        });
+        
+        console.log('Emails sent successfully', {
+          toGary: emailToGaryResponse,
+          toClient: confirmationEmailResponse
+        });
       } catch (emailError) {
         console.error('Email sending error:', emailError);
         return NextResponse.json(
@@ -153,8 +157,18 @@ export async function POST(request: Request) {
     } else {
       // Just log the data in development
       console.log('Form submission received (emails not sent in development):', {
-        emailToGary,
-        confirmationEmail,
+        emailToGary: {
+          to: toEmail,
+          from: fromEmail,
+          subject: `New Consultation Request: ${interest}`,
+          html: emailToGaryHtml
+        },
+        confirmationEmail: {
+          to: email,
+          from: fromEmail,
+          subject: 'Thank You for Contacting The Ubuntu Agent',
+          html: confirmationEmailHtml
+        },
         recaptchaToken: 'token-redacted'
       });
     }

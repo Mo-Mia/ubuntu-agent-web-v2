@@ -4,16 +4,17 @@ The Ubuntu Agent website includes a contact form to allow visitors to schedule c
 
 ## Required Services
 
-1. **SendGrid Account**: For sending emails
+1. **Resend Account**: For sending emails (integrated with Vercel)
 2. **Google reCAPTCHA v3**: For spam protection
 
 ## Setup Steps
 
-### 1. SendGrid Setup
+### 1. Resend Setup
 
-1. Sign up for a SendGrid account at [sendgrid.com](https://sendgrid.com)
+1. Sign up for a Resend account at [resend.com](https://resend.com)
 2. Create an API key with permissions to send emails
-3. Verify a sender email address (usually your domain email)
+3. Verify your domain for better deliverability
+4. Set up the Resend integration in your Vercel project settings
 
 ### 2. Google reCAPTCHA Setup
 
@@ -30,8 +31,8 @@ The Ubuntu Agent website includes a contact form to allow visitors to schedule c
 Create a `.env.local` file in the root directory of your project with the following variables:
 
 ```
-# Email Service (SendGrid)
-SENDGRID_API_KEY=your_sendgrid_api_key_here
+# Email Service (Resend)
+RESEND_API_KEY=your_resend_api_key_here
 
 # reCAPTCHA v3 Keys
 NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_recaptcha_site_key_here
@@ -58,15 +59,16 @@ When deploying to Vercel or another platform:
 
 1. Add the environment variables to your hosting platform's environment variables section
 2. Make sure to include all the variables listed above
-3. After deployment, test the form on the live site
+3. If using Vercel, you can use the Resend integration for simplified setup
+4. After deployment, test the form on the live site
 
 ## Troubleshooting
 
 If you encounter issues:
 
 1. Check that all environment variables are correctly set
-2. Verify your SendGrid account is active and the API key has proper permissions
-3. Make sure your sender email is verified in SendGrid
+2. Verify your Resend account is active and the API key has proper permissions
+3. Make sure your domain is verified in Resend
 4. Look for error messages in your hosting platform's logs
 
 For local development, form submissions will be logged to the console but emails won't be sent. 
