@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
+import Script from "next/script"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +35,8 @@ const ContactForm = () => {
 
   return (
     <>
+      <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      
       {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
           <div className="mx-auto text-center">
@@ -168,6 +171,10 @@ const ContactForm = () => {
               className="form-textarea"
               disabled={isSubmitting}
             ></textarea>
+          </div>
+          
+          <div className="my-6 flex justify-start">
+            <div className="h-captcha" data-captcha="true" data-sitekey="78542f89-6514-41af-a348-39d7a59fdfc1"></div>
           </div>
 
           <div>

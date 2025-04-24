@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { DatePicker } from './ui/DatePicker';
 import { addDays, startOfToday, format } from 'date-fns';
+import Script from 'next/script';
 
 export function ConsultationForm() {
   const [formData, setFormData] = useState({
@@ -89,6 +90,8 @@ export function ConsultationForm() {
   
   return (
     <>
+      <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
           <div className="text-center py-8">
@@ -258,6 +261,10 @@ export function ConsultationForm() {
                 placeholder="Tell us about your real estate needs..."
                 className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
               />
+            </div>
+            
+            <div className="my-6 flex justify-start">
+              <div className="h-captcha" data-captcha="true" data-sitekey="78542f89-6514-41af-a348-39d7a59fdfc1"></div>
             </div>
             
             <div className="pt-2">
