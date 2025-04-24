@@ -91,6 +91,7 @@ export function ConsultationForm() {
   return (
     <>
       <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      <Script src="https://web3forms.com/client/script.js" async defer />
       
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
@@ -132,6 +133,9 @@ export function ConsultationForm() {
             
             {/* BCC field for email notifications */}
             <input type="hidden" name="bcc" value="momia@projectmohem.co.za" />
+            
+            {/* Required field for Web3Forms to enable spam protection */}
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
             
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Schedule a Consultation</h2>
             
@@ -264,7 +268,8 @@ export function ConsultationForm() {
             </div>
             
             <div className="my-6 flex justify-start">
-              <div className="h-captcha" data-captcha="true" data-sitekey="78542f89-6514-41af-a348-39d7a59fdfc1"></div>
+              {/* Web3Forms hCaptcha implementation */}
+              <div className="h-captcha" data-captcha="true"></div>
             </div>
             
             <div className="pt-2">
@@ -283,4 +288,4 @@ export function ConsultationForm() {
       </div>
     </>
   );
-} 
+}
