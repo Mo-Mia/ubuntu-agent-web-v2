@@ -5,6 +5,13 @@ import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
 import Script from "next/script"
 
+// Declare hCaptcha callback on window object
+declare global {
+  interface Window {
+    onHCaptchaSuccess: () => void;
+  }
+}
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +24,7 @@ const ContactForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSuccess, setFormSuccess] = useState(false)
+  const [captchaVerified, setCaptchaVerified] = useState(false)
   
   // Check for success parameter in URL
   useEffect(() => {
@@ -28,9 +36,26 @@ const ContactForm = () => {
     }
   }, []);
 
+  // hCaptcha callback function
+  useEffect(() => {
+    window.onHCaptchaSuccess = () => {
+      setCaptchaVerified(true)
+    }
+
+    return () => {
+      // Fix: Set to empty function instead of undefined
+      window.onHCaptchaSuccess = () => {};
+    }
+  }, [])
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setIsSubmitting(true);
+    // Form will be submitted normally via action attribute
   }
 
   return (
@@ -50,19 +75,16 @@ const ContactForm = () => {
           method="POST" 
           className="space-y-6" 
           aria-label="Contact form"
-          onSubmit={() => setIsSubmitting(true)}
+          onSubmit={handleSubmit}
         >
-          {/* Web3Forms Access Key */}
-          <input type="hidden" name="access_key" value="87b52da1-b119-44a1-a6cb-2a13eb7c16e3" />
+          {/* Required Web3forms fields */}
+          <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY} />
+          <input type="hidden" name="subject" value="Ubuntu Agent Website Submission" />
+          <input type="hidden" name="from_name" value="Ubuntu Agent Notification" />
+          <input type="hidden" name="redirect" value="https://ubuntuagent.co.za/contact?success=true" />
           
-          {/* Redirect URL on success */}
-          <input type="hidden" name="redirect" value="https://theubuntuagent.com/contact?success=true" />
-          
-          {/* Subject field for email */}
-          <input type="hidden" name="subject" value={`New contact form submission: ${formData.subject}`} />
-          
-          {/* BCC field for email notifications */}
-          <input type="hidden" name="bcc" value="momia@projectmohem.co.za" />
+          {/* Required field for Web3Forms to enable spam protection */}
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -174,7 +196,8 @@ const ContactForm = () => {
           </div>
           
           <div className="my-6 flex justify-start">
-            <div className="h-captcha" data-captcha="true" data-sitekey="78542f89-6514-41af-a348-39d7a59fdfc1"></div>
+            {/* Web3Forms hCaptcha implementation with proper sitekey */}
+            <div className="h-captcha" data-sitekey="2a0d87bb-4aca-4baa-9f49-abea5e4acfc9" data-callback="onHCaptchaSuccess"></div>
           </div>
 
           <div>
