@@ -1,15 +1,11 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
 import Script from "next/script"
-import { useSearchParams } from "next/navigation"
 
 const ContactForm = () => {
-  const searchParams = useSearchParams();
-  const formSuccess = searchParams.get('success');
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +16,17 @@ const ContactForm = () => {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formSuccess, setFormSuccess] = useState(false)
+  
+  // Check for success parameter in URL
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        setFormSuccess(true);
+      }
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -30,7 +37,7 @@ const ContactForm = () => {
     <>
       <Script src="https://www.google.com/recaptcha/api.js" async defer />
       
-      {formSuccess === 'true' ? (
+      {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
           <div className="mx-auto text-center">
             <h3 className="text-xl font-semibold text-green-800 mb-2">Thank you for your message!</h3>

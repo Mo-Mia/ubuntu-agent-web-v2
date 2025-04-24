@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ConsultationForm } from '@/components/ConsultationForm';
 import { ProfileImage } from '@/components/ui/ProfileImage';
 import { ContactDetails } from '@/components/ContactDetails';
@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   title: 'Contact | The Ubuntu Agent',
   description: 'Get in touch with Gary at The Ubuntu Agent for personalised real estate service in North Johannesburg.',
 };
+
+// Loading fallbacks for the forms
+const FormLoading = () => (
+  <div className="bg-white p-6 rounded-lg shadow-md animate-pulse">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-2/3"></div>
+    <div className="space-y-4">
+      <div className="h-10 bg-gray-200 rounded"></div>
+      <div className="h-10 bg-gray-200 rounded"></div>
+      <div className="h-10 bg-gray-200 rounded"></div>
+      <div className="h-32 bg-gray-200 rounded"></div>
+      <div className="h-12 bg-gray-200 rounded"></div>
+    </div>
+  </div>
+);
 
 export default function ContactPage() {
   return (
@@ -54,7 +68,9 @@ export default function ContactPage() {
             <div className="max-w-4xl mx-auto">              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div id="consultation-form" className="md:col-span-2">
-                  <ConsultationForm />
+                  <Suspense fallback={<FormLoading />}>
+                    <ConsultationForm />
+                  </Suspense>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md h-fit">

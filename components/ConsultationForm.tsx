@@ -1,15 +1,11 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DatePicker } from './ui/DatePicker';
 import { addDays, startOfToday, format } from 'date-fns';
 import Script from 'next/script';
-import { useSearchParams } from 'next/navigation';
 
 export function ConsultationForm() {
-  const searchParams = useSearchParams();
-  const formSuccess = searchParams.get('success');
-  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,6 +18,17 @@ export function ConsultationForm() {
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
+  
+  // Check for success parameter in URL
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        setFormSuccess(true);
+      }
+    }
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -86,7 +93,7 @@ export function ConsultationForm() {
       <Script src="https://www.google.com/recaptcha/api.js" async defer />
       
       <div className="bg-white p-6 rounded-lg shadow-md">
-        {formSuccess === 'true' ? (
+        {formSuccess ? (
           <div className="text-center py-8">
             <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
               <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
