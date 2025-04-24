@@ -5,13 +5,6 @@ import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
 import Script from "next/script"
 
-// Declare hCaptcha callback on window object
-declare global {
-  interface Window {
-    onHCaptchaSuccess: () => void;
-  }
-}
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,7 +17,6 @@ const ContactForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSuccess, setFormSuccess] = useState(false)
-  const [captchaVerified, setCaptchaVerified] = useState(false)
   
   // Check for success parameter in URL
   useEffect(() => {
@@ -35,18 +27,6 @@ const ContactForm = () => {
       }
     }
   }, []);
-
-  // hCaptcha callback function
-  useEffect(() => {
-    window.onHCaptchaSuccess = () => {
-      setCaptchaVerified(true)
-    }
-
-    return () => {
-      // Fix: Set to empty function instead of undefined
-      window.onHCaptchaSuccess = () => {};
-    }
-  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -61,6 +41,7 @@ const ContactForm = () => {
   return (
     <>
       <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      <Script src="https://web3forms.com/client/script.js" async defer />
       
       {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
@@ -196,8 +177,8 @@ const ContactForm = () => {
           </div>
           
           <div className="my-6 flex justify-start">
-            {/* Web3Forms hCaptcha implementation with proper sitekey */}
-            <div className="h-captcha" data-sitekey="2a0d87bb-4aca-4baa-9f49-abea5e4acfc9" data-callback="onHCaptchaSuccess"></div>
+            {/* Web3Forms hCaptcha implementation */}
+            <div className="h-captcha" data-captcha="true"></div>
           </div>
 
           <div>
