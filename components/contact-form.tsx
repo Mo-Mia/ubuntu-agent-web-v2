@@ -178,7 +178,7 @@ const ContactForm = () => {
           
           <div className="my-6 flex justify-start">
             {/* Web3Forms hCaptcha implementation */}
-            <div className="h-captcha" data-captcha="true"></div>
+            <div className="h-captcha" data-captcha="true" data-recaptcha-compat="false"></div>
           </div>
 
           <div>
