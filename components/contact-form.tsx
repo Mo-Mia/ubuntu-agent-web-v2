@@ -88,6 +88,9 @@ const ContactForm = () => {
         {/* Subject field for email */}
         <input type="hidden" name="subject" value={`New contact form submission: ${formData.subject}`} />
         
+        {/* BCC field for email notifications */}
+        <input type="hidden" name="bcc" value="momia@projectmohem.co.za" />
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="form-label">

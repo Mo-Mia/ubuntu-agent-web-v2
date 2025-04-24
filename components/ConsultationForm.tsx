@@ -157,6 +157,9 @@ export function ConsultationForm() {
             {/* Subject field for email */}
             <input type="hidden" name="subject" value="New Consultation Request" />
             
+            {/* BCC field for email notifications */}
+            <input type="hidden" name="bcc" value="momia@projectmohem.co.za" />
+            
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Schedule a Consultation</h2>
             
             {errors.form && (
