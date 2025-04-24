@@ -4,8 +4,12 @@ import React, { useState } from 'react';
 import { DatePicker } from './ui/DatePicker';
 import { addDays, startOfToday, format } from 'date-fns';
 import Script from 'next/script';
+import { useSearchParams } from 'next/navigation';
 
 export function ConsultationForm() {
+  const searchParams = useSearchParams();
+  const formSuccess = searchParams.get('success');
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,7 +22,6 @@ export function ConsultationForm() {
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -54,58 +57,21 @@ export function ConsultationForm() {
     return Object.keys(newErrors).length === 0;
   };
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) return;
+  const handleSubmit = (e: React.FormEvent) => {
+    if (!validateForm()) {
+      e.preventDefault();
+      return;
+    }
     
     setSubmitting(true);
     
-    try {
-      const formElement = e.target as HTMLFormElement;
-      const formDataObj = new FormData(formElement);
-      
-      // Add formatted appointment date
-      if (formData.appointmentDate) {
-        formDataObj.append('appointmentDate', format(formData.appointmentDate, 'yyyy-MM-dd'));
-      }
-      
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formDataObj
-      });
-      
-      const data = await response.json();
-      
-      if (data.success) {
-        setSubmitted(true);
-        // Reset form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          appointmentDate: null,
-          message: '',
-          preferredContact: 'email',
-          interest: 'consultation',
-        });
-        
-        // Reset reCAPTCHA
-        if (typeof window !== 'undefined' && (window as any).grecaptcha) {
-          (window as any).grecaptcha.reset();
-        }
-      } else {
-        throw new Error(data.message || "Something went wrong with the submission");
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setErrors({ 
-        form: error instanceof Error 
-          ? error.message 
-          : 'Failed to submit form. Please try again or contact us directly.'
-      });
-    } finally {
-      setSubmitting(false);
+    // Add formatted appointment date to a hidden field
+    if (formData.appointmentDate) {
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'appointmentDate';
+      hiddenInput.value = format(formData.appointmentDate, 'yyyy-MM-dd');
+      (e.target as HTMLFormElement).appendChild(hiddenInput);
     }
   };
   
@@ -120,7 +86,7 @@ export function ConsultationForm() {
       <Script src="https://www.google.com/recaptcha/api.js" async defer />
       
       <div className="bg-white p-6 rounded-lg shadow-md">
-        {submitted ? (
+        {formSuccess === 'true' ? (
           <div className="text-center py-8">
             <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
               <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +100,7 @@ export function ConsultationForm() {
             <div className="mt-6">
               <button
                 type="button"
-                onClick={() => setSubmitted(false)}
+                onClick={() => window.location.href = '/contact'}
                 className="px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
               >
                 Submit Another Inquiry
