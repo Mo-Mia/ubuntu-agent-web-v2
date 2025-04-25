@@ -91,6 +91,7 @@ export function ConsultationForm() {
   return (
     <>
       <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      <Script src="https://web3forms.com/client/script.js" async defer />
       
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
@@ -268,7 +269,7 @@ export function ConsultationForm() {
             
             <div className="my-6 flex justify-start">
               {/* Web3Forms hCaptcha implementation */}
-              <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+              <div className="h-captcha" data-captcha="true"></div>
             </div>
             
             <div className="pt-2">

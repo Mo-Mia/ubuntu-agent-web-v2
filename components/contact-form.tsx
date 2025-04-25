@@ -41,6 +41,7 @@ const ContactForm = () => {
   return (
     <>
       <Script src="https://js.hcaptcha.com/1/api.js" async defer />
+      <Script src="https://web3forms.com/client/script.js" async defer />
       
       {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
@@ -177,7 +178,7 @@ const ContactForm = () => {
           
           <div className="my-6 flex justify-start">
             {/* Web3Forms hCaptcha implementation */}
-            <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+            <div className="h-captcha" data-captcha="true"></div>
           </div>
 
           <div>
