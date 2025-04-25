@@ -32,7 +32,18 @@ export function ConsultationForm() {
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // If changing interest away from consultation, clear the appointment date
+    if (name === 'interest' && value !== 'consultation' && formData.interest === 'consultation') {
+      setFormData(prev => ({ 
+        ...prev, 
+        [name]: value as 'buying' | 'selling' | 'valuation' | 'ubuntu' | 'consultation' | 'other', 
+        appointmentDate: null 
+      }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
+    
     // Clear the error when field is changed
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -58,7 +69,11 @@ export function ConsultationForm() {
     }
     
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    if (!formData.appointmentDate) newErrors.appointmentDate = 'Please select a preferred date';
+    
+    // Only require appointment date if interest is "consultation"
+    if (formData.interest === 'consultation' && !formData.appointmentDate) {
+      newErrors.appointmentDate = 'Please select a preferred date';
+    }
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -237,13 +252,13 @@ export function ConsultationForm() {
             
             {/* Appointment Date Picker */}
             <DatePicker
-              label="Preferred Consultation Date"
+              label={`Preferred Consultation Date${formData.interest === 'consultation' ? ' *' : ''}`}
               name="appointmentDate"
               value={formData.appointmentDate}
               onChange={handleDateChange}
               excludeDates={excludeWeekends}
               errorMessage={errors.appointmentDate}
-              required
+              required={formData.interest === 'consultation'}
               placeholder="Select your preferred date"
               minDate={startOfToday()}
               maxDate={addDays(startOfToday(), 60)}
