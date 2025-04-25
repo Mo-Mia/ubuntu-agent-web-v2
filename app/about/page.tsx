@@ -15,6 +15,9 @@ export const metadata = {
   title: "About Gary Berkowitz | The Ubuntu Agent",
   description:
     "Learn about Gary Berkowitz, The Ubuntu Agent, his journey, the Ubuntu philosophy, and his partnership with eXp Realty in Johannesburg, South Africa.",
+  alternates: {
+    canonical: "/about",
+  },
 }
 
 export default function AboutPage() {

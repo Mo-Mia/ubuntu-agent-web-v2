@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Ubuntu Giving Programme: Making a Difference Together | The Ubuntu Agent",
   description:
     "Learn about the Ubuntu Giving Programme where 5% of commission is donated to local charities chosen by home buyers in Johannesburg, South Africa.",
+  alternates: {
+    canonical: "/ubuntu-giving",
+  },
 }
 
 const faqItems = [

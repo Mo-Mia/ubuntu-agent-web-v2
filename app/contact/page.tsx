@@ -9,9 +9,13 @@ import SectionHeading from '@/components/section-heading';
 import { HeroImage } from '@/components/ui/HeroImage';
 import { ContactCard } from '@/components/ContactCard';
 
-export const metadata: Metadata = {
-  title: 'Contact | The Ubuntu Agent',
-  description: 'Get in touch with Gary at The Ubuntu Agent for personalised real estate service in North Johannesburg.',
+export const metadata = {
+  title: "Contact Gary Berkowitz | The Ubuntu Agent",
+  description:
+    "Get in touch with Gary Berkowitz, The Ubuntu Agent, for all your real estate needs in Johannesburg. Expert service with a community impact focus.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 // Loading fallbacks for the forms

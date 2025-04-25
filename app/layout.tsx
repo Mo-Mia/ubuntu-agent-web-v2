@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code", // Replace with actual verification code
+    google: "21ffba78a00eb025",
   },
   generator: 'Next.js',
   applicationName: 'The Ubuntu Agent',
@@ -107,26 +107,55 @@ const structuredData = {
   "@type": "RealEstateAgent",
   "name": "The Ubuntu Agent - Gary Berkowitz",
   "url": "https://www.theubuntuagent.co.za",
-  "logo": "https://www.theubuntuagent.co.za/images/ubuntu-agent-logo.png",
-  "image": "https://www.theubuntuagent.co.za/images/gary-profile.jpg",
+  "logo": "https://www.theubuntuagent.co.za/ubuntu-agent-logo.svg",
+  "image": "https://www.theubuntuagent.co.za/gary-profile.jpg",
   "description": "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities.",
   "telephone": "+27-000-000-000", // Replace with actual phone number
-  "email": "gary@theubuntuagent.co.za",
+  "email": "gary.berkowitz@expsouthafrica.co.za",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Wanderers Office Park, BDO Building",
     "addressLocality": "Johannesburg",
     "addressRegion": "Gauteng",
+    "postalCode": "2000",
     "addressCountry": "South Africa"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-26.1053",
+    "longitude": "28.0569"
   },
   "sameAs": [
     "https://www.facebook.com/theubuntuagent",
     "https://www.instagram.com/theubuntuagent",
     "https://www.linkedin.com/in/garyberkowitz"
   ],
-  "areaServed": {
-    "@type": "City",
-    "name": "Johannesburg"
-  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Johannesburg"
+    },
+    {
+      "@type": "Place",
+      "name": "Fourways"
+    },
+    {
+      "@type": "Place",
+      "name": "Dainfern"
+    },
+    {
+      "@type": "Place",
+      "name": "North Riding"
+    },
+    {
+      "@type": "Place",
+      "name": "Midrand"
+    },
+    {
+      "@type": "Place",
+      "name": "Sandton"
+    }
+  ],
   "priceRange": "$$",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -135,10 +164,12 @@ const structuredData = {
       "Tuesday",
       "Wednesday",
       "Thursday",
-      "Friday"
+      "Friday",
+      "Saturday",
+      "Sunday"
     ],
-    "opens": "09:00",
-    "closes": "17:00"
+    "opens": "08:00",
+    "closes": "20:00"
   }
 }
 

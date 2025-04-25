@@ -9,7 +9,10 @@ import { HeroImage } from "@/components/ui/HeroImage"
 export const metadata = {
   title: "Property Listings | The Ubuntu Agent",
   description:
-    "Browse Gary's current property listings in Johannesburg through his eXp Realty agent profile - specialising in Fourways, Dainfern, North Riding, and Midrand.",
+    "Browse property listings in North Johannesburg including Fourways, Dainfern, North Riding, and Midrand areas, professionally represented by The Ubuntu Agent.",
+  alternates: {
+    canonical: "/listings",
+  },
 }
 
 export default function ListingsPage() {

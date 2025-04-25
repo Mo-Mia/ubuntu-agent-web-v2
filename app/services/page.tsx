@@ -12,7 +12,11 @@ import TestimonialCard from "@/components/testimonial-card"
 
 export const metadata: Metadata = {
   title: "Real Estate Services | The Ubuntu Agent",
-  description: "Professional real estate services in North Johannesburg including buyer representation, seller services, and the Ubuntu Giving Programme.",
+  description:
+    "Professional real estate services in Johannesburg, South Africa. Specializing in residential property sales and rentals with a focus on community impact.",
+  alternates: {
+    canonical: "/services",
+  },
 }
 
 export default function ServicesPage() {
