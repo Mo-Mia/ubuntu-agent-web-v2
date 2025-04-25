@@ -40,8 +40,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <Script src="https://js.hcaptcha.com/1/api.js" async defer />
-      <Script src="https://web3forms.com/client/script.js" async defer />
+      <Script src="https://js.hcaptcha.com/1/api.js?recaptchacompat=off" async defer />
       
       {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">

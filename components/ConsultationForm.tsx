@@ -90,8 +90,7 @@ export function ConsultationForm() {
   
   return (
     <>
-      <Script src="https://js.hcaptcha.com/1/api.js" async defer />
-      <Script src="https://web3forms.com/client/script.js" async defer />
+      <Script src="https://js.hcaptcha.com/1/api.js?recaptchacompat=off" async defer />
       
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
