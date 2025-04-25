@@ -40,8 +40,6 @@ const ContactForm = () => {
 
   return (
     <>
-      <Script src="https://js.hcaptcha.com/1/api.js?recaptchacompat=off" async defer />
-      
       {formSuccess ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
           <div className="mx-auto text-center">
@@ -58,7 +56,7 @@ const ContactForm = () => {
           onSubmit={handleSubmit}
         >
           {/* Required Web3forms fields */}
-          <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY} />
+          <input type="hidden" name="access_key" value="d5e0bf93-be6e-4718-9d55-0cce044ac051" />
           <input type="hidden" name="subject" value="Ubuntu Agent Website Submission" />
           <input type="hidden" name="from_name" value="Ubuntu Agent Notification" />
           <input type="hidden" name="redirect" value="https://ubuntuagent.co.za/contact?success=true" />
@@ -176,8 +174,7 @@ const ContactForm = () => {
           </div>
           
           <div className="my-6 flex justify-start">
-            {/* Web3Forms hCaptcha implementation */}
-            <div className="h-captcha" data-captcha="true"></div>
+            {/* Empty div for spacing where captcha was */}
           </div>
 
           <div>

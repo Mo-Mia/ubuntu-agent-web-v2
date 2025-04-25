@@ -90,8 +90,6 @@ export function ConsultationForm() {
   
   return (
     <>
-      <Script src="https://js.hcaptcha.com/1/api.js?recaptchacompat=off" async defer />
-      
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
           <div className="text-center py-8">
@@ -122,7 +120,7 @@ export function ConsultationForm() {
             className="space-y-4"
           >
             {/* Web3Forms Access Key */}
-            <input type="hidden" name="access_key" value="87b52da1-b119-44a1-a6cb-2a13eb7c16e3" />
+            <input type="hidden" name="access_key" value="d5e0bf93-be6e-4718-9d55-0cce044ac051" />
             
             {/* Redirect URL on success */}
             <input type="hidden" name="redirect" value="https://theubuntuagent.com/contact?success=true" />
@@ -264,11 +262,6 @@ export function ConsultationForm() {
                 placeholder="Tell us about your real estate needs..."
                 className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
               />
-            </div>
-            
-            <div className="my-6 flex justify-start">
-              {/* Web3Forms hCaptcha implementation */}
-              <div className="h-captcha" data-captcha="true"></div>
             </div>
             
             <div className="pt-2">
