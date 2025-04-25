@@ -90,8 +90,6 @@ export function ConsultationForm() {
   
   return (
     <>
-      <Script src="https://js.hcaptcha.com/1/api.js" async defer />
-      
       <div className="bg-white p-6 rounded-lg shadow-md">
         {formSuccess ? (
           <div className="text-center py-8">
@@ -264,11 +262,6 @@ export function ConsultationForm() {
                 placeholder="Tell us about your real estate needs..."
                 className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
               />
-            </div>
-            
-            <div className="my-6 flex justify-start">
-              {/* Web3Forms hCaptcha implementation - using direct site key instead of proxy */}
-              <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
             </div>
             
             <div className="pt-2">
