@@ -42,11 +42,11 @@ export const metadata: Metadata = {
     "charitable giving",
     "community impact"
   ],
-  authors: [{ name: "Gary Berkowitz", url: "https://www.theubuntuagent.co.za" }],
+  authors: [{ name: "Gary Berkowitz", url: "https://theubuntuagent.com" }],
   creator: "Gary Berkowitz",
   publisher: "eXp Realty South Africa",
   category: "Real Estate",
-  metadataBase: new URL("https://www.theubuntuagent.co.za"),
+  metadataBase: new URL("https://theubuntuagent.com"),
   alternates: {
     canonical: "/",
     languages: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_ZA",
-    url: "https://www.theubuntuagent.co.za",
+    url: "https://theubuntuagent.com",
     title: "The Ubuntu Agent | Your Home, Our Community",
     description:
       "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities.",
@@ -106,30 +106,25 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "name": "The Ubuntu Agent - Gary Berkowitz",
-  "url": "https://www.theubuntuagent.co.za",
-  "logo": "https://www.theubuntuagent.co.za/ubuntu-agent-logo.svg",
-  "image": "https://www.theubuntuagent.co.za/gary-profile.jpg",
-  "description": "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities.",
-  "telephone": "+27-000-000-000", // Replace with actual phone number
+  "url": "https://theubuntuagent.com",
+  "logo": "https://theubuntuagent.com/ubuntu-agent-logo.svg",
+  "image": "https://theubuntuagent.com/gary-profile.jpg",
+  "description": "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities through the Ubuntu Giving Program.",
+  "telephone": "+27615403265",
   "email": "gary.berkowitz@expsouthafrica.co.za",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Wanderers Office Park, BDO Building",
-    "addressLocality": "Johannesburg",
+    "streetAddress": "Wanderers Office Park, BDO Building, 52 Corlett Drive",
+    "addressLocality": "Illovo",
     "addressRegion": "Gauteng",
-    "postalCode": "2000",
-    "addressCountry": "South Africa"
+    "postalCode": "2196",
+    "addressCountry": "ZA"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "-26.1053",
-    "longitude": "28.0569"
+    "latitude": "-26.1275",
+    "longitude": "28.0513"
   },
-  "sameAs": [
-    "https://www.facebook.com/theubuntuagent",
-    "https://www.instagram.com/theubuntuagent",
-    "https://www.linkedin.com/in/garyberkowitz"
-  ],
   "areaServed": [
     {
       "@type": "City",
@@ -156,7 +151,7 @@ const structuredData = {
       "name": "Sandton"
     }
   ],
-  "priceRange": "$$",
+  "priceRange": "$",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
@@ -164,9 +159,7 @@ const structuredData = {
       "Tuesday",
       "Wednesday",
       "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
+      "Friday"
     ],
     "opens": "08:00",
     "closes": "20:00"

@@ -1,9 +1,9 @@
-# robots.txt for theubuntuagent.co.za
+# robots.txt for theubuntuagent.com
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://theubuntuagent.co.za/sitemap.xml
+Sitemap: https://theubuntuagent.com/sitemap.xml
 
 # Crawl-delay recommendation
-Crawl-delay: 10 
+Crawl-delay: 10
