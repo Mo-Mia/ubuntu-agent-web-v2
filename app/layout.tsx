@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | The Ubuntu Agent",
   },
   description:
-    "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities through the Ubuntu Giving Program.",
+    "Donating 5% of commission to local charities with every property transaction. Expert real estate services in North Johannesburg with Ubuntu philosophy - Your Home, Our Community.",
   keywords: [
     "real estate", 
     "Johannesburg", 
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: "https://theubuntuagent.com",
     title: "The Ubuntu Agent | Your Home, Our Community",
     description:
-      "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities.",
+      "Donating 5% of commission to local charities with every property transaction. Expert real estate services in North Johannesburg with Ubuntu philosophy.",
     siteName: "The Ubuntu Agent",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Ubuntu Agent | Your Home, Our Community",
     description:
-      "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities.",
+      "Donating 5% of commission to local charities with every property transaction. Expert real estate services in North Johannesburg.",
     images: ["/images/social/twitter-image.svg"],
     creator: "@theubuntuagent",
   },
@@ -97,7 +97,8 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   icons: [
     { rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml' },
-    { rel: 'alternate icon', url: '/favicon.ico', type: 'image/x-icon' }
+    { rel: 'icon', url: '/favicon.ico', type: 'image/x-icon' },
+    { rel: 'shortcut icon', url: '/favicon.ico' }
   ]
 }
 
@@ -109,7 +110,7 @@ const structuredData = {
   "url": "https://theubuntuagent.com",
   "logo": "https://theubuntuagent.com/ubuntu-agent-logo.svg",
   "image": "https://theubuntuagent.com/gary-profile.jpg",
-  "description": "Real estate with real impact in Johannesburg, South Africa. 5% of commission donated to local charities through the Ubuntu Giving Program.",
+  "description": "Donating 5% of commission to local charities with every property transaction. Expert real estate services in North Johannesburg with Ubuntu philosophy.",
   "telephone": "+27615403265",
   "email": "gary.berkowitz@expsouthafrica.co.za",
   "address": {
@@ -175,7 +176,8 @@ export default function RootLayout({
     <html lang="en" className={roboto.variable}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="format-detection" content="telephone=yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
