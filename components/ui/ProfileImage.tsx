@@ -40,7 +40,7 @@ export function ProfileImage({
         alt="Gary Berkowitz, The Ubuntu Agent"
         fill
         className="object-cover"
-        style={{ objectPosition: "center 15%" }}
+        style={{ objectPosition: "center center" }}
         sizes={`${Math.max(width, height)}px`}
         priority={priority}
       />
