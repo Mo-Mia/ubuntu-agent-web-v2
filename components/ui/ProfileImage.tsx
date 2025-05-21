@@ -43,6 +43,7 @@ export function ProfileImage({
         style={{ objectPosition: "center center" }}
         sizes={`${Math.max(width, height)}px`}
         priority={priority}
+        quality={100}
       />
     </div>
   );
