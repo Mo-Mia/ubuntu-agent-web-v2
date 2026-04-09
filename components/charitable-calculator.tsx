@@ -14,6 +14,7 @@ const CharitableCalculator = () => {
 
   // Agent's share of commission (71% when uncapped, 96% when capped)
   const agentCommissionPercentage = isCapped ? 0.96 : 0.71
+  const taxRate = 0.3
 
   // Donation percentage (5% standard, 10% if capped)
   const donationPercentage = isCapped ? 0.1 : 0.05
@@ -22,14 +23,15 @@ const CharitableCalculator = () => {
     // Calculate total commission
     const totalCommission = propertyValue * totalCommissionRate
     
-    // Calculate agent's commission
+    // Calculate agent's commission after the standard tax deduction
     const agentCommission = totalCommission * agentCommissionPercentage
-    setCommission(agentCommission)
+    const netCommission = agentCommission * (1 - taxRate)
+    setCommission(netCommission)
 
     // Calculate donation
-    const calculatedDonation = agentCommission * donationPercentage
+    const calculatedDonation = netCommission * donationPercentage
     setDonation(calculatedDonation)
-  }, [propertyValue, totalCommissionRate, agentCommissionPercentage, donationPercentage, isCapped])
+  }, [propertyValue, totalCommissionRate, agentCommissionPercentage, donationPercentage, isCapped, taxRate])
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("en-US", {
@@ -89,10 +91,10 @@ const CharitableCalculator = () => {
 
       <div className="space-y-6">
         <div className="bg-gray-100 p-5 rounded-md border border-gray-200">
-          <p className="text-sm text-gray-700 mb-2 font-medium">Estimated Commission:</p>
+          <p className="text-sm text-gray-700 mb-2 font-medium">Estimated Net Commission:</p>
           <p className="text-xl font-bold text-navy">{formatCurrency(commission)}</p>
           <p className="text-xs text-gray-600 mt-1">
-            {isCapped ? "96%" : "71%"} of total 6% commission
+            {isCapped ? "96%" : "71%"} of total 6% commission, less 30% tax
           </p>
         </div>
 
@@ -100,10 +102,10 @@ const CharitableCalculator = () => {
           <p className="text-sm text-gray-700 mb-2 font-medium">Charitable Donation:</p>
           <p className="text-xl font-bold text-gold-dark">{formatCurrency(donation)}</p>
           <p className="text-sm text-gray-700 mt-2">
-            <span className="font-bold">{isCapped ? "10%" : "5%"}</span> of commission
+            <span className="font-bold">{isCapped ? "10%" : "5%"}</span> of net commission
           </p>
           <p className="text-xs text-gray-600 mt-1 italic">
-            *All amounts shown are before tax
+            *Donation is calculated after a 30% tax deduction from commission
           </p>
         </div>
       </div>
