@@ -9,6 +9,7 @@ import CharityCard from '@/components/charity-card'
 import CharitableCalculator from '@/components/charitable-calculator'
 import FAQ from '@/components/faq'
 import CharitySection from '@/components/charity/CharitySection'
+import DonationTracker from '@/components/donation-tracker'
 import { charities } from "@/lib/data/charities"
 
 export const metadata: Metadata = {
@@ -204,36 +205,12 @@ export default function UbuntuGivingPage() {
         <div className="container-custom">
           <SectionHeading
             subtitle="Impact"
-            title="Tracking Our Giving"
-            description="As the Ubuntu Giving Programme grows, we'll provide transparent reporting on donations and impact."
+            title="Our Giving To Date"
+            description="Transparent tracking of every donation made through the Ubuntu Giving Programme."
             alignment="center"
           />
-
-            <div className="text-center max-w-2xl mx-auto">
-            <p className="text-body mb-6">
-              This section will include:
-            </p>
-            <ul className="list-disc text-left pl-8 mb-6 space-y-2">
-              <li>Total donations made through the programme</li>
-              <li>Breakdown by charity category</li>
-              <li>Impact stories from beneficiary organisations</li>
-              <li>Monthly and yearly donation totals</li>
-              <li>Details of which organisations have been supported</li>
-              <li>Real estate transaction volume connected to charitable giving</li>
-            </ul>
-            <p className="text-body mb-8">
-              The dashboard will also feature:
-            </p>
-            <ul className="list-disc text-left pl-8 mb-6 space-y-2">
-              <li>Interactive giving metrics</li>
-              <li>Recognition for clients who participate in the programme</li>
-              <li>Testimonials from charity partners</li>
-            </ul>
-            <p className="text-body mb-6 italic">
-              As the programme expands, this section will be updated with actual donation data and impact stories.
-                  </p>
-                </div>
-              </div>
+          <DonationTracker />
+        </div>
       </section>
 
       {/* CTA Section */}
