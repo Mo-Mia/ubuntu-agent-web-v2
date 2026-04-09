@@ -38,7 +38,7 @@ export default function HomePage() {
                   Contact Gary
                 </a>
                 <a href="/ubuntu-giving" className="btn-secondary">
-                  Ubuntu Giving Program
+                  Ubuntu Giving Programme
                 </a>
               </div>
             </div>
@@ -54,10 +54,10 @@ export default function HomePage() {
                 Welcome to The Ubuntu Agent
               </h2>
               <p className="text-gray-600 mb-4">
-                With 10 years of experience in Johannesburg real estate, I combine professional service with the Ubuntu philosophy - "I am because we are." Through my giving program, 5% of my commission (10% if capped) goes to local charities.
+                With over 11 years of experience in Johannesburg real estate, I combine professional service with the Ubuntu philosophy - "I am because we are." Through my giving programme, 5% of my commission (10% if capped) goes to local charities.
               </p>
               <p className="text-gray-600 mb-6">
-                Specialising in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, I'm here to help you navigate the property market while making a positive impact on our community.
+                Specialising in residential sales and rentals across North Johannesburg, including Fourways, Dainfern, North Riding, Midrand, Craigavon, and Broadacres, I'm here to help you navigate the property market while making a positive impact on our community.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="/about" className="btn-primary">
@@ -102,7 +102,7 @@ export default function HomePage() {
             />
 
             <ServiceCard
-              title="Ubuntu Giving Program"
+              title="Ubuntu Giving Programme"
               description="Make your real estate transaction matter by directing 5% of my commission (10% if capped) to a charity of your choice."
               icon={Heart}
               link="/ubuntu-giving"
@@ -123,7 +123,7 @@ export default function HomePage() {
         <div className="container-custom">
           <SectionHeading
             subtitle="How It Works"
-            title="The Ubuntu Giving Program"
+            title="The Ubuntu Giving Programme"
             description="Making a difference in our community is simple and transparent."
             alignment="center"
           />

@@ -73,13 +73,13 @@ export default function AboutPage() {
                 Gary Berkowitz - The Ubuntu Agent
               </h2>
               <p className="text-gray-600 mb-4">
-                With 10 years in Johannesburg real estate, I've helped buyers and sellers across the North Johannesburg area find their perfect properties while building deep community connections.
+                With over 11 years in Johannesburg real estate, I've helped buyers and sellers across the North Johannesburg area find their perfect properties while building deep community connections.
               </p>
               <p className="text-gray-600 mb-4">
                 My approach to real estate is guided by the Ubuntu philosophy: "I am because we are." This belief in our interconnectedness drives my commitment to both exceptional service and meaningful community impact through charitable giving.
               </p>
               <p className="text-gray-600 mb-4">
-                I specialise in residential sales and rentals in Fourways, Dainfern, North Riding, and Midrand, helping clients navigate the market with expertise and integrity.
+                I specialise in residential sales and rentals across North Johannesburg, including Fourways, Dainfern, North Riding, Midrand, Craigavon, and Broadacres, helping clients navigate the market with expertise and integrity.
               </p>
               
               <div className="mt-6">
@@ -119,7 +119,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-body">
-              Through the Ubuntu Giving Program, each real estate transaction becomes an opportunity to strengthen our shared community. By directing 5% of my commission (10% if capped) to local charities like Four Paws, CHOC, and Breadline, we create positive change that extends far beyond the property itself.
+              Through the Ubuntu Giving Programme, each real estate transaction becomes an opportunity to strengthen our shared community. By directing 5% of my commission (10% if capped) to local charities like Four Paws, CHOC, and Breadline, we create positive change that extends far beyond the property itself.
             </p>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function AboutPage() {
               </div>
               <h3 className="heading-sm mb-2">Experience</h3>
               <p className="text-body-sm text-muted-foreground">
-                10 Years in Real Estate
+                11+ Years in Real Estate
                 <br />
                 Residential Sales and Rentals Specialist
                 <br />
@@ -257,7 +257,7 @@ export default function AboutPage() {
 
               <p className="text-body mb-4">
                 eXp Realty's innovative model and cutting-edge technology empower me to provide exceptional service
-                while maintaining the flexibility to create initiatives like the Ubuntu Giving Program.
+                while maintaining the flexibility to create initiatives like the Ubuntu Giving Programme.
               </p>
 
               <p className="text-body mb-6">

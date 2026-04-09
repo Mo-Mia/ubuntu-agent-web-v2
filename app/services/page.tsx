@@ -137,8 +137,8 @@ export default function ServicesPage() {
               />
 
               <p className="text-body mb-4">
-                With 10 years of experience in North Johannesburg real estate, I specialise in residential sales and rentals in 
-                Fourways, Dainfern, North Riding, and Midrand, while making a positive community 
+                With over 11 years of experience in North Johannesburg real estate, I specialise in residential sales and rentals across North Johannesburg, including 
+                Fourways, Dainfern, North Riding, Midrand, Craigavon, and Broadacres, while making a positive community 
                 impact through the Ubuntu Giving Programme.
               </p>
 
@@ -411,7 +411,7 @@ export default function ServicesPage() {
           <SectionHeading
             subtitle="Service Areas"
             title="North Johannesburg Expertise"
-            description="Specialised service in select North Johannesburg neighbourhoods."
+            description="Specialised service across North Johannesburg's key residential neighbourhoods."
             alignment="center"
           />
 
@@ -419,7 +419,7 @@ export default function ServicesPage() {
             <AreaMap />
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="heading-sm mb-4">Fourways</h3>
               <p className="text-body-sm mb-4">
@@ -484,6 +484,40 @@ export default function ServicesPage() {
                 <li className="flex items-center">
                   <Map className="h-4 w-4 text-gold mr-2" />
                   <span>Growing family neighbourhoods</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="heading-sm mb-4">Craigavon</h3>
+              <p className="text-body-sm mb-4">
+                Established residential area with well-maintained townhouse complexes and security estates, popular with families and professionals.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <Map className="h-4 w-4 text-gold mr-2" />
+                  <span>Townhouse complexes and estates</span>
+                </li>
+                <li className="flex items-center">
+                  <Map className="h-4 w-4 text-gold mr-2" />
+                  <span>Popular with families and professionals</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="heading-sm mb-4">Broadacres</h3>
+              <p className="text-body-sm mb-4">
+                Sought-after area featuring spacious properties and country estates, offering a blend of rural tranquillity and urban convenience.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <Map className="h-4 w-4 text-gold mr-2" />
+                  <span>Spacious homes and country estates</span>
+                </li>
+                <li className="flex items-center">
+                  <Map className="h-4 w-4 text-gold mr-2" />
+                  <span>Convenient access with a tranquil feel</span>
                 </li>
               </ul>
             </div>

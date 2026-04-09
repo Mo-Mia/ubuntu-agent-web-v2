@@ -149,6 +149,26 @@ const structuredData = {
     },
     {
       "@type": "Place",
+      "name": "Craigavon"
+    },
+    {
+      "@type": "Place",
+      "name": "Broadacres"
+    },
+    {
+      "@type": "Place",
+      "name": "Olivedale"
+    },
+    {
+      "@type": "Place",
+      "name": "Bloubosrand"
+    },
+    {
+      "@type": "Place",
+      "name": "Boskruin"
+    },
+    {
+      "@type": "Place",
       "name": "Sandton"
     }
   ],

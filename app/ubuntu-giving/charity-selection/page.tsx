@@ -39,7 +39,7 @@ export default function CharitySelectionPage() {
           Select a Charity Partner
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Choose a cause to receive a donation through the Golden Circle Giving Program
+          Choose a cause to receive a donation through the Ubuntu Giving Programme
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function CharitySelectionPage() {
         </div>
 
         <p className="text-gray-700">
-          The Golden Circle Giving Program is at the heart of The Ubuntu Agent&#39;s philosophy. With
+          The Ubuntu Giving Programme is at the heart of The Ubuntu Agent&#39;s philosophy. With
           each property transaction, we contribute to strengthening our community, embodying the
           Ubuntu principle of &quot;I am because we are.&quot;
         </p>

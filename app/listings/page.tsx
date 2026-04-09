@@ -9,7 +9,7 @@ import { HeroImage } from "@/components/ui/HeroImage"
 export const metadata = {
   title: "Property Listings | The Ubuntu Agent",
   description:
-    "Browse property listings in North Johannesburg including Fourways, Dainfern, North Riding, and Midrand areas, professionally represented by The Ubuntu Agent.",
+    "Browse property listings in North Johannesburg including Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas, professionally represented by The Ubuntu Agent.",
   alternates: {
     canonical: "/listings",
   },
@@ -37,7 +37,7 @@ export default function ListingsPage() {
                 Property Listings
               </h1>
               <p className="text-gray-700 mb-6">
-                Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, and Midrand.
+                Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
@@ -76,7 +76,7 @@ export default function ListingsPage() {
               </div>
 
               <p className="text-body mb-6">
-                Gary specialises in residential properties in Fourways, Dainfern, North Riding, and Midrand areas. 
+                Gary specialises in residential properties in Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas. 
                 View all of Gary's current property listings on his official eXp Realty agent profile.
               </p>
 

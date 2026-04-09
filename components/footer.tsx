@@ -60,6 +60,8 @@ export function Footer() {
               <li className="text-gray-300">Dainfern</li>
               <li className="text-gray-300">North Riding</li>
               <li className="text-gray-300">Midrand</li>
+              <li className="text-gray-300">Craigavon</li>
+              <li className="text-gray-300">Broadacres</li>
             </ul>
           </div>
         </div>
