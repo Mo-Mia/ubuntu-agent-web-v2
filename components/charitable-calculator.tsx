@@ -10,7 +10,7 @@ const CharitableCalculator = () => {
   const [isCapped, setIsCapped] = useState(false)
 
   // Total commission rate
-  const totalCommissionRate = 0.06 // 6% total commission
+  const totalCommissionRate = 0.05 // 5% total commission
 
   // Agent's share of commission (71% when uncapped, 96% when capped)
   const agentCommissionPercentage = isCapped ? 0.96 : 0.71
@@ -93,9 +93,7 @@ const CharitableCalculator = () => {
         <div className="bg-gray-100 p-5 rounded-md border border-gray-200">
           <p className="text-sm text-gray-700 mb-2 font-medium">Estimated Net Commission:</p>
           <p className="text-xl font-bold text-navy">{formatCurrency(commission)}</p>
-          <p className="text-xs text-gray-600 mt-1">
-            {isCapped ? "96%" : "71%"} of total 6% commission, less 30% tax
-          </p>
+          <p className="text-xs text-gray-600 mt-1">Calculated from a 5% commission rate, less 30% tax</p>
         </div>
 
         <div className="bg-[#f7f3e3] p-5 rounded-md border border-gold/20">
