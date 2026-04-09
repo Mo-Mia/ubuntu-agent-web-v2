@@ -48,3 +48,5 @@ temp/
 # TypeScript
 *.tsbuildinfo
 next-env.d.tspublic/gary-profile-original.jpg
+.codex
+next-env.d.ts
