@@ -1,45 +1,44 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://theubuntuagent.com";
-  const lastModified = new Date();
-  
+  const baseUrl = "https://www.theubuntuagent.com";
+
   return [
     {
       url: baseUrl,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/ubuntu-giving`,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/listings`,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified,
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
-    }
+    },
   ];
 }
