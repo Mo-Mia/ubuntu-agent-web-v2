@@ -41,7 +41,7 @@ export default function ListingsPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://www.expsouthafrica.co.za/agents/80314" 
+                  href="https://www.property24.com/for-sale/agency/exp-south-africa/gary-berkowitz/527723#117079264" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn-primary flex items-center gap-2"
@@ -86,7 +86,7 @@ export default function ListingsPage() {
 
               <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a 
-                  href="https://www.expsouthafrica.co.za/agents/80314" 
+                  href="https://www.property24.com/for-sale/agency/exp-south-africa/gary-berkowitz/527723#117079264" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn-primary flex items-center justify-center gap-2"
