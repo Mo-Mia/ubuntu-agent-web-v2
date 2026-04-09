@@ -59,7 +59,7 @@ const ContactForm = () => {
           <input type="hidden" name="access_key" value="d5e0bf93-be6e-4718-9d55-0cce044ac051" />
           <input type="hidden" name="subject" value="Ubuntu Agent Website Submission" />
           <input type="hidden" name="from_name" value="Ubuntu Agent Notification" />
-          <input type="hidden" name="redirect" value="https://ubuntuagent.co.za/contact?success=true" />
+          <input type="hidden" name="redirect" value="https://www.theubuntuagent.com/contact?success=true" />
           
           {/* Required field for Web3Forms to enable spam protection */}
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />

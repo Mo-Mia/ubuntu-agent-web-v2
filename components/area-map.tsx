@@ -18,34 +18,28 @@ const AreaMap = () => {
 
   const areas: Area[] = [
     {
-      id: "sandton",
-      name: "Sandton",
-      description: "Upscale business district with luxury homes and apartments.",
-      coordinates: { x: 60, y: 30 },
-    },
-    {
-      id: "rosebank",
-      name: "Rosebank",
-      description: "Trendy area with a mix of residential and commercial properties.",
-      coordinates: { x: 40, y: 40 },
-    },
-    {
       id: "fourways",
       name: "Fourways",
-      description: "Family-friendly suburb with various housing options.",
-      coordinates: { x: 70, y: 20 },
+      description: "A vibrant commercial and residential hub with diverse property options ranging from apartments to luxury estates.",
+      coordinates: { x: 45, y: 30 },
     },
     {
-      id: "melrose",
-      name: "Melrose",
-      description: "Elegant residential area with beautiful gardens.",
-      coordinates: { x: 45, y: 50 },
+      id: "dainfern",
+      name: "Dainfern",
+      description: "Prestigious golf estate offering secure living with luxury homes and excellent amenities.",
+      coordinates: { x: 40, y: 20 },
     },
     {
-      id: "bryanston",
-      name: "Bryanston",
-      description: "Spacious properties in a green, established suburb.",
-      coordinates: { x: 65, y: 25 },
+      id: "north-riding",
+      name: "North Riding",
+      description: "Growing area with a mix of townhouse complexes, security estates, and freestanding homes.",
+      coordinates: { x: 55, y: 40 },
+    },
+    {
+      id: "midrand",
+      name: "Midrand",
+      description: "Rapidly developing area with business parks, residential estates, and diverse housing options.",
+      coordinates: { x: 65, y: 50 },
     },
   ]
 
@@ -55,7 +49,7 @@ const AreaMap = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <h3 className="heading-sm mb-4">Areas Served in Johannesburg</h3>
+      <h3 className="heading-sm mb-4">Areas Served in North Johannesburg</h3>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 relative h-[400px] bg-gray-100 rounded-lg overflow-hidden">

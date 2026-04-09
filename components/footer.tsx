@@ -56,11 +56,10 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-medium mb-4">Service Areas</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">Sandton</li>
               <li className="text-gray-300">Fourways</li>
-              <li className="text-gray-300">Rosebank</li>
+              <li className="text-gray-300">Dainfern</li>
+              <li className="text-gray-300">North Riding</li>
               <li className="text-gray-300">Midrand</li>
-              <li className="text-gray-300">Bryanston</li>
             </ul>
           </div>
         </div>
