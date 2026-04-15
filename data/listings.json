@@ -1,9 +1,10 @@
 {
-  "lastUpdated": "2026-04-15T08:53:32.767Z",
+  "lastUpdated": "2026-04-15T09:47:15.369Z",
   "listings": [
     {
       "uniqueId": "475af2b079665944dcb35276f0e8ebab",
-      "address": "56 Pinehurst, , Jackal Creek Golf Estate, , 1 Boundary Road, , Jackal Creek Golf Estate, , Randburg, , Gauteng",
+      "displayAddress": "Jackal Creek Golf Estate, Randburg",
+      "fullAddress": "56 Pinehurst, Jackal Creek Golf Estate, 1 Boundary Road, Jackal Creek Golf Estate, Randburg, Gauteng",
       "status": "For Sale",
       "price": 849000,
       "type": "Apartment",
@@ -32,7 +33,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/e68246d131d4147b8d526e51ca993d57",
       "photos": [
         "01.webp",
         "02.webp",
@@ -55,7 +56,8 @@
     },
     {
       "uniqueId": "0eda6e9ecf1abf4af54e311e0be32932",
-      "address": "64, , Waterford View, , 1 Oosterland Avenue, , Bloubosrand, , Randburg, , Gauteng",
+      "displayAddress": "Bloubosrand, Randburg",
+      "fullAddress": "64, Waterford View, 1 Oosterland Avenue, Bloubosrand, Randburg, Gauteng",
       "status": "For Sale",
       "price": 1299000,
       "type": "Townhouse",
@@ -85,7 +87,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/e0013229c5b9fa0c3a2cde46cbb8a959",
       "photos": [
         "01.webp",
         "02.webp",
@@ -121,7 +123,8 @@
     },
     {
       "uniqueId": "b0102d4e0e365c71fb2a832acf5fefcf",
-      "address": "16, , Fairview, , 1 Memorial Lane, , Craigavon, , Sandton, , Gauteng",
+      "displayAddress": "Craigavon, Sandton",
+      "fullAddress": "16, Fairview, 1 Memorial Lane, Craigavon, Sandton, Gauteng",
       "status": "For Sale",
       "price": 1699000,
       "type": "Townhouse",
@@ -156,7 +159,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/c082272982f047f92604c18a54482936",
       "photos": [
         "01.webp",
         "02.webp",
@@ -195,7 +198,8 @@
     },
     {
       "uniqueId": "1bc5655358975906bef792ed2cc184f3",
-      "address": "25, , Poplar Place, , 1 Poplar Avenue, , Craigavon, , Sandton, , Gauteng",
+      "displayAddress": "Craigavon, Sandton",
+      "fullAddress": "25, Poplar Place, 1 Poplar Avenue, Craigavon, Sandton, Gauteng",
       "status": "For Sale",
       "price": 1250000,
       "type": "Townhouse",
@@ -225,7 +229,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/8714f8e0ad41b98c59a070ba88e56ef3",
       "photos": [
         "01.webp",
         "02.webp",
@@ -258,7 +262,8 @@
     },
     {
       "uniqueId": "ae8eb57347e66874618bba9c84b03286",
-      "address": "5, , Kalysta, , 1 Kalysta Lane, , Fourways, , Sandton, , Gauteng",
+      "displayAddress": "Fourways, Sandton",
+      "fullAddress": "5, Kalysta, 1 Kalysta Lane, Fourways, Sandton, Gauteng",
       "status": "For Sale",
       "price": 1499000,
       "type": "Duplex",
@@ -288,7 +293,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/58ec9e46d1f662fe672630aeb7d9067c",
       "photos": [
         "01.webp",
         "02.webp",
@@ -316,7 +321,8 @@
     },
     {
       "uniqueId": "7db6799d20323dfa00d70b7f04ab89c2",
-      "address": "132, , Canvass Eighty2, , 1 Blandford Road, , Noordhang, , Randburg, , Gauteng",
+      "displayAddress": "Noordhang, Randburg",
+      "fullAddress": "132, Canvass Eighty2, 1 Blandford Road, Noordhang, Randburg, Gauteng",
       "status": "For Sale",
       "price": 1400000,
       "type": "Apartment",
@@ -345,7 +351,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/4e207c836bfcd981e8509964a9e9eea9",
       "photos": [
         "01.webp",
         "02.webp",
@@ -372,7 +378,8 @@
     },
     {
       "uniqueId": "7e732a8f75e20926abcdea87aba3d1bf",
-      "address": "1688, , Tezula Lifestyle Estate, , 1 Uranium, , Fourways, , Sandton, , Gauteng",
+      "displayAddress": "Fourways, Sandton",
+      "fullAddress": "1688, Tezula Lifestyle Estate, 1 Uranium, Fourways, Sandton, Gauteng",
       "status": "For Sale",
       "price": 2199000,
       "type": "Townhouse",
@@ -402,7 +409,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/ffa37d0af8e443eb5a5650c44f37cdbc",
       "photos": [
         "01.webp",
         "02.webp",
@@ -438,7 +445,8 @@
     },
     {
       "uniqueId": "fffb5631536de0bc83b50eba9065a15c",
-      "address": "15, , Genmare, , 1 Blandford Road, , North Riding, , Randburg, , Gauteng",
+      "displayAddress": "North Riding, Randburg",
+      "fullAddress": "15, Genmare, 1 Blandford Road, North Riding, Randburg, Gauteng",
       "status": "For Sale",
       "price": 1650000,
       "type": "Townhouse",
@@ -471,7 +479,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/1cf0c653974db44b7d73c9610eae0e6c",
       "photos": [
         "01.webp",
         "02.webp",
@@ -515,7 +523,8 @@
     },
     {
       "uniqueId": "98e60945d0727985118d0dc9a4fab06b",
-      "address": "6, , Kingfisher Court, , 1 Hyperion Drive, , North Riding, , Randburg, , Gauteng",
+      "displayAddress": "North Riding, Randburg",
+      "fullAddress": "6, Kingfisher Court, 1 Hyperion Drive, North Riding, Randburg, Gauteng",
       "status": "Under Offer",
       "price": 795000,
       "type": "Duplex",
@@ -545,7 +554,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/6e084b3e62532109b2538418188f58da",
       "photos": [
         "01.webp",
         "02.webp",
@@ -573,7 +582,8 @@
     },
     {
       "uniqueId": "e82b5711759e0bc11f7603781b94460d",
-      "address": "52, , The Plantation Club, , 1 Frederick Road, , Broadacres, , Sandton, , Gauteng",
+      "displayAddress": "Broadacres, Sandton",
+      "fullAddress": "52, The Plantation Club, 1 Frederick Road, Broadacres, Sandton, Gauteng",
       "status": "For Sale",
       "price": 1895000,
       "type": "House",
@@ -606,7 +616,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/159160a69d2767499094967e6f21b0ed",
       "photos": [
         "01.webp",
         "02.webp",
@@ -642,7 +652,8 @@
     },
     {
       "uniqueId": "3020a3ee69e5dbc2d70bfd292f89561f",
-      "address": "189, , Waterford View, , 1 Oosterland, , Bloubosrand, , Randburg, , Gauteng",
+      "displayAddress": "Bloubosrand, Randburg",
+      "fullAddress": "189, Waterford View, 1 Oosterland, Bloubosrand, Randburg, Gauteng",
       "status": "Under Offer",
       "price": 1249000,
       "type": "Townhouse",
@@ -674,7 +685,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/3c29a7cbbe304aeff512fc854be05ab3",
       "photos": [
         "01.webp",
         "02.webp",
@@ -705,7 +716,8 @@
     },
     {
       "uniqueId": "e268f20769dbd0f72d6e24f87b4e276a",
-      "address": "11, , Bateleur Estate, , 11 Bellairs Drive, , North Riding, , Randburg, , Gauteng",
+      "displayAddress": "North Riding, Randburg",
+      "fullAddress": "11, Bateleur Estate, 11 Bellairs Drive, North Riding, Randburg, Gauteng",
       "status": "Under Offer",
       "price": 2499000,
       "type": "House",
@@ -744,7 +756,7 @@
         "Water Tank",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/a782c42b48905d5558c1d1d4a08794af",
       "photos": [
         "01.webp",
         "02.webp",
@@ -779,7 +791,8 @@
     },
     {
       "uniqueId": "05b1f7f5c9030d8f9a089331dfbfde17",
-      "address": "13, , Fairview, , 1 Blandford, , North Riding, , Randburg, , Gauteng",
+      "displayAddress": "North Riding, Randburg",
+      "fullAddress": "13, Fairview, 1 Blandford, North Riding, Randburg, Gauteng",
       "status": "For Sale",
       "price": 1599000,
       "type": "Townhouse",
@@ -809,7 +822,7 @@
         "Totally Fenced",
         "Totally Walled"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/f7558b94e60ce8ee54c009c7690ffaa9",
       "photos": [
         "01.webp",
         "02.webp",
@@ -837,7 +850,8 @@
     },
     {
       "uniqueId": "19091f2eff1bd5b804b5c2add62dc263",
-      "address": "1, , Honey Grove, , 1 Glover Road, , Honeypark, , Roodepoort, , Gauteng",
+      "displayAddress": "Honeypark, Roodepoort",
+      "fullAddress": "1, Honey Grove, 1 Glover Road, Honeypark, Roodepoort, Gauteng",
       "status": "Under Offer",
       "price": 899000,
       "type": "Townhouse",
@@ -871,7 +885,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/2bb67244918e1005947c1cb535e58403",
       "photos": [
         "01.webp",
         "02.webp",
@@ -902,7 +916,8 @@
     },
     {
       "uniqueId": "34f9dd61bf28436bd63d05508a1d48f8",
-      "address": "4, , Olivenhout Manor, , 1 Derby Drive, , North Riding, , Randburg, , Gauteng",
+      "displayAddress": "North Riding, Randburg",
+      "fullAddress": "4, Olivenhout Manor, 1 Derby Drive, North Riding, Randburg, Gauteng",
       "status": "Under Offer",
       "price": 2399000,
       "type": "House",
@@ -935,7 +950,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/42d2ad2d6c1b93ccb06f644c8ec8b1ec",
       "photos": [
         "01.webp",
         "02.webp",
@@ -969,7 +984,8 @@
     },
     {
       "uniqueId": "0eb1dfc1b4fa2094c8cc27be860086d0",
-      "address": "16, , Harmony Corner, , 1 Jacaranda Avenue, , Olivedale, , Randburg, , Gauteng",
+      "displayAddress": "Olivedale, Randburg",
+      "fullAddress": "16, Harmony Corner, 1 Jacaranda Avenue, Olivedale, Randburg, Gauteng",
       "status": "Under Offer",
       "price": 1650000,
       "type": "House",
@@ -1005,7 +1021,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/a22832b242c55eb6851bf3ce0b37699c",
       "photos": [
         "01.webp",
         "02.webp",
@@ -1039,7 +1055,8 @@
     },
     {
       "uniqueId": "21dc1ee98fa2f4c1ce6b47e9b2e681d8",
-      "address": "17, , Broadacres Country Estate, , 17 Syringa Avenue, , Broadacres, , Sandton, , Gauteng",
+      "displayAddress": "Broadacres, Sandton",
+      "fullAddress": "17, Broadacres Country Estate, 17 Syringa Avenue, Broadacres, Sandton, Gauteng",
       "status": "For Sale",
       "price": 3250000,
       "type": "House",
@@ -1078,7 +1095,7 @@
         "Totally Walled",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/83c0aba8656e57c4d740400de055370c",
       "photos": [
         "01.webp",
         "02.webp",
@@ -1120,7 +1137,8 @@
     },
     {
       "uniqueId": "5f1d39913a47b4e258df6f0cb143216a",
-      "address": "5388, , Helderfontein Estate, , 1 Barracuda Drive, , Helderfontein Estate, , Midrand, , Gauteng",
+      "displayAddress": "Helderfontein Estate, Midrand",
+      "fullAddress": "5388, Helderfontein Estate, 1 Barracuda Drive, Helderfontein Estate, Midrand, Gauteng",
       "status": "For Sale",
       "price": 7999000,
       "type": "House",
@@ -1165,7 +1183,7 @@
         "Water Tank",
         "Wi-Fi"
       ],
-      "publicUrl": "",
+      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/5d3a86fe52761cc8550c0d4ac3d0a952",
       "photos": [
         "01.webp",
         "02.webp",
