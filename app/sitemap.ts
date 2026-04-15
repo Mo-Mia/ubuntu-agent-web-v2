@@ -1,7 +1,14 @@
 import type { MetadataRoute } from "next";
+import { getAllListings } from "@/lib/listings";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.theubuntuagent.com";
+  const listingPages = getAllListings().map((listing) => ({
+    url: `${baseUrl}/listings/${listing.uniqueId}`,
+    lastModified: new Date(listing.dateModified),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -40,5 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...listingPages,
   ];
 }

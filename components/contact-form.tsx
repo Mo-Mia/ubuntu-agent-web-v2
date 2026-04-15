@@ -3,7 +3,6 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
-import Script from "next/script"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +24,18 @@ const ContactForm = () => {
       if (urlParams.get('success') === 'true') {
         setFormSuccess(true);
       }
+
+      const property = urlParams.get('property');
+      if (property) {
+        setFormData((prev) => ({
+          ...prev,
+          interest: 'buying',
+          subject: prev.subject || 'Property enquiry',
+          message:
+            prev.message ||
+            `I'm interested in the property at ${property}. Please provide more information.`,
+        }));
+      }
     }
   }, []);
 
@@ -44,7 +55,7 @@ const ContactForm = () => {
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-5 rounded flex items-start mb-8" role="alert">
           <div className="mx-auto text-center">
             <h3 className="text-xl font-semibold text-green-800 mb-2">Thank you for your message!</h3>
-            <p className="text-green-700">We've received your inquiry and will get back to you shortly.</p>
+            <p className="text-green-700">We&apos;ve received your inquiry and will get back to you shortly.</p>
           </div>
         </div>
       ) : (

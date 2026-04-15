@@ -1,13 +1,9 @@
 import React, { Suspense } from 'react';
-import { ConsultationForm } from '@/components/ConsultationForm';
-import { ProfileImage } from '@/components/ui/ProfileImage';
 import { ContactDetails } from '@/components/ContactDetails';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/contact-form';
-import SectionHeading from '@/components/section-heading';
 import { HeroImage } from '@/components/ui/HeroImage';
-import { ContactCard } from '@/components/ContactCard';
+import { ProfileImage } from '@/components/ui/ProfileImage';
 
 export const metadata = {
   title: "Contact Gary Berkowitz | The Ubuntu Agent",
@@ -51,7 +47,7 @@ export default function ContactPage() {
                 Contact Gary
               </h1>
               <p className="text-gray-700 mb-6">
-                Let's discuss your real estate needs and how we can achieve your goals together.
+                Let&apos;s discuss your real estate needs and how we can achieve your goals together.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#consultation-form" className="btn-primary">
@@ -73,7 +69,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div id="consultation-form" className="md:col-span-2">
                   <Suspense fallback={<FormLoading />}>
-                    <ConsultationForm />
+                    <ContactForm />
                   </Suspense>
                 </div>
                 

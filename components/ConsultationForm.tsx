@@ -20,12 +20,24 @@ export function ConsultationForm() {
   const [submitting, setSubmitting] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   
-  // Check for success parameter in URL
+  // Apply URL state for success handling and listing enquiries.
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('success') === 'true') {
         setFormSuccess(true);
+      }
+
+      const property = urlParams.get('property');
+      if (property) {
+        const decodedProperty = decodeURIComponent(property);
+        setFormData((current) => ({
+          ...current,
+          interest: current.interest === 'consultation' ? 'buying' : current.interest,
+          message:
+            current.message ||
+            `I'm interested in the property at ${decodedProperty}. Please provide more information.`,
+        }));
       }
     }
   }, []);

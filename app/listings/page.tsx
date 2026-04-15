@@ -1,126 +1,61 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Calendar, Home, ExternalLink } from "lucide-react"
+import type { Metadata } from 'next';
+import { format } from 'date-fns';
 
-import HeroSection from "@/components/hero-section"
-import SectionHeading from "@/components/section-heading"
-import { HeroImage } from "@/components/ui/HeroImage"
+import { ListingFilters } from '@/components/listings/listing-filters';
+import SectionHeading from '@/components/section-heading';
+import { getActiveListings, getLastUpdated } from '@/lib/listings';
 
-export const metadata = {
-  title: "Property Listings | The Ubuntu Agent",
+export const metadata: Metadata = {
+  title: 'Properties | The Ubuntu Agent',
   description:
-    "Browse property listings in North Johannesburg including Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas, professionally represented by The Ubuntu Agent.",
+    'Browse current property listings from The Ubuntu Agent in Fourways, North Riding, Craigavon and surrounding areas.',
   alternates: {
-    canonical: "/listings",
+    canonical: '/listings',
   },
-}
+};
 
 export default function ListingsPage() {
+  const listings = getActiveListings();
+  const regions = [...new Set(listings.map((listing) => listing.region))].sort((a, b) =>
+    a.localeCompare(b)
+  );
+  const lastUpdated = format(new Date(getLastUpdated()), 'd MMMM yyyy');
+
   return (
     <>
-      <section className="relative h-[600px]">
-        <div className="absolute inset-0">
-          <Image 
-            src="/images/backgrounds/johannesburg-skyline.jpg" 
-            alt="Johannesburg skyline"
-            fill
-            className="object-cover"
-            priority={true}
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-lg">
-              <span className="inline-block text-gold font-medium mb-2">Available Properties</span>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-                Property Listings
-              </h1>
-              <p className="text-gray-700 mb-6">
-                Browse Gary's current property listings through his eXp Realty agent profile, specialising in Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="https://www.property24.com/for-sale/agency/exp-south-africa/gary-berkowitz/527723#117079264" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary flex items-center gap-2"
-                >
-                  View Current Listings <ExternalLink className="h-4 w-4" />
-                </a>
-                <Link href="/contact" className="btn-secondary">
-                  Contact for Property Inquiries
-                </Link>
-              </div>
-            </div>
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0C0F24_0%,#18204A_55%,#E27D60_180%)] pt-32 text-white">
+        <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,#D4AF37_0%,transparent_55%)] opacity-30" />
+        <div className="container-custom relative pb-20">
+          <div className="max-w-3xl">
+            <span className="mb-3 inline-block text-sm font-medium uppercase tracking-[0.28em] text-[#D4AF37]">
+              Property collection
+            </span>
+            <h1 className="mb-5 text-4xl font-bold md:text-5xl lg:text-6xl">
+              Current homes represented by The Ubuntu Agent
+            </h1>
+            <p className="mb-0 max-w-2xl text-lg text-white/80">
+              Browse residential listings across Fourways, North Riding, Craigavon, Broadacres,
+              Olivedale, and nearby neighbourhoods.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Available Properties Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[#F7F5EF]">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Available Properties"
-            title="Current Property Listings"
-            description="Browse Gary's current property listings via his eXp Realty agent profile."
-            alignment="center"
+            subtitle="Available now"
+            title="Find your next property"
+            description="Filter by status and region, then sort by price or recency."
           />
 
-          <div className="mt-12 max-w-3xl mx-auto text-center">
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="flex justify-center mb-6">
-                <div className="relative h-32 w-48">
-                  <Image src="/images/backgrounds/property-search-illustration.svg" alt="Property search illustration" fill className="object-contain" />
-                </div>
-              </div>
+          <ListingFilters listings={listings} regions={regions} />
 
-              <p className="text-body mb-6">
-                Gary specialises in residential properties in Fourways, Dainfern, North Riding, Midrand, Craigavon, Broadacres, and surrounding areas. 
-                View all of Gary's current property listings on his official eXp Realty agent profile.
-              </p>
-
-              <p className="text-body mb-6">
-                You can browse available properties, view details and photos, or contact Gary directly to discuss specific properties.
-              </p>
-
-              <div className="flex flex-col md:flex-row justify-center gap-4">
-                <a 
-                  href="https://www.property24.com/for-sale/agency/exp-south-africa/gary-berkowitz/527723#117079264" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary flex items-center justify-center gap-2"
-                >
-                  View Current Listings <ExternalLink className="h-4 w-4" />
-                </a>
-                <Link href="/contact" className="btn-secondary">
-                  Contact for Property Inquiries
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-navy text-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-lg mb-4">Looking to Buy or Sell?</h2>
-            <p className="text-white mb-8">
-              Whether you are looking to buy or sell property in North Johannesburg, The Ubuntu Agent has the expertise and local knowledge to help you navigate the market successfully.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                Contact Gary
-              </Link>
-              <Link href="/services" className="btn-tertiary bg-transparent border-white text-white hover:bg-white/20">
-                Explore Services
-              </Link>
-            </div>
-          </div>
+          <p className="mt-8 mb-0 text-sm text-slate-500">
+            Last updated: {lastUpdated}
+          </p>
         </div>
       </section>
     </>
-  )
+  );
 }

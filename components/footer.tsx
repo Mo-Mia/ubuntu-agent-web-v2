@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ContactDetails } from './ContactDetails';
+import { SocialLinks } from './social-links';
 import { ProfileImage } from './ui/ProfileImage';
 
 export function Footer() {
@@ -20,6 +21,9 @@ export function Footer() {
               variant="vertical" 
               className="text-white" 
             />
+            <div className="mt-5">
+              <SocialLinks iconOnly className="text-gray-400" />
+            </div>
           </div>
           
           <div>

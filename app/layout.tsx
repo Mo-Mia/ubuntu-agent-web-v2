@@ -1,18 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Roboto } from 'next/font/google'
 import Header from '@/components/header'
 import { Footer } from '@/components/footer'
 import type React from "react"
 import type { Viewport } from "next"
 import Script from 'next/script'
-
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto",
-})
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -193,7 +185,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={roboto.variable}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

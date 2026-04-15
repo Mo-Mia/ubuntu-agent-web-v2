@@ -152,7 +152,7 @@ const Header = () => {
               </div>
             </div>
             <Link href="/listings" className="nav-link">
-              Listings
+              Properties
             </Link>
             <Link href="/contact" className="nav-link">
               Contact
@@ -264,7 +264,7 @@ const Header = () => {
               className={`nav-link py-3 px-4 rounded-md transition-all ${activeMenuItem === 'listings' ? 'bg-amber-50 text-amber-600' : 'hover:bg-gray-50'}`} 
               onClick={() => closeMenu('listings')}
             >
-              Listings
+              Properties
             </Link>
             <Link 
               href="/contact" 

@@ -4,6 +4,7 @@ import { Award, BookOpen, Briefcase, Users } from "lucide-react"
 import React from 'react';
 import { ProfileImage } from '@/components/ui/ProfileImage';
 import { ContactDetails } from '@/components/ContactDetails';
+import { SocialLinks } from '@/components/social-links';
 import { HeroImage } from '@/components/ui/HeroImage'
 
 import HeroSection from "@/components/hero-section"
@@ -87,6 +88,9 @@ export default function AboutPage() {
                   Contact Gary Directly
                 </h3>
                 <ContactDetails variant="vertical" showIcons={true} />
+                <div className="mt-4">
+                  <SocialLinks />
+                </div>
               </div>
             </div>
           </div>
