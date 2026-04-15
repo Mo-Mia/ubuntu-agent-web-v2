@@ -25,3 +25,17 @@ export function formatPrice(price: number): string {
 export function getListingPhotoUrl(uniqueId: string, filename: string): string {
   return `/listings/${uniqueId}/${filename}`;
 }
+
+export function getListingDisplayAddress(listing: Listing): string {
+  const displayAddress = listing.displayAddress?.trim();
+  if (displayAddress) {
+    return displayAddress;
+  }
+
+  return listing.region;
+}
+
+export function getListingPublicUrl(listing: Listing): string | null {
+  const publicUrl = listing.publicUrl?.trim();
+  return publicUrl ? publicUrl : null;
+}

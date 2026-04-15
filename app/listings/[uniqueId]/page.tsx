@@ -6,7 +6,13 @@ import { Bath, BedDouble, CarFront, ExternalLink, MapPin, MoveLeft, Ruler, Wareh
 import { ListingGallery } from '@/components/listings/listing-gallery';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getAllListings, getListingById, formatPrice } from '@/lib/listings';
+import {
+  formatPrice,
+  getAllListings,
+  getListingById,
+  getListingDisplayAddress,
+  getListingPublicUrl,
+} from '@/lib/listings';
 
 type ListingPageProps = {
   params: Promise<{ uniqueId: string }>;
@@ -54,7 +60,7 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
   }
 
   return {
-    title: `${listing.address} | The Ubuntu Agent`,
+    title: `${listing.type} in ${getListingDisplayAddress(listing)} | The Ubuntu Agent`,
     description: getMetaDescription(uniqueId),
     alternates: {
       canonical: `/listings/${listing.uniqueId}`,
@@ -70,7 +76,11 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
     notFound();
   }
 
-  const enquiryAddress = encodeURIComponent(listing.address);
+  const displayAddress = getListingDisplayAddress(listing);
+  const enquiryAddress = encodeURIComponent(`${listing.type} in ${displayAddress}`);
+  const publicUrl = getListingPublicUrl(listing);
+
+  console.log('Listing brochure URL:', listing.uniqueId, listing.publicUrl);
 
   return (
     <section className="bg-[#F7F5EF] pb-20 pt-32">
@@ -84,7 +94,7 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
         </Link>
 
         <ListingGallery
-          address={listing.address}
+          displayAddress={displayAddress}
           photos={listing.photos}
           type={listing.type}
           uniqueId={listing.uniqueId}
@@ -98,11 +108,11 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
                   {formatPrice(listing.price)}
                 </p>
                 <h1 className="mb-2 text-3xl font-semibold text-slate-900 md:text-4xl">
-                  {listing.address}
+                  {listing.type} in {displayAddress}
                 </h1>
                 <p className="mb-0 flex items-center gap-2 text-slate-600">
                   <MapPin className="h-4 w-4 text-[#E27D60]" aria-hidden="true" />
-                  <span>{listing.type} in {listing.region}</span>
+                  <span>{displayAddress}</span>
                 </p>
               </div>
 
@@ -221,17 +231,19 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
                 </Link>
               </Button>
 
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="w-full border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
-              >
-                <a href={listing.publicUrl} target="_blank" rel="noreferrer noopener">
-                  View Full Brochure
-                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                </a>
-              </Button>
+              {publicUrl ? (
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                >
+                  <a href={publicUrl} target="_blank" rel="noreferrer noopener">
+                    View Full Brochure
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </Button>
+              ) : null}
             </div>
           </aside>
         </div>

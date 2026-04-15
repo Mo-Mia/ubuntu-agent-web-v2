@@ -1,6 +1,7 @@
 export interface Listing {
   uniqueId: string;
   address: string;
+  displayAddress?: string;
   status: 'For Sale' | 'Under Offer' | 'To Rent' | 'On Auction';
   price: number;
   type: string;
@@ -16,7 +17,7 @@ export interface Listing {
   region: string;
   mandate: string;
   keywords: string[];
-  publicUrl: string;
+  publicUrl: string | null;
   photos: string[];
   heroPhoto: string | null;
   dateLoaded: string;

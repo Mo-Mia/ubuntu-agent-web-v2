@@ -7,7 +7,7 @@ import { Building2, Home, Landmark, MapPin } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { getListingPhotoUrl, formatPrice } from '@/lib/listings';
+import { formatPrice, getListingDisplayAddress, getListingPhotoUrl } from '@/lib/listings';
 import type { Listing } from '@/types/listing';
 import { ListingStats } from './listing-stats';
 
@@ -44,6 +44,7 @@ function PlaceholderIcon({ type }: { type: string }) {
 
 export function ListingCard({ listing }: ListingCardProps) {
   const [showImageFallback, setShowImageFallback] = useState(!listing.heroPhoto);
+  const displayAddress = getListingDisplayAddress(listing);
 
   return (
     <Link href={`/listings/${listing.uniqueId}`} className="group block h-full">
@@ -52,7 +53,7 @@ export function ListingCard({ listing }: ListingCardProps) {
           {!showImageFallback && listing.heroPhoto ? (
             <Image
               src={getListingPhotoUrl(listing.uniqueId, listing.heroPhoto)}
-              alt={listing.address}
+              alt={`${listing.type} in ${displayAddress}`}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -90,11 +91,11 @@ export function ListingCard({ listing }: ListingCardProps) {
             {formatPrice(listing.price)}
           </p>
           <h2 className="mb-2 line-clamp-1 text-xl font-semibold text-slate-900">
-            {listing.address}
+            {listing.type} in {displayAddress}
           </h2>
           <p className="mb-4 flex items-center gap-2 text-sm text-slate-600">
             <MapPin className="h-4 w-4 text-[#E27D60]" aria-hidden="true" />
-            <span>{listing.type} in {listing.region}</span>
+            <span>{displayAddress}</span>
           </p>
           <div className="mt-auto">
             <ListingStats
