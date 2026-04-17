@@ -88,13 +88,14 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative h-16 w-64">
+            <div className="relative h-16 w-72 md:h-20 md:w-80">
               <Image
-                src="/ubuntu-agent-simple.svg"
+                src="/the-ubuntu-agent-logo-improved-trimmed.png"
                 alt="The Ubuntu Agent Logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 256px, 256px"
+                sizes="(max-width: 768px) 288px, 320px"
+                priority
               />
             </div>
           </Link>
