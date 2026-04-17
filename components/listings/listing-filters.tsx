@@ -44,7 +44,7 @@ export function ListingFilters({ listings, regions }: ListingFiltersProps) {
             <SelectTrigger className="border-slate-200">
               <SelectValue placeholder="All statuses" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="border-slate-200 bg-white text-slate-900 shadow-xl">
               <SelectItem value="All">All</SelectItem>
               <SelectItem value="For Sale">For Sale</SelectItem>
               <SelectItem value="Under Offer">Under Offer</SelectItem>
@@ -59,7 +59,7 @@ export function ListingFilters({ listings, regions }: ListingFiltersProps) {
             <SelectTrigger className="border-slate-200">
               <SelectValue placeholder="All regions" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="border-slate-200 bg-white text-slate-900 shadow-xl">
               <SelectItem value="All">All regions</SelectItem>
               {regions.map((regionOption) => (
                 <SelectItem key={regionOption} value={regionOption}>
@@ -76,7 +76,7 @@ export function ListingFilters({ listings, regions }: ListingFiltersProps) {
             <SelectTrigger className="border-slate-200">
               <SelectValue placeholder="Choose a sort order" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="border-slate-200 bg-white text-slate-900 shadow-xl">
               <SelectItem value="price-asc">Price: low to high</SelectItem>
               <SelectItem value="price-desc">Price: high to low</SelectItem>
               <SelectItem value="newest">Newest first</SelectItem>
