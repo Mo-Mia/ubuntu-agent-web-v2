@@ -14,6 +14,13 @@ export function getActiveListings(): Listing[] {
   return getAllListings().filter((listing) => !inactiveStatuses.has(listing.status));
 }
 
+export function getFeaturedListings(limit = 3): Listing[] {
+  return getActiveListings()
+    .filter((listing) => listing.status === 'For Sale')
+    .sort((a, b) => new Date(b.dateModified).getTime() - new Date(a.dateModified).getTime())
+    .slice(0, limit);
+}
+
 export function getLastUpdated(): string {
   return (listingsData as ListingsData).lastUpdated;
 }

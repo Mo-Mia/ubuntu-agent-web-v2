@@ -12,8 +12,12 @@ import TestimonialCard from "@/components/testimonial-card"
 import BlogCard from "@/components/blog-card"
 import GivingProcess from "@/components/giving-process"
 import CharitableCalculator from "@/components/charitable-calculator"
+import { ListingCard } from '@/components/listings/listing-card';
+import { getFeaturedListings } from '@/lib/listings';
 
 export default function HomePage() {
+  const featuredListings = getFeaturedListings(3);
+
   return (
     <>
       <section className="relative">
@@ -71,6 +75,31 @@ export default function HomePage() {
             <div>
               <ContactCard />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <SectionHeading
+              subtitle="Fresh to market"
+              title="Featured Listings"
+              description="Explore the three newest homes currently available for sale."
+            />
+
+            <Link
+              href="/listings"
+              className="inline-flex items-center text-sm font-semibold uppercase tracking-[0.18em] text-[#0C0F24] transition-colors hover:text-[#B3941F]"
+            >
+              Show All Listings
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {featuredListings.map((listing) => (
+              <ListingCard key={listing.uniqueId} listing={listing} />
+            ))}
           </div>
         </div>
       </section>
