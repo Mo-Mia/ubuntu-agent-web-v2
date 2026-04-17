@@ -229,6 +229,24 @@ export default function AboutPage() {
               testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way in which Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. To his credit, he brought me a desired offer within the first month of working on my property and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to."
               rating={5}
             />
+
+            <TestimonialCard
+              name="Michiel Barnard"
+              testimonial="It was a real pleasure to deal with you regarding the sale of our home. You were incredibly punctual, very attentive to all the small detail, and very professional. In a time when many other people were negative you remained bullish and optimistic because you believe that a thorough and professional approach will succeed in the end. And it did. You got us a really good buyer in a few weeks, and transfer has just gone through. You are a star! I unreservedly recommend you to potential sellers."
+              rating={5}
+            />
+
+            <TestimonialCard
+              name="Lizelle Lotz"
+              testimonial="I was super impressed with how quickly Gary stepped in and took charge of the entire selling process. He was proactive, responsive, and efficient - finding qualified buyers almost immediately and managing everything seamlessly. He completely took the pressure off my shoulders and turned what could have been a stressful experience into an effortless, worry-free sale. What truly sets Gary apart is his commitment to giving back. I was able to choose a cause I care about for him to donate a portion of his commission to. I can't recommend Gary highly enough to anyone looking to sell their property with confidence, ease, and a sense of purpose."
+              rating={5}
+            />
+
+            <TestimonialCard
+              name="Chris Coetzee"
+              testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. He brought me a desired offer within the first month and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to. I would highly recommend Gary to anyone interested in selling or buying a property."
+              rating={5}
+            />
           </div>
         </div>
       </section>
