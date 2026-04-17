@@ -75,15 +75,6 @@ export function ListingCard({ listing }: ListingCardProps) {
           <Badge className={`absolute left-4 top-4 border-none px-3 py-1 text-[11px] uppercase tracking-[0.18em] ${getStatusClasses(listing.status)}`}>
             {listing.status}
           </Badge>
-
-          {listing.mandate.toLowerCase() === 'sole' ? (
-            <Badge
-              variant="outline"
-              className="absolute bottom-4 left-4 border-white/60 bg-white/90 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-[#0C0F24]"
-            >
-              Sole mandate
-            </Badge>
-          ) : null}
         </div>
 
         <CardContent className="flex flex-1 flex-col p-5">

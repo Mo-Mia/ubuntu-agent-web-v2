@@ -120,9 +120,6 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
                 <Badge className={`border-none px-3 py-1 text-[11px] uppercase tracking-[0.18em] ${getStatusClasses(listing.status)}`}>
                   {listing.status}
                 </Badge>
-                <Badge variant="outline" className="border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-[#0C0F24]">
-                  {listing.mandate} mandate
-                </Badge>
               </div>
             </div>
 
