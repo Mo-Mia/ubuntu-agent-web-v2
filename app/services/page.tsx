@@ -391,13 +391,13 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <TestimonialCard
                 name="Iain Mackenzie"
-                testimonial="After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. Thanks to his persistence and strategic approach, he got my property sold—something that didn't happen with multiple agents involved."
+                testimonial="After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. He got my property sold - something that didn't happen with multiple agents involved. Gary always kept my best interests at the forefront, negotiating the best possible price and ensuring a smooth process from listing to sale. I strongly recommend signing a sole mandate with Gary Berkowitz. His dedication and results speak for themselves."
                 compact={true}
               />
               
               <TestimonialCard
                 name="Chris Coetzee"
-                testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way in which Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. To his credit, he brought me a desired offer within the first month of working on my property and drove the sale through to completion."
+                testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. He brought me a desired offer within the first month and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to. I would highly recommend Gary to anyone interested in selling or buying a property."
                 compact={true}
               />
             </div>

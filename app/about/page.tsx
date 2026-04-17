@@ -208,13 +208,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <TestimonialCard
               name="Michiel Barnard"
-              testimonial="It was a real pleasure to deal with you regarding the sale of our home. You were incredibly punctual, very attentive to all the small detail, and very professional. In a time when many other people were negative you remained bullish and optimistic because you believe that a thorough and professional approach will succeed in the end. And it did. You got us a really good buyer in a few weeks, and transfer has just gone through. Thank you very much Gary. You are a star! I unreservedly recommend you to potential sellers."
+              testimonial="It was a real pleasure to deal with you regarding the sale of our home. You were incredibly punctual, very attentive to all the small detail, and very professional. In a time when many other people were negative you remained bullish and optimistic because you believe that a thorough and professional approach will succeed in the end. And it did. You got us a really good buyer in a few weeks, and transfer has just gone through. You are a star! I unreservedly recommend you to potential sellers."
               rating={5}
             />
 
             <TestimonialCard
               name="Iain Mackenzie"
-              testimonial="I am writing to provide my highest recommendation for Gary Berkowitz as a real estate agent. From start to finish, Gary demonstrated exceptional professionalism, dedication, and a genuine commitment to securing the best possible outcome for me. After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. Thanks to his persistence and strategic approach, he got my property sold—something that didn't happen with multiple agents involved."
+              testimonial="After initially listing my property with an open mandate, where 4 different agents were actively marketing it, I struggled to get the right buyer at the right price. However, when I signed a sole mandate with Gary, everything changed. He proactively marketed the property, consistently brought in potential buyers, and ensured that every showing was handled with expertise and attention to detail. He got my property sold - something that didn't happen with multiple agents involved. Gary always kept my best interests at the forefront, negotiating the best possible price and ensuring a smooth process from listing to sale. I strongly recommend signing a sole mandate with Gary Berkowitz. His dedication and results speak for themselves."
               rating={5}
             />
 
@@ -226,25 +226,13 @@ export default function AboutPage() {
 
             <TestimonialCard
               name="Chris Coetzee"
-              testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way in which Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. To his credit, he brought me a desired offer within the first month of working on my property and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to."
-              rating={5}
-            />
-
-            <TestimonialCard
-              name="Michiel Barnard"
-              testimonial="It was a real pleasure to deal with you regarding the sale of our home. You were incredibly punctual, very attentive to all the small detail, and very professional. In a time when many other people were negative you remained bullish and optimistic because you believe that a thorough and professional approach will succeed in the end. And it did. You got us a really good buyer in a few weeks, and transfer has just gone through. You are a star! I unreservedly recommend you to potential sellers."
+              testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. He brought me a desired offer within the first month and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to. I would highly recommend Gary to anyone interested in selling or buying a property."
               rating={5}
             />
 
             <TestimonialCard
               name="Lizelle Lotz"
               testimonial="I was super impressed with how quickly Gary stepped in and took charge of the entire selling process. He was proactive, responsive, and efficient - finding qualified buyers almost immediately and managing everything seamlessly. He completely took the pressure off my shoulders and turned what could have been a stressful experience into an effortless, worry-free sale. What truly sets Gary apart is his commitment to giving back. I was able to choose a cause I care about for him to donate a portion of his commission to. I can't recommend Gary highly enough to anyone looking to sell their property with confidence, ease, and a sense of purpose."
-              rating={5}
-            />
-
-            <TestimonialCard
-              name="Chris Coetzee"
-              testimonial="Prior to Gary assisting me in selling my property, I had it on the market for 3 months with a different agency without success. I experienced an immediate change in the way Gary brought fresh, new energy in helping me sell my property. He was committed, efficient, reliable and professional and I felt the sale of my property was safe in his hands. He brought me a desired offer within the first month and drove the sale through to completion. He even went the extra mile by arranging to get my property cleaned and the garden seen to. I would highly recommend Gary to anyone interested in selling or buying a property."
               rating={5}
             />
           </div>
