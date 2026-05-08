@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08T05:55:30.978Z",
+  "lastUpdated": "2026-05-08T06:40:23.611Z",
   "listings": [
     {
       "uniqueId": "6204084ac259c6cbe902656770e54ceb",
@@ -67,7 +67,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-04-09",
-      "dateModified": "2026-04-17"
+      "dateModified": "2026-04-17",
+      "sourceAccountId": "nkululeko",
+      "sourceAccountLabel": "Nkululeko Radebe"
     },
     {
       "uniqueId": "a87b73d50779547d72b26db5058705b7",
@@ -142,7 +144,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-18",
-      "dateModified": "2026-04-17"
+      "dateModified": "2026-04-17",
+      "sourceAccountId": "nkululeko",
+      "sourceAccountLabel": "Nkululeko Radebe"
     },
     {
       "uniqueId": "95aac3bbc9ff116d5f124b28424e84ff",
@@ -222,7 +226,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-18",
-      "dateModified": "2026-05-06"
+      "dateModified": "2026-05-06",
+      "sourceAccountId": "nkululeko",
+      "sourceAccountLabel": "Nkululeko Radebe"
     },
     {
       "uniqueId": "9a4026b5b1f3ffe6ba2d564041a21127",
@@ -293,7 +299,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-09",
-      "dateModified": "2026-04-17"
+      "dateModified": "2026-04-17",
+      "sourceAccountId": "nkululeko",
+      "sourceAccountLabel": "Nkululeko Radebe"
     },
     {
       "uniqueId": "215fb246fd5494bd444282b6b79d0926",
@@ -366,10 +374,14 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-02-04",
-      "dateModified": "2026-05-07"
+      "dateModified": "2026-05-07",
+      "sourceAccountId": "nkululeko",
+      "sourceAccountLabel": "Nkululeko Radebe"
     },
     {
       "uniqueId": "0259a852a555422d5c58385887339c4a",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz",
       "displayAddress": "Craigavon, Sandton",
       "fullAddress": "26, Villa Donato, 1 Inchanga, Craigavon, Sandton, Gauteng",
       "status": "For Sale",
@@ -433,66 +445,7 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-05-05",
-      "dateModified": "2026-05-05"
-    },
-    {
-      "uniqueId": "05b1f7f5c9030d8f9a089331dfbfde17",
-      "displayAddress": "North Riding, Randburg",
-      "fullAddress": "13, Fairview, 1 Blandford, North Riding, Randburg, Gauteng",
-      "status": "For Sale",
-      "price": 1599000,
-      "type": "Townhouse",
-      "category": "Residential",
-      "bedrooms": 3,
-      "bathrooms": 2.5,
-      "garages": 2,
-      "parking": 2,
-      "floorSize": 169,
-      "erfSize": 0,
-      "rates": 1000,
-      "levy": 2800,
-      "region": "North Riding, Randburg, Gauteng",
-      "mandate": "Open",
-      "keywords": [
-        "24 Hour Access",
-        "24 Hour Guard",
-        "Balcony",
-        "Electric Fence",
-        "Electric Gate",
-        "Natural Light",
-        "Pet Friendly",
-        "Safe",
-        "Sectional Title",
-        "Security Complex",
-        "Security Gate",
-        "Totally Fenced",
-        "Totally Walled"
-      ],
-      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/f7558b94e60ce8ee54c009c7690ffaa9",
-      "photos": [
-        "01.webp",
-        "02.webp",
-        "03.webp",
-        "04.webp",
-        "05.webp",
-        "06.webp",
-        "07.webp",
-        "08.webp",
-        "09.webp",
-        "10.webp",
-        "11.webp",
-        "12.webp",
-        "13.webp",
-        "14.webp",
-        "15.webp",
-        "16.webp",
-        "17.webp",
-        "18.webp",
-        "19.webp"
-      ],
-      "heroPhoto": "01.webp",
-      "dateLoaded": "2026-01-07",
-      "dateModified": "2026-01-07"
+      "dateModified": "2026-05-07"
     },
     {
       "uniqueId": "0eb1dfc1b4fa2094c8cc27be860086d0",
@@ -563,7 +516,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-11-19",
-      "dateModified": "2025-12-23"
+      "dateModified": "2025-12-23",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "0eda6e9ecf1abf4af54e311e0be32932",
@@ -630,7 +585,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-30",
-      "dateModified": "2026-03-30"
+      "dateModified": "2026-03-30",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "10607ccc7ded949738ac59cb1111b4d0",
@@ -704,7 +661,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-12-02",
-      "dateModified": "2026-04-12"
+      "dateModified": "2026-04-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "19091f2eff1bd5b804b5c2add62dc263",
@@ -770,7 +729,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-05",
-      "dateModified": "2026-02-12"
+      "dateModified": "2026-02-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "1bc5655358975906bef792ed2cc184f3",
@@ -834,7 +795,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-25",
-      "dateModified": "2026-03-25"
+      "dateModified": "2026-03-25",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "21dc1ee98fa2f4c1ce6b47e9b2e681d8",
@@ -916,7 +879,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-11-12",
-      "dateModified": "2025-11-12"
+      "dateModified": "2025-11-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "29736f569e3ee07ffb888d3e066bfb02",
@@ -981,7 +946,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-12",
-      "dateModified": "2026-03-28"
+      "dateModified": "2026-03-28",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "3020a3ee69e5dbc2d70bfd292f89561f",
@@ -1045,7 +1012,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-27",
-      "dateModified": "2026-04-21"
+      "dateModified": "2026-04-21",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "34f9dd61bf28436bd63d05508a1d48f8",
@@ -1113,7 +1082,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-12-10",
-      "dateModified": "2026-02-08"
+      "dateModified": "2026-02-08",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "475af2b079665944dcb35276f0e8ebab",
@@ -1166,7 +1137,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-04-14",
-      "dateModified": "2026-04-15"
+      "dateModified": "2026-04-15",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "4cd4c0a6464734b84cd107fad02078b0",
@@ -1234,7 +1207,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-09-08",
-      "dateModified": "2026-02-01"
+      "dateModified": "2026-02-01",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "5f1d39913a47b4e258df6f0cb143216a",
@@ -1347,7 +1322,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-10-22",
-      "dateModified": "2026-02-22"
+      "dateModified": "2026-02-22",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "61ebeab364f7140a9c4b97e21590a906",
@@ -1405,7 +1382,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-07-14",
-      "dateModified": "2025-08-24"
+      "dateModified": "2025-08-24",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "6213b0b416d2a48d03d7bf99918fce34",
@@ -1470,7 +1449,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-09-29",
-      "dateModified": "2026-03-18"
+      "dateModified": "2026-03-18",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "625b9a9d0e232fa656b2a9e971feb4d7",
@@ -1524,7 +1505,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-10-06",
-      "dateModified": "2026-01-28"
+      "dateModified": "2026-01-28",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "7033e2be18f8633a9fc67d7d1c0ce060",
@@ -1571,7 +1554,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-08-19",
-      "dateModified": "2025-12-19"
+      "dateModified": "2025-12-19",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "7db6799d20323dfa00d70b7f04ab89c2",
@@ -1628,74 +1613,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-03",
-      "dateModified": "2026-03-30"
-    },
-    {
-      "uniqueId": "7e732a8f75e20926abcdea87aba3d1bf",
-      "displayAddress": "Fourways, Sandton",
-      "fullAddress": "1688, Tezula Lifestyle Estate, 1 Uranium, Fourways, Sandton, Gauteng",
-      "status": "For Sale",
-      "price": 2199000,
-      "type": "Townhouse",
-      "category": "Residential",
-      "bedrooms": 3,
-      "bathrooms": 2.5,
-      "garages": 2,
-      "parking": 2,
-      "floorSize": 0,
-      "erfSize": 247,
-      "rates": 1800,
-      "levy": 2530,
-      "region": "Fourways, Sandton, Gauteng",
-      "mandate": "Open",
-      "keywords": [
-        "24 Hour Access",
-        "24 Hour Guard",
-        "Automated Garage Doors",
-        "Balcony",
-        "Fast Internet",
-        "Fibre",
-        "Natural Light",
-        "Pet Friendly",
-        "Safe",
-        "Security Complex",
-        "Totally Fenced",
-        "Totally Walled",
-        "Wi-Fi"
-      ],
-      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/ffa37d0af8e443eb5a5650c44f37cdbc",
-      "photos": [
-        "01.webp",
-        "02.webp",
-        "03.webp",
-        "04.webp",
-        "05.webp",
-        "06.webp",
-        "07.webp",
-        "08.webp",
-        "09.webp",
-        "10.webp",
-        "11.webp",
-        "12.webp",
-        "13.webp",
-        "14.webp",
-        "15.webp",
-        "16.webp",
-        "17.webp",
-        "18.webp",
-        "19.webp",
-        "20.webp",
-        "21.webp",
-        "22.webp",
-        "23.webp",
-        "24.webp",
-        "25.webp",
-        "26.webp",
-        "27.webp"
-      ],
-      "heroPhoto": "01.webp",
-      "dateLoaded": "2026-02-24",
-      "dateModified": "2026-03-07"
+      "dateModified": "2026-03-30",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "84e252324140c26ceecefda53d7f2428",
@@ -1766,7 +1686,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-04-22",
-      "dateModified": "2026-04-28"
+      "dateModified": "2026-04-28",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "918e3abca8b3fd1698d34e5c04ec8724",
@@ -1825,7 +1747,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-08-05",
-      "dateModified": "2025-11-14"
+      "dateModified": "2025-11-14",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "9781110881d715d03b50f69c36fd0455",
@@ -1884,7 +1808,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-04-28",
-      "dateModified": "2026-04-29"
+      "dateModified": "2026-04-29",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "98e60945d0727985118d0dc9a4fab06b",
@@ -1943,7 +1869,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-02-16",
-      "dateModified": "2026-04-26"
+      "dateModified": "2026-04-26",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "9913a5d25a2c5e74d42d263f234c1b5e",
@@ -2016,7 +1944,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-14",
-      "dateModified": "2026-03-12"
+      "dateModified": "2026-03-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "9e0eafdb331882125e10090224a5a2ae",
@@ -2079,7 +2009,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-12-10",
-      "dateModified": "2026-03-18"
+      "dateModified": "2026-03-18",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "a5f035e6b84dee7eaf27b88db3a14d02",
@@ -2144,7 +2076,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-07",
-      "dateModified": "2026-03-30"
+      "dateModified": "2026-03-30",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "a95f813641cd7b26d1ad257f56f63248",
@@ -2210,10 +2144,14 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-06",
-      "dateModified": "2026-04-15"
+      "dateModified": "2026-04-15",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "ab9224a9afb57edad262202ea5dfbf15",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz",
       "displayAddress": "Craigavon, Sandton",
       "fullAddress": "32, Villa Donato, 1 Inchanga, Craigavon, Sandton, Gauteng",
       "status": "Sold",
@@ -2276,7 +2214,7 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-11-13",
-      "dateModified": "2026-03-18"
+      "dateModified": "2026-05-07"
     },
     {
       "uniqueId": "ae8eb57347e66874618bba9c84b03286",
@@ -2335,7 +2273,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-09",
-      "dateModified": "2026-04-03"
+      "dateModified": "2026-04-03",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "b0102d4e0e365c71fb2a832acf5fefcf",
@@ -2410,7 +2350,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-03-30",
-      "dateModified": "2026-03-31"
+      "dateModified": "2026-03-31",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "bfda2217c2ded380735aa1efe82c2959",
@@ -2480,7 +2422,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-10-28",
-      "dateModified": "2026-04-12"
+      "dateModified": "2026-04-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "e268f20769dbd0f72d6e24f87b4e276a",
@@ -2555,77 +2499,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-01-12",
-      "dateModified": "2026-01-25"
-    },
-    {
-      "uniqueId": "e82b5711759e0bc11f7603781b94460d",
-      "displayAddress": "Broadacres, Sandton",
-      "fullAddress": "52, The Plantation Club, 1 Frederick Road, Broadacres, Sandton, Gauteng",
-      "status": "For Sale",
-      "price": 1895000,
-      "type": "House",
-      "category": "Residential",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "garages": 2,
-      "parking": 0,
-      "floorSize": 0,
-      "erfSize": 318,
-      "rates": 1881,
-      "levy": 2300,
-      "region": "Broadacres, Sandton, Gauteng",
-      "mandate": "Sole",
-      "keywords": [
-        "24 Hour Access",
-        "24 Hour Guard",
-        "Automated Garage Doors",
-        "Electric Fence",
-        "Electric Gate",
-        "Fast Internet",
-        "Fibre",
-        "Natural Light",
-        "Pet Friendly",
-        "Safe",
-        "Security Complex",
-        "Security Gate",
-        "Single Storey",
-        "Totally Fenced",
-        "Totally Walled",
-        "Wi-Fi"
-      ],
-      "publicUrl": "https://agent.propcon.co.za/unlisted/listing/159160a69d2767499094967e6f21b0ed",
-      "photos": [
-        "01.webp",
-        "02.webp",
-        "03.webp",
-        "04.webp",
-        "05.webp",
-        "06.webp",
-        "07.webp",
-        "08.webp",
-        "09.webp",
-        "10.webp",
-        "11.webp",
-        "12.webp",
-        "13.webp",
-        "14.webp",
-        "15.webp",
-        "16.webp",
-        "17.webp",
-        "18.webp",
-        "19.webp",
-        "20.webp",
-        "21.webp",
-        "22.webp",
-        "23.webp",
-        "24.webp",
-        "25.webp",
-        "26.webp",
-        "27.webp"
-      ],
-      "heroPhoto": "01.webp",
-      "dateLoaded": "2026-02-12",
-      "dateModified": "2026-02-12"
+      "dateModified": "2026-01-25",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "eacde19f1d1559f5a8f862d8f13cc403",
@@ -2695,7 +2571,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-09-08",
-      "dateModified": "2025-12-12"
+      "dateModified": "2025-12-12",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "fa7aab37bad816c6f8ede7d1eb36293d",
@@ -2768,7 +2646,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-09-05",
-      "dateModified": "2025-11-14"
+      "dateModified": "2025-11-14",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "ff7bc9cb2e3d8d1f1a874db254809ba4",
@@ -2815,7 +2695,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2025-08-04",
-      "dateModified": "2025-12-20"
+      "dateModified": "2025-12-20",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     },
     {
       "uniqueId": "fffb5631536de0bc83b50eba9065a15c",
@@ -2893,7 +2775,9 @@
       ],
       "heroPhoto": "01.webp",
       "dateLoaded": "2026-02-19",
-      "dateModified": "2026-03-25"
+      "dateModified": "2026-03-25",
+      "sourceAccountId": "gary",
+      "sourceAccountLabel": "Gary Berkowitz"
     }
   ]
 }
