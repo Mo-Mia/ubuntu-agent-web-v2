@@ -13,10 +13,15 @@ import BlogCard from "@/components/blog-card"
 import GivingProcess from "@/components/giving-process"
 import CharitableCalculator from "@/components/charitable-calculator"
 import { ListingCard } from '@/components/listings/listing-card';
-import { getFeaturedListings } from '@/lib/listings';
+import { getListings } from '@/lib/content';
 
-export default function HomePage() {
-  const featuredListings = getFeaturedListings(3);
+export const dynamic = 'force-dynamic';
+
+export default async function HomePage() {
+  const featuredListings = (await getListings({ publicOnly: true }))
+    .filter((listing) => listing.status === 'For Sale')
+    .sort((a, b) => new Date(b.dateModified).getTime() - new Date(a.dateModified).getTime())
+    .slice(0, 3);
 
   return (
     <>

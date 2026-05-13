@@ -1,0 +1,58 @@
+import { boolean, integer, jsonb, pgTable, real, serial, text, timestamp } from "drizzle-orm/pg-core"
+
+export const donations = pgTable("donations", {
+  id: text("id").primaryKey(),
+  donatedOn: text("donated_on").notNull(),
+  displayDate: text("display_date").notNull(),
+  charityName: text("charity_name").notNull(),
+  propertyLabel: text("property_label").notNull(),
+  amountRand: integer("amount_rand").notNull(),
+  isAdjustment: boolean("is_adjustment").notNull().default(false),
+  notes: text("notes"),
+  archivedAt: timestamp("archived_at", { withTimezone: true, mode: "string" }),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "string" }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true, mode: "string" }).notNull().defaultNow(),
+})
+
+export const listings = pgTable("listings", {
+  uniqueId: text("unique_id").primaryKey(),
+  displayAddress: text("display_address"),
+  fullAddress: text("full_address"),
+  status: text("status").notNull(),
+  price: integer("price").notNull(),
+  type: text("type").notNull(),
+  category: text("category").notNull(),
+  bedrooms: integer("bedrooms").notNull(),
+  bathrooms: real("bathrooms").notNull(),
+  garages: integer("garages").notNull(),
+  parking: integer("parking").notNull(),
+  floorSize: integer("floor_size").notNull(),
+  erfSize: integer("erf_size").notNull(),
+  rates: integer("rates").notNull(),
+  levy: integer("levy").notNull(),
+  region: text("region").notNull(),
+  mandate: text("mandate").notNull(),
+  keywords: jsonb("keywords").$type<string[]>().notNull().default([]),
+  publicUrl: text("public_url"),
+  photos: jsonb("photos").$type<string[]>().notNull().default([]),
+  heroPhoto: text("hero_photo"),
+  dateLoaded: text("date_loaded").notNull(),
+  dateModified: text("date_modified").notNull(),
+  sourceAccountId: text("source_account_id"),
+  sourceAccountLabel: text("source_account_label"),
+  isPublished: boolean("is_published").notNull().default(true),
+  archivedAt: timestamp("archived_at", { withTimezone: true, mode: "string" }),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "string" }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true, mode: "string" }).notNull().defaultNow(),
+})
+
+export const adminAuditLog = pgTable("admin_audit_log", {
+  id: serial("id").primaryKey(),
+  entityType: text("entity_type").notNull(),
+  entityId: text("entity_id").notNull(),
+  action: text("action").notNull(),
+  actor: text("actor").notNull().default("admin"),
+  before: jsonb("before"),
+  after: jsonb("after"),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "string" }).notNull().defaultNow(),
+})

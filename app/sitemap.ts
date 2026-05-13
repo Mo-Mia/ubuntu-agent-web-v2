@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
-import { getAllListings } from "@/lib/listings";
+import { getListings } from "@/lib/content";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.theubuntuagent.com";
-  const listingPages = getAllListings().map((listing) => ({
+  const listingPages = (await getListings({ publicOnly: true })).map((listing) => ({
     url: `${baseUrl}/listings/${listing.uniqueId}`,
     lastModified: new Date(listing.dateModified),
     changeFrequency: "weekly" as const,

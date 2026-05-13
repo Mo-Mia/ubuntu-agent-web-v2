@@ -11,6 +11,9 @@ import FAQ from '@/components/faq'
 import CharitySection from '@/components/charity/CharitySection'
 import DonationTracker from '@/components/donation-tracker'
 import { charities } from "@/lib/data/charities"
+import { getDonationSummary } from '@/lib/content'
+
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "Ubuntu Giving Programme: Making a Difference Together | The Ubuntu Agent",
@@ -49,7 +52,8 @@ const faqItems = [
   },
 ]
 
-export default function UbuntuGivingPage() {
+export default async function UbuntuGivingPage() {
+  const donationSummary = await getDonationSummary()
   // Get featured charities for the highlight section
   const featuredCharities = charities.filter(charity => charity.featured).slice(0, 3);
   
@@ -209,7 +213,7 @@ export default function UbuntuGivingPage() {
             description="Transparent tracking of every donation made through the Ubuntu Giving Programme."
             alignment="center"
           />
-          <DonationTracker />
+          <DonationTracker {...donationSummary} />
         </div>
       </section>
 

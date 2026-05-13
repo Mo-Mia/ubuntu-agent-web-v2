@@ -8,11 +8,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   formatPrice,
-  getAllListings,
-  getListingById,
   getListingDisplayAddress,
   getListingPublicUrl,
 } from '@/lib/listings';
+import { getListing } from '@/lib/content';
+
+export const dynamic = 'force-dynamic';
 
 type ListingPageProps = {
   params: Promise<{ uniqueId: string }>;
@@ -33,8 +34,8 @@ function getStatusClasses(status: string) {
   }
 }
 
-function getMetaDescription(uniqueId: string) {
-  const listing = getListingById(uniqueId);
+async function getMetaDescription(uniqueId: string) {
+  const listing = await getListing(uniqueId);
   if (!listing) {
     return 'Browse property listings from The Ubuntu Agent.';
   }
@@ -42,15 +43,9 @@ function getMetaDescription(uniqueId: string) {
   return `${formatPrice(listing.price)} ${listing.type.toLowerCase()} with ${listing.bedrooms} bedrooms in ${listing.region}.`;
 }
 
-export async function generateStaticParams() {
-  return getAllListings().map((listing) => ({
-    uniqueId: listing.uniqueId,
-  }));
-}
-
 export async function generateMetadata({ params }: ListingPageProps): Promise<Metadata> {
   const { uniqueId } = await params;
-  const listing = getListingById(uniqueId);
+  const listing = await getListing(uniqueId);
 
   if (!listing) {
     return {
@@ -61,7 +56,7 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
 
   return {
     title: `${listing.type} in ${getListingDisplayAddress(listing)} | The Ubuntu Agent`,
-    description: getMetaDescription(uniqueId),
+    description: await getMetaDescription(uniqueId),
     alternates: {
       canonical: `/listings/${listing.uniqueId}`,
     },
@@ -70,7 +65,7 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
 
 export default async function ListingDetailPage({ params }: ListingPageProps) {
   const { uniqueId } = await params;
-  const listing = getListingById(uniqueId);
+  const listing = await getListing(uniqueId);
 
   if (!listing) {
     notFound();
@@ -79,8 +74,6 @@ export default async function ListingDetailPage({ params }: ListingPageProps) {
   const displayAddress = getListingDisplayAddress(listing);
   const enquiryAddress = encodeURIComponent(`${listing.type} in ${displayAddress}`);
   const publicUrl = getListingPublicUrl(listing);
-
-  console.log('Listing brochure URL:', listing.uniqueId, listing.publicUrl);
 
   return (
     <section className="bg-[#F7F5EF] pb-20 pt-32">

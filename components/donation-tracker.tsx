@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
-import { donations, totalCharities, totalDonated, totalTransactions } from "@/lib/data/donations"
+import type { DonationRecord, DonationSummary } from "@/lib/content"
 
 const zarFormatter = new Intl.NumberFormat("en-ZA", {
   maximumFractionDigits: 0,
@@ -12,20 +12,22 @@ const zarFormatter = new Intl.NumberFormat("en-ZA", {
 
 const formatRand = (amount: number) => `R${zarFormatter.format(amount)}`
 
-const charityTotals = Object.entries(
-  donations.reduce<Record<string, number>>((totals, donation) => {
-    totals[donation.charity] = (totals[donation.charity] ?? 0) + donation.amount
-    return totals
-  }, {}),
-)
-  .map(([charity, total]) => ({
-    charity,
-    total: charity === "CHOC" ? total + 3800 : total,
-  }))
-  .sort((a, b) => b.total - a.total)
+type DonationTrackerProps = DonationSummary
 
-export default function DonationTracker() {
+function getCharityTotals(donations: DonationRecord[]) {
+  return Object.entries(
+    donations.reduce<Record<string, number>>((totals, donation) => {
+      totals[donation.charityName] = (totals[donation.charityName] ?? 0) + donation.amountRand
+      return totals
+    }, {}),
+  )
+    .map(([charity, total]) => ({ charity, total }))
+    .sort((a, b) => b.total - a.total)
+}
+
+export default function DonationTracker({ donations, totalCharities, totalDonated, totalTransactions }: DonationTrackerProps) {
   const [isLedgerOpen, setIsLedgerOpen] = useState(false)
+  const charityTotals = getCharityTotals(donations)
 
   return (
     <div className="mt-12 space-y-12">
@@ -74,11 +76,11 @@ export default function DonationTracker() {
                 <div className="min-w-0">
                   <p className="text-sm text-gray-600">{donation.displayDate}</p>
                   <p className="mt-1 text-base text-gray-700">
-                    <span className="font-semibold text-gray-900">{donation.charity}</span>
-                    <span className="text-gray-600">{" — "}{donation.property}</span>
+                    <span className="font-semibold text-gray-900">{donation.charityName}</span>
+                    <span className="text-gray-600">{" — "}{donation.propertyLabel}</span>
                   </p>
                 </div>
-                <p className="shrink-0 text-lg font-semibold text-gold">{formatRand(donation.amount)}</p>
+                <p className="shrink-0 text-lg font-semibold text-gold">{formatRand(donation.amountRand)}</p>
               </div>
             ))}
           </div>

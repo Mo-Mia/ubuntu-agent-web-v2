@@ -3,7 +3,9 @@ import { format } from 'date-fns';
 
 import { ListingFilters } from '@/components/listings/listing-filters';
 import SectionHeading from '@/components/section-heading';
-import { getActiveListings, getLastUpdated } from '@/lib/listings';
+import { getLastUpdated, getListings } from '@/lib/content';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Properties | The Ubuntu Agent',
@@ -14,12 +16,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ListingsPage() {
-  const listings = getActiveListings();
+export default async function ListingsPage() {
+  const listings = await getListings({ publicOnly: true });
   const regions = [...new Set(listings.map((listing) => listing.region))].sort((a, b) =>
     a.localeCompare(b)
   );
-  const lastUpdated = format(new Date(getLastUpdated()), 'd MMMM yyyy');
+  const lastUpdated = format(new Date(await getLastUpdated()), 'd MMMM yyyy');
 
   return (
     <>
