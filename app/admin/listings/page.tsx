@@ -2,6 +2,7 @@ import { ArchiveRestore, ExternalLink, Save, Trash2 } from "lucide-react"
 import Link from "next/link"
 
 import { archiveListingAction, restoreListingAction, updateListingAction } from "@/app/admin/actions"
+import { AdminListingHeroPicker } from "@/components/admin-listing-hero-picker"
 import { AdminShell } from "@/components/admin-shell"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -101,7 +102,15 @@ export default async function AdminListingsPage() {
                       <option key={photo} value={photo}>{photo}</option>
                     ))}
                   </select>
-                  <p className="mt-2 text-xs text-slate-500">{listing.photos.length} photos</p>
+                  <div className="mt-2 flex items-center justify-between gap-3">
+                    <p className="text-xs text-slate-500">{listing.photos.length} photos</p>
+                    <AdminListingHeroPicker
+                      uniqueId={listing.uniqueId}
+                      displayAddress={listing.displayAddress ?? listing.region}
+                      photos={listing.photos}
+                      heroPhoto={listing.heroPhoto}
+                    />
+                  </div>
                 </td>
                 <td className="px-4 py-3">
                   <Input form={`listing-${listing.uniqueId}`} name="publicUrl" defaultValue={listing.publicUrl ?? ""} />

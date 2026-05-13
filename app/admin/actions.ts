@@ -157,6 +157,28 @@ export async function updateListingAction(formData: FormData) {
   redirect("/admin/listings")
 }
 
+export async function updateListingHeroAction(formData: FormData) {
+  await assertAdmin()
+  const db = getDb()
+  const uniqueId = stringValue(formData, "uniqueId")
+  const heroPhoto = nullableStringValue(formData, "heroPhoto")
+  const [before] = await db.select().from(listings).where(eq(listings.uniqueId, uniqueId)).limit(1)
+  const [after] = await db
+    .update(listings)
+    .set({
+      heroPhoto,
+      dateModified: new Date().toISOString().slice(0, 10),
+      updatedAt: sql<string>`now()`,
+    })
+    .where(eq(listings.uniqueId, uniqueId))
+    .returning()
+
+  await logAdminChange({ entityType: "listing", entityId: uniqueId, action: "update_hero", before, after })
+  revalidatePublicContent()
+  revalidatePath(`/listings/${uniqueId}`)
+  redirect("/admin/listings")
+}
+
 export async function archiveListingAction(formData: FormData) {
   await assertAdmin()
   const db = getDb()
