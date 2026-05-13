@@ -2,7 +2,7 @@
 
 **Important Note:** This project uses British/South African English spelling conventions (e.g., `optimise`, `colour`, `centre`). Please ensure all future contributions adhere to this standard.
 
-This project is the official website for Gary Berkowitz, "The Ubuntu Agent", showcasing his real estate services and the Ubuntu Giving Program.
+This project is the official website for Gary Berkowitz, "The Ubuntu Agent", showcasing his real estate services and the Ubuntu Giving Programme.
 
 ## Implementation Status
 
@@ -27,7 +27,7 @@ The website has been updated according to the Revised Phase 1 Implementation Pla
 3. **Ubuntu Giving Page**
    - Updated to mention actual charities Gary supports (Four Paws, CHOC, Breadline)
    - Replaced detailed charity partner profiles with simplified versions
-   - Changed impact tracking to a "Coming Soon" section as no historical data is available yet
+   - Added transparent donation tracking backed by the admin content database when configured
 
 4. **Services Page**
    - Updated service descriptions to focus on actual offerings
@@ -35,9 +35,8 @@ The website has been updated according to the Revised Phase 1 Implementation Pla
    - Revised buyer/seller services to reflect actual capabilities
 
 5. **Listings Page**
-   - Simplified to a basic "Coming Soon" message
-   - Added reference to Gary's actual service areas
-   - Removed detailed features and placeholder content
+   - Added live listing pages, listing detail pages, filters, and featured homepage listings
+   - Listing metadata can be maintained through the admin content database when configured
 
 6. **Resources Page**
    - Replaced placeholder blog posts with a "Coming Soon" message
@@ -59,19 +58,14 @@ The website has been updated according to the Revised Phase 1 Implementation Pla
    - Fixed email address and WhatsApp link
    - Ensured contact information is consistent throughout the site
 
+3. **Admin Content Manager**
+   - Added password-protected `/admin` area for donation and listing metadata maintenance
+   - Added Neon Postgres + Drizzle-backed storage with static-file fallback for local builds without `DATABASE_URL`
+   - Added migration and idempotent seed scripts that run before production builds
+
 ## Next Steps
 
-1. **Image Updates**
-   - Obtain and update images according to the image requirements document
-   - Replace placeholder images with authentic Johannesburg photography
-
-2. **Content Review**
-   - Review all content with Gary for accuracy
-   - Add any additional details or corrections
-
-3. **Technical Adjustments**
-   - Ensure forms are properly connected for lead generation
-   - Test across various devices and browsers
+See `BACKLOG.md` for deferred admin, listing, image, and operational improvements.
 
 ## Project Structure
 
@@ -96,10 +90,39 @@ npm run build
 npm run start
 ```
 
+## Admin Content Manager
+
+The admin area lives at `/admin/login`.
+
+Required Vercel environment variables:
+
+- `DATABASE_URL` - Neon Postgres pooled connection string. The Vercel Neon integration should create this when the custom prefix is `DATABASE`.
+- `ADMIN_PASSWORD` - password Gary uses to sign in.
+- `ADMIN_SESSION_SECRET` - long random value used to sign the admin session cookie.
+
+Recommended Vercel setup:
+
+- Enable Neon for Production and Preview.
+- Enable database branch creation for Preview.
+- Leave Neon Auth disabled for the current single-admin workflow.
+- Add admin secrets to Preview first, redeploy staging, then add Production secrets when ready to promote.
+
+Database scripts:
+
+- `npm run db:migrate` applies SQL migrations from `drizzle/`.
+- `npm run db:seed` seeds donations and listings only when the relevant tables are empty.
+- `npm run db:deploy` runs migration and seed, and is called automatically before `next build`.
+
+Local development without `DATABASE_URL` uses the existing static donation/listing fixtures as a fallback. Admin editing requires `DATABASE_URL`.
+
+Known npm warning:
+
+- `npm install` may warn that `@esbuild-kit/core-utils` and `@esbuild-kit/esm-loader` are deprecated. These are transitive dependencies of the current `drizzle-kit` release, not direct project dependencies. Recheck after future `drizzle-kit` releases.
+
 ## Contact
 
 For questions or further information about this website, please contact the development team.
 
 ---
 
-Last updated: April 22, 2025
+Last updated: May 13, 2026
