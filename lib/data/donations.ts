@@ -8,6 +8,7 @@ export interface Donation {
 }
 
 export const donations: Donation[] = [
+  { id: "d14", date: "2026-05-13", displayDate: "May 2026", charity: "Four Paws", property: "Direct donation", amount: 1750 },
   { id: "d13", date: "2026-05-01", displayDate: "May 2026", charity: "CHOC", property: "Complex - Fairview", amount: 1750 },
   { id: "d12", date: "2026-04-06", displayDate: "April 2026", charity: "Breadline Africa", property: "Fairview", amount: 5000 },
   { id: "d11", date: "2026-03-20", displayDate: "March 2026", charity: "Mother of Peace", property: "Wild Olive Manor", amount: 4800 },
@@ -24,7 +25,7 @@ export const donations: Donation[] = [
 ];
 
 // Summary stats
-export const totalDonated = 45250;
-export const totalTransactions = 13;
+export const totalDonated = 47000;
+export const totalTransactions = 14;
 export const totalCharities = 8;
 export const programmeStartDate = "October 2025";
