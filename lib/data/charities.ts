@@ -65,13 +65,6 @@ export const categories: Category[] = [
     shortName: "Homeless",
     description: "Organizations that provide shelter, food, and rehabilitation for the homeless.",
     icon: "home-heart"
-  },
-  {
-    id: "community-initiatives",
-    name: "Community Initiatives",
-    shortName: "Initiatives",
-    description: "Grassroots initiatives that bring communities together for health, fitness, and social connection.",
-    icon: "users-round"
   }
 ];
 
@@ -90,21 +83,6 @@ export const charities: Charity[] = [
     impact: "Employs former homeless to clear litter, cut grass, and fix park fencing. Supports city services by keeping Ward 88 clean and safe.",
     featured: true,
     image: "/images/charity/logos/lets-work-logo.svg"
-  },
-  {
-    id: "future-city-fourways",
-    name: "Future City Fourways",
-    category: "Community Development",
-    location: "Fourways (Douglasdale & Lonehill area)",
-    contact: {
-      email: "info@futurecityfourways.co.za",
-      phone: "074 252 8877",
-      website: null
-    },
-    mission: "Uplift Fourways through anti-grime and anti-crime initiatives led by community.",
-    impact: "Launched street clean-up programme clearing tons of litter. Created jobs for local residents and expanded safety patrols in Fourways.",
-    featured: false,
-    image: "/images/charity/logos/future-city-fourways.jpg"
   },
   {
     id: "gift-of-the-givers",
@@ -168,21 +146,6 @@ export const charities: Charity[] = [
     image: "/images/charity/logos/spca-randburg-logo.png"
   },
   {
-    id: "spca-sandton",
-    name: "SPCA Sandton & Eastern Metro",
-    category: "Animal Welfare",
-    location: "9th Street, Marlboro Gardens, Sandton",
-    contact: {
-      email: "info@sandtonspca.org.za",
-      phone: "011 444 7730",
-      website: "sandtonspca.org.za"
-    },
-    mission: "Prevention of animal cruelty in Sandton & surrounding areas. Rescue, rehabilitate and rehome lost, abandoned or abused pets.",
-    impact: "Runs mobile clinics in Alexandra and other townships. Handles ~hundreds of cases yearly, covering wealthy and impoverished areas alike.",
-    featured: false,
-    image: "/images/charity/logos/spca-sandton-logo.png"
-  },
-  {
     id: "kitty-puppy-haven",
     name: "Kitty and Puppy Haven",
     category: "Animal Welfare",
@@ -211,21 +174,6 @@ export const charities: Charity[] = [
     impact: "Cares for ~30 children on site. Children live in small group homes with house parents, recreating a family structure. Provides schooling support and life skills.",
     featured: true,
     image: "/images/charity/logos/mother-of-peace-logo.jpg"
-  },
-  {
-    id: "gift-a-child",
-    name: "Gift a Child Children's Home",
-    category: "Child Welfare",
-    location: "67 Preller Drive, Franklin Roosevelt Park, Randburg",
-    contact: {
-      email: "giftachild_daycare@outlook.com",
-      phone: "081 357 6091",
-      website: "giftachild.org.za"
-    },
-    mission: "A fully registered children's home offering love, care and shelter to abandoned, abused, and HIV-positive children.",
-    impact: "Provides 24/7 care in a home setting. Helps children heal and thrive, with many success stories of kids overcoming trauma.",
-    featured: false,
-    image: "/images/charity/logos/gift-a-child-logo.png"
   },
   {
     id: "oasis-haven",
@@ -288,21 +236,6 @@ export const charities: Charity[] = [
     image: "/images/charity/logos/rdsa-logo.jpg"
   },
   {
-    id: "cansa",
-    name: "CANSA (Cancer Association of SA)",
-    category: "Disease Support & Research",
-    location: "(Gauteng Care Centre) Edenvale, JHB",
-    contact: {
-      email: "info@cansa.org.za",
-      phone: "0800 22 66 22",
-      website: "cansa.org.za"
-    },
-    mission: "A national health charity (est. 1931) dedicated to fighting cancer and supporting those affected.",
-    impact: "Operates CANSA Care Centres across Gauteng offering screenings, counselling and a toll-free helpline. Runs the iconic CANSA Shavathon fundraising campaign nationwide.",
-    featured: false,
-    image: "/images/charity/logos/cansa-logo.jpg"
-  },
-  {
     id: "breadline-africa",
     name: "Breadline Africa",
     category: "Child Welfare",
@@ -333,36 +266,6 @@ export const charities: Charity[] = [
     featured: true,
     previouslySupported: true,
     image: "/images/charity/logos/choc-logo.png"
-  },
-  {
-    id: "mes",
-    name: "MES (Mould Empower Serve)",
-    category: "Homeless Support",
-    location: "Braamfontein and Hillbrow, Johannesburg",
-    contact: {
-      email: "jhb@mes.org.za",
-      phone: "011 725 6531",
-      website: "mes.org.za"
-    },
-    mission: "Urban homelessness intervention organisation focused on Changing the heart of the city.",
-    impact: "In Johannesburg, MES runs overnight shelters, soup kitchens, and vocational programmes that assist thousands annually. The Hillbrow Safe Space and Braamfontein shelters accommodate hundreds of homeless.",
-    featured: false,
-    image: "/images/charity/logos/mes-logo.jpg"
-  },
-  {
-    id: "parkrun",
-    name: "Parkrun South Africa",
-    category: "Community Initiatives",
-    location: "Various parks (e.g. Delta Park, Bryanston, Midrand)",
-    contact: {
-      email: "office@parkrun.co.za",
-      phone: null,
-      website: "parkrun.co.za"
-    },
-    mission: "A global charity that organises free, weekly 5km community runs/walks in public parks.",
-    impact: "Local examples: Delta Parkrun (Victory Park) with scenic trails; Golden Harvest Parkrun (Northriding) in a nature reserve; Braamfontein Parkrun (at Zoo Lake) etc. Each event draws hundred-plus participants weekly.",
-    featured: false,
-    image: "/images/charity/logos/parkrun-logo.png"
   }
 ];
 
