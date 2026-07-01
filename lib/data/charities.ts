@@ -11,56 +11,65 @@ export interface Charity {
   mission: string;
   impact: string;
   featured: boolean;
+  previouslySupported?: boolean;
   image: string;
 }
 
 export interface Category {
   id: string;
   name: string;
+  shortName: string;
   description: string;
   icon: string;
 }
 
 export const categories: Category[] = [
   {
-    id: "community-development",
-    name: "Community Development",
-    description: "Organizations that uplift communities through job creation, urban renewal, and local improvement initiatives.",
-    icon: "building-community"
-  },
-  {
     id: "animal-welfare",
     name: "Animal Welfare",
+    shortName: "Animals",
     description: "Organizations that protect, rescue, and care for animals in need.",
     icon: "paw-print"
   },
   {
     id: "child-welfare",
     name: "Child Welfare",
+    shortName: "Children",
     description: "Organizations that care for orphaned, abandoned, and vulnerable children.",
     icon: "heart-hands"
   },
   {
+    id: "community-development",
+    name: "Community Development",
+    shortName: "Community",
+    description: "Organizations that uplift communities through job creation, urban renewal, and local improvement initiatives.",
+    icon: "building-community"
+  },
+  {
     id: "elderly-care",
     name: "Elderly Care",
+    shortName: "Elderly",
     description: "Organizations that provide care, housing, and support for the elderly.",
     icon: "users"
   },
   {
     id: "disease-support",
     name: "Disease Support & Research",
+    shortName: "Health",
     description: "Organizations that support those affected by diseases and fund research for cures and treatments.",
     icon: "stethoscope"
   },
   {
     id: "homeless-support",
     name: "Homeless Support",
+    shortName: "Homeless",
     description: "Organizations that provide shelter, food, and rehabilitation for the homeless.",
     icon: "home-heart"
   },
   {
     id: "community-initiatives",
     name: "Community Initiatives",
+    shortName: "Initiatives",
     description: "Grassroots initiatives that bring communities together for health, fitness, and social connection.",
     icon: "users-round"
   }
@@ -126,6 +135,22 @@ export const charities: Charity[] = [
     impact: "Serves ~510 plates of food daily across porridge, sandwiches, and meals. Feeds children in foster care and local schools, and supports 30 men with shelter.",
     featured: false,
     image: "/images/charity/placeholder-homeless.svg"
+  },
+  {
+    id: "four-paws",
+    name: "Four Paws",
+    category: "Animal Welfare",
+    location: "Johannesburg",
+    contact: {
+      email: null,
+      phone: null,
+      website: "four-paws.org.za"
+    },
+    mission: "Animal welfare organisation dedicated to saving animals in need. Four Paws focuses on animals who are directly under human influence.",
+    impact: "Rescues and rehabilitates animals in distress across South Africa, advocating for humane treatment and responsible pet ownership.",
+    featured: true,
+    previouslySupported: true,
+    image: "/images/charity/logos/four-paws-logo.svg"
   },
   {
     id: "spca-randburg",
@@ -278,6 +303,22 @@ export const charities: Charity[] = [
     image: "/images/charity/placeholder-health.svg"
   },
   {
+    id: "breadline-africa",
+    name: "Breadline Africa",
+    category: "Disease Support & Research",
+    location: "South Africa",
+    contact: {
+      email: null,
+      phone: null,
+      website: "breadlineafrica.org"
+    },
+    mission: "Transforming the lives of children through infrastructure projects focused on education, health, and well-being.",
+    impact: "Provides classrooms, libraries, and sanitation facilities to underserved communities across Africa, improving access to education for thousands of children.",
+    featured: true,
+    previouslySupported: true,
+    image: "/images/charity/logos/breadline-africa-logo.png"
+  },
+  {
     id: "choc",
     name: "CHOC Childhood Cancer Foundation",
     category: "Disease Support & Research",
@@ -290,7 +331,8 @@ export const charities: Charity[] = [
     mission: "Provides comprehensive support to children with cancer or life-threatening blood disorders, and their families.",
     impact: "CHOC runs 13 accommodation facilities near pediatric oncology units, offering families free lodging during treatment. Offers emotional support via social workers and support groups.",
     featured: true,
-    image: "/images/charity/placeholder-health.svg"
+    previouslySupported: true,
+    image: "/images/charity/logos/choc-logo.png"
   },
   {
     id: "mes",
@@ -322,4 +364,21 @@ export const charities: Charity[] = [
     featured: false,
     image: "/images/charity/placeholder-community.svg"
   }
-]; 
+];
+
+export function getCharitiesForCategory(category: Category): Charity[] {
+  return charities.filter((charity) => charity.category === category.name);
+}
+
+export function getCharitiesGroupedByCategory(): { category: Category; charities: Charity[] }[] {
+  return categories
+    .map((category) => ({
+      category,
+      charities: getCharitiesForCategory(category),
+    }))
+    .filter((group) => group.charities.length > 0);
+}
+
+export function getPreviouslySupportedCharities(): Charity[] {
+  return charities.filter((charity) => charity.previouslySupported);
+} 

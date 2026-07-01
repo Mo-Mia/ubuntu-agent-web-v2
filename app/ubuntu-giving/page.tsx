@@ -5,12 +5,10 @@ import Image from 'next/image'
 import { HeroImage } from '@/components/ui/HeroImage'
 import SectionHeading from '@/components/section-heading'
 import GivingProcess from '@/components/giving-process'
-import CharityCard from '@/components/charity-card'
 import CharitableCalculator from '@/components/charitable-calculator'
 import FAQ from '@/components/faq'
 import CharitySection from '@/components/charity/CharitySection'
 import DonationTracker from '@/components/donation-tracker'
-import { charities } from "@/lib/data/charities"
 import { getDonationSummary } from '@/lib/content'
 
 export const dynamic = "force-dynamic"
@@ -54,17 +52,6 @@ const faqItems = [
 
 export default async function UbuntuGivingPage() {
   const donationSummary = await getDonationSummary()
-  // Get featured charities for the highlight section
-  const featuredCharities = charities.filter(charity => charity.featured).slice(0, 3);
-  
-  // Format charities for compatibility with current CharityCard component
-  const formattedCharities = featuredCharities.map(charity => ({
-    name: charity.name,
-    description: charity.mission,
-    imageSrc: charity.image,
-    category: charity.category,
-    link: `/ubuntu-giving/charity-selection?highlight=${charity.id}`,
-  }));
 
   return (
     <>
@@ -162,39 +149,6 @@ export default async function UbuntuGivingPage() {
             <Link href="/contact" className="btn-primary">
               Start Your Ubuntu Journey
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Charity Partners Section */}
-      <section id="charities" className="section-padding bg-white">
-        <div className="container-custom">
-          <SectionHeading
-            subtitle="Current Impact"
-            title="Charities We've Supported"
-            description="Through the Ubuntu Giving Programme, we're already making an impact with these organisations."
-            alignment="center"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <CharityCard
-              name="Four Paws"
-              description="Animal welfare organisation dedicated to saving animals in need."
-              imageSrc="/images/charity/logos/four-paws-logo.svg"
-              websiteUrl="https://www.four-paws.org.za/"
-            />
-            <CharityCard
-              name="CHOC"
-              description="Childhood Cancer Foundation supporting children and families affected by cancer."
-              imageSrc="/images/charity/logos/choc-logo.png"
-              websiteUrl="https://choc.org.za/"
-            />
-            <CharityCard
-              name="Breadline Africa"
-              description="Transforming the lives of children through infrastructure projects."
-              imageSrc="/images/charity/logos/breadline-africa-logo.png"
-              websiteUrl="https://breadlineafrica.org/"
-            />
           </div>
         </div>
       </section>
