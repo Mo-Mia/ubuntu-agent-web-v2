@@ -8,6 +8,7 @@
     "build:next": "next build",
     "db:migrate": "tsx scripts/migrate-db.ts",
     "db:seed": "tsx scripts/seed-db.ts",
+    "db:archive-stale-listings": "tsx scripts/archive-stale-listings.ts",
     "db:deploy": "npm run db:migrate && npm run db:seed",
     "start": "next start",
     "lint": "next lint"
