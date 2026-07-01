@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { DatePicker } from './ui/DatePicker';
 import { addDays, startOfToday, format } from 'date-fns';
-import Script from 'next/script';
+import { charities } from '@/lib/data/charities';
 
 export function ConsultationForm() {
   const [formData, setFormData] = useState({
@@ -15,12 +15,13 @@ export function ConsultationForm() {
     preferredContact: 'email',
     interest: 'consultation' as 'buying' | 'selling' | 'valuation' | 'ubuntu' | 'consultation' | 'other',
   });
+  const [selectedCharityName, setSelectedCharityName] = useState<string | null>(null);
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   
-  // Apply URL state for success handling and listing enquiries.
+  // Apply URL state for success handling, listing enquiries, and charity selection.
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search);
@@ -38,6 +39,22 @@ export function ConsultationForm() {
             current.message ||
             `I'm interested in the property at ${decodedProperty}. Please provide more information.`,
         }));
+      }
+
+      const charityId = urlParams.get('charity');
+      if (charityId) {
+        const charity = charities.find((entry) => entry.id === charityId);
+        if (charity) {
+          setSelectedCharityName(charity.name);
+          setFormData((current) => ({
+            ...current,
+            interest: 'ubuntu',
+            appointmentDate: null,
+            message:
+              current.message ||
+              `I'd like to direct my Ubuntu Giving Programme donation to ${charity.name} when my property transaction completes.`,
+          }));
+        }
       }
     }
   }, []);
@@ -153,7 +170,19 @@ export function ConsultationForm() {
             <input type="hidden" name="redirect" value="https://theubuntuagent.com/contact?success=true" />
             
             {/* Subject field for email */}
-            <input type="hidden" name="subject" value="New Consultation Request" />
+            <input
+              type="hidden"
+              name="subject"
+              value={
+                selectedCharityName
+                  ? `Ubuntu Giving Programme — ${selectedCharityName}`
+                  : 'New Consultation Request'
+              }
+            />
+
+            {selectedCharityName && (
+              <input type="hidden" name="ubuntuCharity" value={selectedCharityName} />
+            )}
             
             {/* BCC field for email notifications */}
             <input type="hidden" name="bcc" value="momia@projectmohem.co.za" />
@@ -161,7 +190,16 @@ export function ConsultationForm() {
             {/* Required field for Web3Forms to enable spam protection */}
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
             
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Schedule a Consultation</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {selectedCharityName ? 'Confirm Your Charity Choice' : 'Schedule a Consultation'}
+            </h2>
+
+            {selectedCharityName && (
+              <p className="text-sm text-gray-700 mb-4 rounded-md bg-amber-50 border border-amber-200 px-4 py-3">
+                Selected charity partner: <strong>{selectedCharityName}</strong>. Complete the form below
+                and Gary will include this in your consultation.
+              </p>
+            )}
             
             {errors.form && (
               <div className="bg-red-50 p-3 rounded-md flex items-start space-x-2">

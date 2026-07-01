@@ -216,11 +216,11 @@ export const charities: Charity[] = [
     id: "gift-a-child",
     name: "Gift a Child Children's Home",
     category: "Child Welfare",
-    location: "Franklin Roosevelt Park, Randburg",
+    location: "67 Preller Drive, Franklin Roosevelt Park, Randburg",
     contact: {
-      email: null,
-      phone: null,
-      website: null
+      email: "giftachild_daycare@outlook.com",
+      phone: "081 357 6091",
+      website: "giftachild.org.za"
     },
     mission: "A fully registered children's home offering love, care and shelter to abandoned, abused, and HIV-positive children.",
     impact: "Provides 24/7 care in a home setting. Helps children heal and thrive, with many success stories of kids overcoming trauma.",
@@ -305,7 +305,7 @@ export const charities: Charity[] = [
   {
     id: "breadline-africa",
     name: "Breadline Africa",
-    category: "Disease Support & Research",
+    category: "Child Welfare",
     location: "South Africa",
     contact: {
       email: null,

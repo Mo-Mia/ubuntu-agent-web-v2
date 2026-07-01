@@ -21,7 +21,7 @@ const CharityCard = ({ charity, isSelected, onSelect }: CharityCardProps) => {
     >
       <div className={`relative w-full ${isLogo ? "h-32 p-4 bg-white" : "h-48"}`}>
         <Image
-          src={charity.image || "/images/charity/placeholder.jpg"}
+          src={charity.image || "/images/charity/placeholder.svg"}
           alt={charity.name}
           fill
           className={isLogo ? "object-contain" : "object-cover"}
