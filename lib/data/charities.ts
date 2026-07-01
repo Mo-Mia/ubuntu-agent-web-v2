@@ -89,7 +89,7 @@ export const charities: Charity[] = [
     mission: "Create jobs for homeless while cleaning and maintaining public spaces.",
     impact: "Employs former homeless to clear litter, cut grass, and fix park fencing. Supports city services by keeping Ward 88 clean and safe.",
     featured: true,
-    image: "/images/charity/placeholder-community.svg"
+    image: "/images/charity/logos/lets-work-logo.svg"
   },
   {
     id: "future-city-fourways",
@@ -104,7 +104,7 @@ export const charities: Charity[] = [
     mission: "Uplift Fourways through anti-grime and anti-crime initiatives led by community.",
     impact: "Launched street clean-up programme clearing tons of litter. Created jobs for local residents and expanded safety patrols in Fourways.",
     featured: false,
-    image: "/images/charity/placeholder-community.svg"
+    image: "/images/charity/logos/future-city-fourways.jpg"
   },
   {
     id: "gift-of-the-givers",
@@ -119,7 +119,7 @@ export const charities: Charity[] = [
     mission: "Largest African disaster response NGO providing impartial humanitarian aid in crises irrespective of race or religion.",
     impact: "Delivered R4.5 billion in life-saving aid since 1992, across 45+ countries including SA. Notable for disaster relief and community projects.",
     featured: true,
-    image: "/images/charity/placeholder-community.svg"
+    image: "/images/charity/logos/gift-of-the-givers-logo.png"
   },
   {
     id: "one-small-act",
@@ -134,7 +134,7 @@ export const charities: Charity[] = [
     mission: "Provides shelter, food and support to the homeless and destitute.",
     impact: "Serves ~510 plates of food daily across porridge, sandwiches, and meals. Feeds children in foster care and local schools, and supports 30 men with shelter.",
     featured: false,
-    image: "/images/charity/placeholder-homeless.svg"
+    image: "/images/charity/logos/one-small-act-logo.png"
   },
   {
     id: "four-paws",
@@ -165,7 +165,7 @@ export const charities: Charity[] = [
     mission: "Prevent cruelty to animals and provide shelter for stray, abandoned, and abused animals.",
     impact: "Investigates animal cruelty complaints in Randburg area. Operates a kennel for adoptions and a small clinic. Offers public education on pet care.",
     featured: true,
-    image: "/images/charity/placeholder-animal.svg"
+    image: "/images/charity/logos/spca-randburg-logo.png"
   },
   {
     id: "spca-sandton",
@@ -180,7 +180,7 @@ export const charities: Charity[] = [
     mission: "Prevention of animal cruelty in Sandton & surrounding areas. Rescue, rehabilitate and rehome lost, abandoned or abused pets.",
     impact: "Runs mobile clinics in Alexandra and other townships. Handles ~hundreds of cases yearly, covering wealthy and impoverished areas alike.",
     featured: false,
-    image: "/images/charity/placeholder-animal.svg"
+    image: "/images/charity/logos/spca-sandton-logo.png"
   },
   {
     id: "kitty-puppy-haven",
@@ -195,7 +195,7 @@ export const charities: Charity[] = [
     mission: "A pro-life animal sanctuary rescuing neglected, abused and abandoned cats and dogs.",
     impact: "Rehomes ~1,200 animals per year. Provides extensive veterinary care to nurse animals back to health. Runs outreach pet care days and sterilisation drives.",
     featured: false,
-    image: "/images/charity/placeholder-animal.svg"
+    image: "/images/charity/logos/kitty-puppy-haven-logo.png"
   },
   {
     id: "mother-of-peace",
@@ -210,7 +210,7 @@ export const charities: Charity[] = [
     mission: "Operates a foster-care community for orphans and vulnerable children in a family-like environment.",
     impact: "Cares for ~30 children on site. Children live in small group homes with house parents, recreating a family structure. Provides schooling support and life skills.",
     featured: true,
-    image: "/images/charity/placeholder-children.svg"
+    image: "/images/charity/logos/mother-of-peace-logo.jpg"
   },
   {
     id: "gift-a-child",
@@ -225,7 +225,7 @@ export const charities: Charity[] = [
     mission: "A fully registered children's home offering love, care and shelter to abandoned, abused, and HIV-positive children.",
     impact: "Provides 24/7 care in a home setting. Helps children heal and thrive, with many success stories of kids overcoming trauma.",
     featured: false,
-    image: "/images/charity/placeholder-children.svg"
+    image: "/images/charity/logos/gift-a-child-logo.png"
   },
   {
     id: "oasis-haven",
@@ -240,7 +240,7 @@ export const charities: Charity[] = [
     mission: "A Child & Youth Care Centre that provides family-based care for orphaned and abandoned children.",
     impact: "Since 2002, has cared for dozens of vulnerable children in small home units. Emphasises breaking the cycle of abuse/neglect by loving them as our own.",
     featured: false,
-    image: "/images/charity/placeholder-children.svg"
+    image: "/images/charity/logos/oasis-haven-logo.png"
   },
   {
     id: "rand-aid",
@@ -255,7 +255,7 @@ export const charities: Charity[] = [
     mission: "NPO offering accommodation in retirement villages and frail-care centres, and running rehab programmes.",
     impact: "Operates multiple facilities: Tarentaal Village (subsidised flats), Ron Smith Centre (frail care), Thembalami Care Centre (for disadvantaged seniors) and Wedge Gardens Treatment Centre.",
     featured: false,
-    image: "/images/charity/placeholder-elderly.svg"
+    image: "/images/charity/logos/rand-aid-logo.jpg"
   },
   {
     id: "garden-village",
@@ -270,7 +270,7 @@ export const charities: Charity[] = [
     mission: "A long-established retirement home and frail care facility for seniors, providing compassionate care and comfortable accommodation to the elderly for over 50 years.",
     impact: "Home to dozens of elderly residents in the Randburg area. Known for a vibrant community life – e.g., organising events like Mardi Gras parties for residents.",
     featured: true,
-    image: "/images/charity/placeholder-elderly.svg"
+    image: "/images/charity/logos/methodist-homes-logo.png"
   },
   {
     id: "rare-diseases-sa",
@@ -285,7 +285,7 @@ export const charities: Charity[] = [
     mission: "Advocates for the ~1 in 15 South Africans living with rare diseases or congenital disorders.",
     impact: "Supports rare disease patients via patient registry, navigation to specialists, and help with funding treatment. Organises Rare Disease Day events and public campaigns.",
     featured: false,
-    image: "/images/charity/placeholder-health.svg"
+    image: "/images/charity/logos/rdsa-logo.jpg"
   },
   {
     id: "cansa",
@@ -300,7 +300,7 @@ export const charities: Charity[] = [
     mission: "A national health charity (est. 1931) dedicated to fighting cancer and supporting those affected.",
     impact: "Operates CANSA Care Centres across Gauteng offering screenings, counselling and a toll-free helpline. Runs the iconic CANSA Shavathon fundraising campaign nationwide.",
     featured: false,
-    image: "/images/charity/placeholder-health.svg"
+    image: "/images/charity/logos/cansa-logo.jpg"
   },
   {
     id: "breadline-africa",
@@ -347,7 +347,7 @@ export const charities: Charity[] = [
     mission: "Urban homelessness intervention organisation focused on Changing the heart of the city.",
     impact: "In Johannesburg, MES runs overnight shelters, soup kitchens, and vocational programmes that assist thousands annually. The Hillbrow Safe Space and Braamfontein shelters accommodate hundreds of homeless.",
     featured: false,
-    image: "/images/charity/placeholder-homeless.svg"
+    image: "/images/charity/logos/mes-logo.jpg"
   },
   {
     id: "parkrun",
@@ -362,7 +362,7 @@ export const charities: Charity[] = [
     mission: "A global charity that organises free, weekly 5km community runs/walks in public parks.",
     impact: "Local examples: Delta Parkrun (Victory Park) with scenic trails; Golden Harvest Parkrun (Northriding) in a nature reserve; Braamfontein Parkrun (at Zoo Lake) etc. Each event draws hundred-plus participants weekly.",
     featured: false,
-    image: "/images/charity/placeholder-community.svg"
+    image: "/images/charity/logos/parkrun-logo.png"
   }
 ];
 

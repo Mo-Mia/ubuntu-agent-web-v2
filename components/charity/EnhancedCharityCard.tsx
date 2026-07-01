@@ -21,7 +21,7 @@ function charityWebsiteUrl(website: string | null): string | null {
 const EnhancedCharityCard: React.FC<EnhancedCharityCardProps> = ({ charity }) => {
   const website = charityWebsiteUrl(charity.contact.website);
   const isLogo =
-    charity.image.endsWith(".svg") || charity.image.includes("logo");
+    charity.image.endsWith(".svg") || charity.image.includes("logo") || charity.image.includes("/logos/");
 
   return (
     <Card className="h-full flex flex-col charity-surface bg-white">

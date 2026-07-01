@@ -10,18 +10,21 @@ interface CharityCardProps {
 }
 
 const CharityCard = ({ charity, isSelected, onSelect }: CharityCardProps) => {
+  const isLogo =
+    charity.image.endsWith(".svg") || charity.image.includes("logo") || charity.image.includes("/logos/");
+
   return (
     <div
       className={`border rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer
         ${isSelected ? "border-amber-500 ring-2 ring-amber-500" : "border-gray-200"}`}
       onClick={onSelect}
     >
-      <div className="relative h-48 w-full">
+      <div className={`relative w-full ${isLogo ? "h-32 p-4 bg-white" : "h-48"}`}>
         <Image
           src={charity.image || "/images/charity/placeholder.jpg"}
           alt={charity.name}
           fill
-          className="object-cover"
+          className={isLogo ? "object-contain" : "object-cover"}
         />
         {charity.featured && (
           <div className="absolute top-2 right-2 bg-amber-500 text-white px-2 py-1 text-xs rounded-full">
