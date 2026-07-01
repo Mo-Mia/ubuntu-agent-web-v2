@@ -82,7 +82,7 @@ export const charities: Charity[] = [
     mission: "Create jobs for homeless while cleaning and maintaining public spaces.",
     impact: "Employs former homeless to clear litter, cut grass, and fix park fencing. Supports city services by keeping Ward 88 clean and safe.",
     featured: true,
-    image: "/images/charity/logos/lets-work-logo.svg"
+    image: "/images/charity/logos/lets-work-logo.jpg"
   },
   {
     id: "gift-of-the-givers",
