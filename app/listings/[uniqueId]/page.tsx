@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation';
 import { Bath, BedDouble, CarFront, ExternalLink, MapPin, MoveLeft, Ruler, Warehouse } from 'lucide-react';
 
 import { ListingGallery } from '@/components/listings/listing-gallery';
+import { ListingMovedPage } from '@/components/listings/listing-moved-page';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { isInternalListingsEnabled } from '@/lib/config/listings';
 import {
   formatPrice,
   getListingDisplayAddress,
@@ -45,6 +47,19 @@ async function getMetaDescription(uniqueId: string) {
 
 export async function generateMetadata({ params }: ListingPageProps): Promise<Metadata> {
   const { uniqueId } = await params;
+
+  if (!isInternalListingsEnabled()) {
+    return {
+      title: 'Property Listing Moved | The Ubuntu Agent',
+      description:
+        'This property listing has moved to Gary Berkowitz\'s live PropCon profile. Browse current listings there.',
+      robots: {
+        index: false,
+        follow: true,
+      },
+    };
+  }
+
   const listing = await getListing(uniqueId);
 
   if (!listing) {
@@ -65,6 +80,11 @@ export async function generateMetadata({ params }: ListingPageProps): Promise<Me
 
 export default async function ListingDetailPage({ params }: ListingPageProps) {
   const { uniqueId } = await params;
+
+  if (!isInternalListingsEnabled()) {
+    return <ListingMovedPage uniqueId={uniqueId} />;
+  }
+
   const listing = await getListing(uniqueId);
 
   if (!listing) {

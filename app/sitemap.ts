@@ -1,16 +1,19 @@
 import type { MetadataRoute } from "next";
 import { getListings } from "@/lib/content";
+import { isInternalListingsEnabled } from "@/lib/config/listings";
 
 export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.theubuntuagent.com";
-  const listingPages = (await getListings({ publicOnly: true })).map((listing) => ({
-    url: `${baseUrl}/listings/${listing.uniqueId}`,
-    lastModified: new Date(listing.dateModified),
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
-  }));
+  const listingPages = isInternalListingsEnabled()
+    ? (await getListings({ publicOnly: true })).map((listing) => ({
+        url: `${baseUrl}/listings/${listing.uniqueId}`,
+        lastModified: new Date(listing.dateModified),
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      }))
+    : [];
 
   return [
     {

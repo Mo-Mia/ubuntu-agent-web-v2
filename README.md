@@ -34,9 +34,9 @@ The website has been updated according to the Revised Phase 1 Implementation Pla
    - Highlighted specific areas served in North Johannesburg
    - Revised buyer/seller services to reflect actual capabilities
 
-5. **Listings Page**
-   - Added live listing pages, listing detail pages, filters, and featured homepage listings
-   - Listing metadata can be maintained through the admin content database when configured
+5. **Listings**
+   - Public property discovery links to Gary's live PropCon agent profile via a bridge page at `/listings`
+   - Internal listing pages, filters, and admin tools are retained behind `LISTINGS_MODE=internal` for potential future use
 
 6. **Resources Page**
    - Replaced placeholder blog posts with a "Coming Soon" message
@@ -62,6 +62,18 @@ The website has been updated according to the Revised Phase 1 Implementation Pla
    - Added password-protected `/admin` area for donation and listing metadata maintenance
    - Added Neon Postgres + Drizzle-backed storage with static-file fallback for local builds without `DATABASE_URL`
    - Added migration and idempotent seed scripts that run before production builds
+
+### Listings (PropCon pivot)
+
+Property inventory is hosted on [Gary's PropCon profile](https://agent.propcon.co.za/estate-agent/gary-berkowitz-1). The site shows a bridge page at `/listings` that hands off to PropCon. Legacy listing routes show a "moved" page rather than 404.
+
+Environment variables:
+
+- `LISTINGS_MODE` — `external` (default) or `internal`. Use `external` for the PropCon handoff; set `internal` to restore on-site listing index and detail pages.
+- `PROPCON_AGENT_URL` — optional override for the PropCon profile URL (defaults to Gary's agent page).
+- `ENABLE_LISTING_ADMIN` — set to `true` together with `LISTINGS_MODE=internal` to show listing management in `/admin`.
+
+Listing seed data, images, components, and database schema are retained in the repo for potential future reuse.
 
 ## Next Steps
 

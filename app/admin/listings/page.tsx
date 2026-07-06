@@ -7,6 +7,7 @@ import { AdminShell } from "@/components/admin-shell"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { getListings } from "@/lib/content"
+import { isListingAdminEnabled } from "@/lib/config/listings"
 import { hasDatabaseUrl } from "@/lib/db"
 import { requireAdmin } from "@/lib/admin-auth"
 
@@ -16,6 +17,22 @@ const statuses = ["For Sale", "Under Offer", "To Rent", "On Auction", "Sold"]
 
 export default async function AdminListingsPage() {
   await requireAdmin()
+
+  if (!isListingAdminEnabled()) {
+    return (
+      <AdminShell>
+        <div className="rounded-lg border border-slate-200 bg-white p-6 text-slate-700">
+          <h2 className="mb-2 text-xl font-semibold text-[#0C0F24]">Listings admin disabled</h2>
+          <p className="mb-0">
+            Property listings are hosted on PropCon. Internal listing management is retained for
+            future use but hidden while <code className="text-sm">LISTINGS_MODE=external</code>.
+            To re-enable, set <code className="text-sm">LISTINGS_MODE=internal</code> and{" "}
+            <code className="text-sm">ENABLE_LISTING_ADMIN=true</code> in your environment.
+          </p>
+        </div>
+      </AdminShell>
+    )
+  }
 
   if (!hasDatabaseUrl()) {
     return (

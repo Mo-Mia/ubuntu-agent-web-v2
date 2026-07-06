@@ -2,6 +2,7 @@ import { count } from "drizzle-orm"
 
 import { donations, listings } from "@/db/schema"
 import { getDb, hasDatabaseUrl } from "@/lib/db"
+import { isInternalListingsEnabled } from "@/lib/config/listings"
 import { donations as staticDonations } from "@/lib/data/donations"
 import { legacyChocDonation } from "@/lib/content"
 import listingsData from "@/data/listings.json"
@@ -78,7 +79,9 @@ async function main() {
     console.log("Donations table already has data; skipping donation seed.")
   }
 
-  if (listingCount.value === 0) {
+  if (!isInternalListingsEnabled()) {
+    console.log("LISTINGS_MODE=external; skipping listing seed.")
+  } else if (listingCount.value === 0) {
     const rows = (listingsData as ListingsData).listings.map(normalizeListing)
     for (let index = 0; index < rows.length; index += 100) {
       await db.insert(listings).values(rows.slice(index, index + 100))

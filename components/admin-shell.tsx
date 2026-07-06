@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { logoutAction } from "@/app/admin/actions"
 import { Button } from "@/components/ui/button"
+import { isListingAdminEnabled } from "@/lib/config/listings"
 
 export function AdminShell({ children }: { children: React.ReactNode }) {
   return (
@@ -16,9 +17,11 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             <Button asChild variant="outline">
               <Link href="/admin/donations">Donations</Link>
             </Button>
-            <Button asChild variant="outline">
-              <Link href="/admin/listings">Listings</Link>
-            </Button>
+            {isListingAdminEnabled() ? (
+              <Button asChild variant="outline">
+                <Link href="/admin/listings">Listings</Link>
+              </Button>
+            ) : null}
             <form action={logoutAction}>
               <Button type="submit" variant="ghost">Log out</Button>
             </form>
