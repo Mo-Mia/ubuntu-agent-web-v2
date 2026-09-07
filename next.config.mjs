@@ -19,6 +19,14 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Reverse proxy for PostHog so analytics requests are same-origin.
+  skipTrailingSlashRedirect: true,
+  async rewrites() {
+    return [
+      { source: '/ingest/static/:path*', destination: 'https://eu-assets.i.posthog.com/static/:path*' },
+      { source: '/ingest/:path*', destination: 'https://eu.i.posthog.com/:path*' },
+    ]
+  },
   images: {
     unoptimized: true,
     domains: ['localhost', 'placeholder.svg'],
