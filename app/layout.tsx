@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer'
 import type React from "react"
 import type { Viewport } from "next"
 import Script from 'next/script'
+import { PostHogProvider } from '@/components/analytics/posthog-provider'
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -204,9 +205,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-800">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   )

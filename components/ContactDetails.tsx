@@ -1,4 +1,8 @@
+"use client"
+
 import React from 'react';
+import { track } from '@/lib/analytics';
+import { whatsappLink } from '@/lib/attribution';
 import { Phone, Mail, MessageCircle } from 'lucide-react';
 
 type ContactDetailsProps = {
@@ -15,7 +19,7 @@ export function ContactDetails({
   const contactInfo = {
     mobile: {
       display: '+27 061-540-3265',
-      link: 'tel:+270615403265',
+      link: 'tel:+27615403265',
       icon: <Phone className="h-5 w-5" />,
     },
     email: {
@@ -25,7 +29,7 @@ export function ContactDetails({
     },
     whatsApp: {
       display: 'WhatsApp: +27 061-540-3265',
-      link: 'https://wa.me/270615403265',
+      link: whatsappLink(),
       icon: <MessageCircle className="h-5 w-5" />,
     },
   };
@@ -46,6 +50,11 @@ export function ContactDetails({
           )}
           <a 
             href={link}
+            onClick={() => {
+              if (key === 'whatsApp') track('whatsapp_click', { location: 'contact_details' });
+              if (key === 'mobile') track('phone_click', { location: 'contact_details' });
+              if (key === 'email') track('email_click', { location: 'contact_details' });
+            }}
             className="hover:text-amber-600 transition-colors break-all text-sm sm:text-base"
             rel={key === 'whatsApp' ? 'noopener noreferrer' : undefined}
             target={key === 'whatsApp' ? '_blank' : undefined}

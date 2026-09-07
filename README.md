@@ -138,3 +138,17 @@ For questions or further information about this website, please contact the deve
 ---
 
 Last updated: May 13, 2026
+
+## Analytics and attribution (PostHog)
+
+Product analytics run through PostHog (EU region) via a same-origin reverse proxy at `/ingest` (see `next.config.mjs`). Set these in Vercel:
+
+```
+NEXT_PUBLIC_POSTHOG_KEY=phc_...        # project API key from PostHog
+NEXT_PUBLIC_POSTHOG_HOST=https://eu.posthog.com
+NEXT_PUBLIC_WHATSAPP_NUMBER=27615403265 # no leading zero, no plus
+```
+
+Without `NEXT_PUBLIC_POSTHOG_KEY` the provider is a no-op.
+
+First-touch attribution: visitors arriving with `utm_*` parameters or a `ref`/`r` code get a 90 day first-party cookie (`ua_attr`). Contact form submissions forward those values as `attribution_*` fields in the notification email, PostHog receives them as `first_*` super properties, and `lib/attribution.ts` exposes `resolveAttribution()` and `whatsappLink(ref)` for new pages. Events are named in `lib/analytics.ts`.

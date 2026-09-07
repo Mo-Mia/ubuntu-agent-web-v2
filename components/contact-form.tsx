@@ -3,6 +3,8 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Send } from "lucide-react"
+import { track } from "@/lib/analytics"
+import { resolveAttribution } from "@/lib/attribution"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +18,20 @@ const ContactForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSuccess, setFormSuccess] = useState(false)
+  const [attribution, setAttribution] = useState<Record<string, string>>({})
+
+  // Attach first-touch attribution so the notification email shows where the lead came from.
+  useEffect(() => {
+    const a = resolveAttribution();
+    setAttribution({
+      ref: a.ref ?? "",
+      utm_source: a.utmSource ?? "",
+      utm_medium: a.utmMedium ?? "",
+      utm_campaign: a.utmCampaign ?? "",
+      utm_content: a.utmContent ?? "",
+      landing_path: a.landingPath ?? "",
+    });
+  }, []);
   
   // Check for success parameter in URL
   useEffect(() => {
@@ -46,6 +62,8 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true);
+    const attribution = resolveAttribution();
+    track("contact_form_submitted", { interest: formData.interest, ref: attribution.ref, utm_source: attribution.utmSource });
     // Form will be submitted normally via action attribute
   }
 
@@ -72,6 +90,11 @@ const ContactForm = () => {
           <input type="hidden" name="from_name" value="Ubuntu Agent Notification" />
           <input type="hidden" name="redirect" value="https://www.theubuntuagent.com/contact?success=true" />
           
+          {/* Attribution (first touch) forwarded in the notification email */}
+          {Object.entries(attribution).map(([k, v]) => (
+            <input key={k} type="hidden" name={`attribution_${k}`} value={v} />
+          ))}
+
           {/* Required field for Web3Forms to enable spam protection */}
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           
